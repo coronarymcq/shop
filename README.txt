@@ -1,5 +1,5 @@
 ## My goal
-This is a simple static website created for personal purposes only.
+This is a simple static website created for personal purposes only for now.
 
 ## Features
 - MCQ'S features 
