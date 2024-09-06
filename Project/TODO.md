@@ -3,3 +3,5 @@
 - ~~3. Orgnized the files and the source code~~
 - ~~4. Setup the primary structure of HTML and CSS~~
 - ~~5. Hosted a server with a URL-~~
+- 6. Making UI setup
+- 7. Structure the frame 
