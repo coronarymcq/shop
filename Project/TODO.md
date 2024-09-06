@@ -1,8 +1,5 @@
-~~1. Set up the GITHub and GIT resp~~
-~~2. Syncing the files up to the GIThub source~~
-~~3. Orgnized the files and the source code~~
-~~4. Setup the primary structure of HTML and CSS~~
-~~5. Hosted a server with a URL-~~
-~~ ~~
-~~ ~~
-~~ ~~
+- ~~1. Set up the GITHub and GIT resp~~
+- ~~2. Syncing the files up to the GIThub source~~
+- ~~3. Orgnized the files and the source code~~
+- ~~4. Setup the primary structure of HTML and CSS~~
+- ~~5. Hosted a server with a URL-~~
