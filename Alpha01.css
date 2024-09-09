@@ -1,0 +1,94 @@
+
+.first-div {
+  background-color: lightgoldenrodyellow;
+  margin-bottom: 10px; 
+  margin-top: 0px;
+}
+
+.sec-div {
+  background-color: lightpink;
+  margin-top: 0px;
+  margin-bottom: 00px;
+}
+
+.third-div {
+  background-color: lightblue;
+}
+
+.forth-div {
+  margin-top: 10px;
+  background-color: lightgreen;
+}
+
+.fifth-div {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background-color: lightgray;
+  }
+
+.sixth-div {
+  margin-bottom: 5px;
+  margin-top: 7px;
+  display: block;
+  background-color: aliceblue;
+}
+
+.uber-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 0.5px ;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.amazon-button {
+  background-color: rgb(255, 216, 20);
+  border: none;
+  border-radius: 500px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 7.5px ;
+  padding-bottom: 7.5px;
+}
+
+.github-button {
+  background-color: rgb(40, 189, 82);
+  border: none;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px ;
+  padding-bottom: 7px;
+  font-weight: bold;
+  color: white;
+}
+
+.bootstrap-button1 {
+  background-color: rgb(121, 82, 179);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding-left: 19.9px;
+  padding-right: 19.9px;
+  padding-top: 9.25px;
+  padding-bottom: 9.25px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.bootstrap-button2 {
+  background-color: white;
+  color: rgb(108, 117, 125);
+  border-width: 0.2px;
+  border-style: solid;
+  border-radius: 4px;
+  padding-left: 19.9px;
+  padding-right: 19.9px;
+  padding-top: 9.25px;
+  padding-bottom: 9.25px;
+  font-weight: bold;
+}
+
