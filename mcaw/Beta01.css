@@ -1,0 +1,137 @@
+
+body {
+  background-color: rgba(85, 249, 255, 0.144);
+  font-family: Nunito;
+}
+
+footer {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.main {
+  margin: auto;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 100px;
+  padding-bottom: 700px;
+}
+
+.main-text03 {
+  font-size: 60px;
+  color: rgb(97, 97, 97) ;
+}
+
+.end-margin {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 0px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.end-margin-text01{
+  margin-top: 0px ;
+  margin-bottom: 0px;
+  font-weight: 700;
+  color: rgba(128, 128, 128, 0.596);
+}
+
+.end-margin-text02{
+  display: inline-block;
+  margin-top: 5px ;
+  margin-bottom: 0px;
+  font-weight: 700;
+  color: rgba(128, 128, 128, 0.596);
+}
+
+.logo {
+  width: 300px;
+  height: 315px;
+  opacity: 0.8;
+  margin-bottom: 50px;
+  transition: opacity 0.3s;
+  cursor: pointer;
+  margin: auto;
+  margin-left: 20px;
+}
+
+.logo:hover {
+opacity: 0.6;
+}
+
+.logo:active {
+  opacity: 1;
+}
+
+.main-text01 {
+  margin-top: 50px;
+  font-weight: 700;
+  color: rgb(97, 97, 97) ;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.main-text02 {
+  font-weight: 700;
+  color: rgb(97, 97, 97) ;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.d-main00 {
+  background-color: rgba(204, 193, 193, 0);
+  width: 900px;
+  text-align: center;
+  margin: auto;
+  width: 600px;
+  display: inline-block;
+}
+
+.d-main03,
+.d-main02,
+.d-main01 {
+  vertical-align: middle;
+  display: inline-block;
+  margin: auto;
+  margin-left: 0px;
+}
+
+.t-logo {
+  margin-top: 500px;
+  width: 100px;
+  cursor: auto;
+}
+
+.join-us {
+  color: rgb(0, 0, 0);
+  display: block;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  font-size: 50px;
+  transition: opacity 0.7s, color 0.7s;
+}
+
+.join-us:hover {
+  opacity: 0.5;
+}
+
+.join-us:active {
+  color: rgba(128, 128, 128, 0.774);
+}
+
+.main-text04,
+.main-text05 {
+  font-size: 30px;
+}
+
+.main-text04 {
+  margin-top: 500px;
+}
+
+.main-text05 {
+  margin-top: 700px;
+}
+
