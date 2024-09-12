@@ -1,16 +1,26 @@
 
 
+
+
+
+
+
+
 .div10-1 {
   display: inline-block;
 }
 
 .dog2 {
   display: inline-block;
-  width: 10px;
+  width: 23px;
+  border-radius: 100px;
+  vertical-align: middle;
+  margin-left: 6px;
 }
 
 .friends0x {
   display: inline-block;
+  vertical-align: middle;
 }
 
 
