@@ -135,3 +135,14 @@ opacity: 0.6;
   margin-top: 700px;
 }
 
+.half-h {
+transition: opacity 0.5s;
+}
+
+.half-h:hover {
+opacity: 0.75;
+}
+
+.half-h:active {
+  opacity: 0.9;
+}
