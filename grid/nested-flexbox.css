@@ -1,27 +1,26 @@
-.main-flex {
+.flexbox {
     display: flex;
     flex-direction: row;
-}
-
-.div-flex1 {
+    height: 50px;
+  }
+  
+  .column1 {
     background-color: lightpink;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     width: 100px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.div-flex1-1 {
-display: flex;
-flex-direction: row;
-background-color: black;
-color: white;
-}
-
-.div-flex2 {
+  }
+  
+  .column2 {
     background-color: lightblue;
     width: 200px;
-}
+  }
+  
+  .row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .row2-item {
+    background-color: black;
+    color: white;
+  }
