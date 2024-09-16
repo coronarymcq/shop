@@ -1,0 +1,8 @@
+button:hover {
+    opacity: 0.5;
+}
+
+.off:hover {
+    text-decoration: underline;
+    cursor: default;
+}
