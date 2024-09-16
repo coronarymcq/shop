@@ -2,11 +2,21 @@
 body {
   background-color: rgba(85, 249, 255, 0.144);
   font-family: Nunito;
+  padding-top: 200px;
 }
 
 footer {
   text-align: center;
   vertical-align: middle;
+}
+
+
+.header {
+  background-color: #d8feff;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
 }
 
 .main {
