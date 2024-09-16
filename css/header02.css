@@ -62,7 +62,6 @@ margin-left: 10px;
 }
 
 .middle-section {
-    background-color: red;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -73,12 +72,12 @@ margin-left: 10px;
     border-color: rgb(71, 71, 71);
     color: rgb(57, 57, 57);
     border-width: 0.1px;
+    border-radius: 100px;
     font-size: 20px;
     box-shadow: inset -1px 1px 10px rgba(0, 0, 0, 0.104);
 }
 
-.search-bar {
-}
+
 
 input[type="text"] {
     text-align: left;
