@@ -3,6 +3,7 @@
   <head>
     <title>MCQS CA - Beta 01</title>
     <link rel="stylesheet" href="Beta01.css" />
+    <link rel="stylesheet" href="header.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,49 +12,45 @@
     />
   </head>
 
-  <body style="margin: 0px">
-    <div
-      class="header"
-      style="
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: 30px;
-        text-align: center;
-        padding: 20px;
-      "
-    >
-      <div style="width: 200px; margin-right: 50px; padding: 30px"></div>
-      <div style="flex: 1; margin-right: 50px; padding: 30px; flex-shrink: 0">
-        <img
-          src="logos/header-logo-2.webp"
-          class="half-h"
-          style="height: 90px"
-        />
-      </div>
-      <div style="width: 200px; padding: 30px; text-align: right"></div>
-    </div>
-    <div class="main">
-      <div class="text">
-        <p class="main-text01">Welcome to Coronary Academic MCQs Website</p>
-        <p class="main-text02">
-          Our main platform for student-created MCQs, Q-banks, past year papers,
-          and more!
-        </p>
-        <p class="main-text03">Coming Soon</p>
-      </div>
+  <body style="min-height: 100vh; margin: 0px; position: relative">
+    <div class="content">
+      <header class="header-container">
+        <section class="left-section">
+          <button class="login-button">Login</button>
+          <button class="register-button">Register</button>
+        </section>
+        <section class="middle-section">
+          <input type="text" placeholder="Search questions, files..." />
+          <button class="search-icon-button">
+            <img src="logos/search-icon.png" class="search-icon" />
+          </button>
+        </section>
+        <section class="right-section">
+          <img src="logos/header-logo-2.webp" class="header-logo" />
+        </section>
+      </header>
+      <div class="main">
+        <div class="text">
+          <p class="main-text01">Welcome to Coronary Academic MCQs Website</p>
+          <p class="main-text02">
+            Our platform for student-created MCQs, Q-banks, past papers, and
+            more—all in one place!
+          </p>
+          <p class="main-text03">Coming Soon</p>
+        </div>
 
-      <div class="d-main00">
-        <div class="d-main02">
-          <img src="logos/teleg.png" class="t-logo" />
-          <a
-            class="join-us"
-            href="https://t.me/coronarymcq"
-            target="_blank"
-            style="font-weight: bold"
-          >
-            JOIN US ON TELEGRAM
-          </a>
+        <div class="d-main00">
+          <div class="d-main02">
+            <img src="logos/teleg.png" class="t-logo" />
+            <a
+              class="join-us"
+              href="https://t.me/coronarymcq"
+              target="_blank"
+              style="font-weight: bold"
+            >
+              JOIN US ON TELEGRAM
+            </a>
+          </div>
         </div>
       </div>
     </div>
