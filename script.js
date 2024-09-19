@@ -19,3 +19,29 @@ document.querySelector('.nav-button').addEventListener('click', function() {
     header.classList.add('header-no-shadow');
   }
 });
+
+// Add event listeners to all sidebar buttons
+document.querySelectorAll('.nav-bar, .nav-bar5').forEach(button => {
+  button.addEventListener('click', function() {
+      // Remove 'active' class from all buttons
+      document.querySelectorAll('.nav-bar, .nav-bar5').forEach(btn => {
+          btn.classList.remove('active');
+      });
+
+      // Add 'active' class to the clicked button
+      this.classList.add('active');
+  });
+});
+
+// Add an event listener to the document to manage clicks outside the sidebar
+document.addEventListener('click', function(event) {
+  if (!document.querySelector('.side-bar-container').contains(event.target)) {
+      // Optionally, you can add code here if you want to manage focus differently when clicking outside
+      // For instance, keeping the last clicked button highlighted
+      // Remove this part if you want the focus to stay on the last clicked button
+      // document.querySelectorAll('.nav-bar, .nav-bar5').forEach(button => {
+      //     button.classList.remove('active');
+      // });
+  }
+});
+

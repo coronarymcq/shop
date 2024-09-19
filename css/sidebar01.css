@@ -42,8 +42,11 @@
   font-size: 20px;
   white-space: nowrap;
   transition: background-color 0.3s;
-  background-color: transparent;
   border: none;
+  border-bottom: solid transparent; /* Start with transparent border */
+  border-width: 1px; /* Set border width */
+  transition: border-bottom-color 0.2s ease-in-out, border-bottom-width 0.2s ease-in-out; /* Transition properties */
+  background-color: transparent;
 }
 
 .nav-bar5 {
@@ -55,20 +58,26 @@
   cursor: pointer ;
   font-size: 20px;
   white-space: nowrap;
-  transition: background-color 0.3s;
   background-color: transparent;
   border: none;
+  border-bottom: solid transparent; /* Start with transparent border */
+  border-width: 1px; /* Set border width */
+  transition: border-bottom-color 0.2s ease-in-out, border-bottom-width 0.2s ease-in-out; /* Transition properties */
+  background-color: transparent;
 }
 
 .nav-bar:hover,
 .nav-bar5:hover {
   background-color: rgba(237, 237, 237, 0.202);
-  border-bottom: solid ;
+  border-color: rgba(0, 0, 0, 0.417); /* Specify the border color */
   border-width: 1px ;
 }
 
-.nav-bar:active,
-.nav-bar5:active {
-  border-bottom: solid ;
-  border-width: 1px ;
+.nav-bar:focus,
+.nav-bar5:focus,
+.nav-bar.active,
+.nav-bar5.active {
+    border-bottom-color: rgb(0, 0, 0); /* Ensure the border stays */
+    border-bottom-width: 1px; /* Ensure the border width */
+    outline: none; /* Remove default outline */
 }

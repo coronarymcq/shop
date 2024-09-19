@@ -61,9 +61,6 @@ nav {
     opacity: 1;
 }
 
-.nav-button:focus {
-    opacity: 1;
-}
 
 .right-section {
     display: flex;
@@ -101,7 +98,6 @@ nav {
     font-weight: 550;
     padding: 10px 30px 10px 30px;
     color: rgba(57, 57, 57, 0.696);
-    border-color: rgb(57, 57, 57);
     border-radius: 2px;
     transition: background-color 0.3s;
     white-space: nowrap;
@@ -126,24 +122,13 @@ nav {
     color: rgb(52, 164, 162);
 }
     
-.login-button:hover {
-    background-color: rgba(52, 164, 162, 0);
-}
-
-.register-button:hover {
-    background-color: rgba(52, 164, 162, 0);
-}
-
-
 .login-button:active,
 .register-button:active {
-    background-color: rgba(52, 164, 162, 0.08); /* Example color */
-    color: rgb(52, 164, 162);
+    color: rgba(57, 57, 57, 0.696);
 }
 
 
 .login-button:focus,
 .register-button:focus {
     background-color: rgba(52, 164, 162, 0.002); /* Example color */
-    color: rgb(52, 164, 162);
 }
