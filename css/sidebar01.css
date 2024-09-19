@@ -85,6 +85,13 @@
 }
 
 /* For max-width 619.9 */
+ @media (max-width: 619.9px) {
+  #nav-bar2,
+  #nav-bar4 {
+    display: none;
+  }
+} 
+
 @media (max-width: 605.09px) {
   #nav-bar2,
   #nav-bar4 {
