@@ -79,7 +79,7 @@
 .nav-bar5:focus,
 .nav-bar.active,
 .nav-bar5.active {
-    border-bottom-color: rgba(0, 0, 0, 0); /* Ensure the border stays */
+    border-bottom-color: rgb(0, 0, 0); /* Ensure the border stays */
     border-bottom-width: 1px; /* Ensure the border width */
     outline: none; /* Remove default outline */
 }

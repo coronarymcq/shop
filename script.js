@@ -44,12 +44,3 @@ document.addEventListener('click', function(event) {
       // });
   }
 });
-
-document.querySelectorAll('.nav-bar, .nav-bar5').forEach(button => {
-  button.addEventListener('touchstart', function() {
-      this.classList.add('active');
-  });
-  button.addEventListener('touchend', function() {
-      this.classList.remove('active');
-  });
-});
