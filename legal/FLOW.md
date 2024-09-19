@@ -26,20 +26,6 @@ https://mcqcat.github.io/MCAW_Project01/
     - **Intro Section**: A welcome message, brief description of MCAW, and a "Get Started" button linking to quizzes or the dashboard.
     - **Featured Quizzes**: Highlight popular or recent quizzes with preview images or icons.
     - **Call to Action**: Buttons for signing up or starting a quiz, placed prominently.
-  - **Color Scheme Suggestions**:
-    - **Modern Tech Look**:
-      - **Primary Color**: Deep navy blue (#2c3e50)
-      - **Accent Color**: Bright orange (#f39c12) for buttons/links
-      - **Background**: Light grey (#ecf0f1) for the main area, keeping it clean but not too cold.
-    - **Friendly & Warm**:
-      - **Primary Color**: Soft teal (#1abc9c)
-      - **Accent Color**: Coral (#e74c3c) for call-to-action buttons.
-      - **Background**: Creamy white (#fdfbfb) or soft beige for warmth.
-    - **Dark Mode**:
-      - **Background**: Charcoal black (#2d2d2d)
-      - **Text**: Light grey or white (#ecf0f1)
-      - **Accent**: Neon green (#2ecc71) or electric blue (#3498db) for buttons/links.
-
 ---
 
 ## 2. Quiz Dashboard Page

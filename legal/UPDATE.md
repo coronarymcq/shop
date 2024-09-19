@@ -59,9 +59,11 @@
 
    - [Resizing issues related to the sidebar on all devices] 
 
-2. Minor UI fixes.
+2. Minor UI fixes and improvements.
 
 3. Smoothing out the transitions 
+
+4. Changed color scheme for the whole project.
 
 ****
 
