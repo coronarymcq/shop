@@ -32,6 +32,7 @@
 }
 
 .nav-bar {
+  color: rgba(57, 57, 57, 0.696);
   padding: 0px 20px 0px 20px;
   display: flex;
   flex: 1;
@@ -50,6 +51,7 @@
 }
 
 .nav-bar5 {
+  color: rgba(57, 57, 57, 0.696);
   padding: 0px 20px 0px 20px;
   display: flex;
   flex: 1;

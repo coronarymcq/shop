@@ -53,11 +53,13 @@
 
 1. Troubleshooting and bug fixes:
 
-   - [ ] 
+   - [ UI fixes on iPhone and iPad ] 
 
    - [ ] 
 
    - [ ] 
+
+2. Minor UI fixes.
 
 ****
 
