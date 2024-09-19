@@ -28,7 +28,7 @@
 }
 
 nav {
-    border-right: solid;
+    border-right: dashed;
     border-width: 1px;
     padding-right: 10px;
     margin-left: 5px;

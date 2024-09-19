@@ -1,0 +1,65 @@
+.side-bar-container {
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 30px 0px 30px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 100px;
+  height: 100px;
+  border: none;
+  border-bottom: solid;
+  border-bottom-color: gray ;
+  border-bottom-width: 0.1px ;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.123);
+}
+
+.section-nav {
+  display: flex;
+}
+
+.nav-bar {
+  padding: 0px 20px 0px 20px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer ;
+  text-align: center;
+  font-size: 20px;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+  background-color: transparent;
+  border: none;
+}
+
+.nav-bar5 {
+  padding: 0px 20px 0px 20px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer ;
+  font-size: 20px;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+  background-color: transparent;
+  border: none;
+}
+
+.nav-bar:hover,
+.nav-bar5:hover {
+  background-color: rgba(237, 237, 237, 0.202);
+  border-bottom: solid ;
+  border-width: 1px ;
+}
+
+.nav-bar:active,
+.nav-bar5:active {
+  border-bottom: solid ;
+  border-width: 1px ;
+}
