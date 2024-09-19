@@ -131,6 +131,12 @@ nav {
     height: 80px;
 }
 
+/* Default transition settings */
+.header-container, .login-button, .register-button, .header-logo {
+    transition: all 0.3s ease-in-out;
+}
+
+/* For max-width 580px */
 @media (max-width: 580px) {
     .header-container {
         display: flex;
@@ -142,33 +148,41 @@ nav {
 
     .login-button,
     .register-button {
-        margin-right: 0px ;
+        margin-right: 0px;
         padding: 10px 0px 10px 30px;
     }
 }
 
+/* For max-width 454.55px */
 @media (max-width: 454.55px) {
     .header-container {
         display: flex;
         flex-direction: row;
         justify-content: right;
+        position: fixed;
         margin: 0px;
         padding: 0px;
     }
 
+    .right-section {
+        position: relative;
+    }
+    /* Instead of display: none, transition opacity for smooth disappearance */
     .header-logo {
-        display: none;
+        opacity: 0;
+        visibility: hidden; /* Makes it invisible but keeps space */
+        position: absolute;
     }
 
     .login-button,
     .register-button {
-        margin-right: 0px ;
+        margin-right: 0px;
         padding: 10px 0px 10px 30px;
     }
 }
 
+/* For max-width 340.50px */
 @media (max-width: 340.50px) {
-
     .header-container {
         display: flex;
         flex-direction: row;
@@ -186,12 +200,10 @@ nav {
     .login-button {
         padding: 0px 19px 0px 19px !important;
     }
-
-    
 }
 
+/* For max-width 272.40px */
 @media (max-width: 272.40px) {
-
     .header-container {
         display: flex;
         flex-direction: row;
@@ -210,21 +222,14 @@ nav {
         justify-content: center;
     }
 
+    .right-section {
+        position: relative;
+    }
+
     .login-button,
     .register-button {
-        display: none;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden; /* Use this instead of display: none for smooth transition */
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-    
-

@@ -55,7 +55,7 @@
 
    - [ UI fixes on iPhone and iPad ] 
 
-   - [ ] 
+   - [ Resizing issues related to the header ] 
 
    - [ ] 
 
