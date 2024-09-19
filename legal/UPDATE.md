@@ -51,13 +51,13 @@
 ****
 **Version 1.7 | September 19**
 
-1. Troubleshooting and bug fixes:
+1. Troubleshooting and bug fixes: 
 
    - [UI fixes on iPhone and iPad] 
 
-   - [Resizing issues related to the header] 
+   - [Resizing issues related to the header on all devices] 
 
-   - [ ] 
+   - [Resizing issues related to the sidebar on all devices] 
 
 2. Minor UI fixes.
 
