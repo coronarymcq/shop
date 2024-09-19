@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-  background-color: rgba(85, 249, 255, 0.144);
+  background-color: transparent;
   font-family: Nunito;
   padding-top: 100px;
   min-height: 100vh;
@@ -17,7 +17,7 @@ body {
 
 .content {
   flex: 1;
-  background-color: rgba(85, 249, 255, 0.144);
+  background-color: transparent;
 }
 
 footer {
@@ -53,11 +53,11 @@ footer {
   padding-top: 10px;
   text-align: center;
   background-color: white;
-  border-top: solid;
+  border-top: none;
   white-space: nowrap;
   border-color: gray;
   border-width: 0.1px;
-  box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.274);
+  box-shadow: -5px 0px 10px  rgba(0, 0, 0, 0.031);
 }
 
 .end-margin-text01{
