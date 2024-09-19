@@ -17,8 +17,16 @@
     border-bottom-color: gray ;
     border-bottom-width: 0.1px ;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.274);
+    z-index: 2; /* Ensure it is above the sidebar */
 }
 
+/* This class to remove the shadow */
+.header-no-shadow {
+    box-shadow: none; /* Remove shadow */
+    border: none;
+  }
+
+  
 .left-section {
     max-width: 450px;
     display: flex;

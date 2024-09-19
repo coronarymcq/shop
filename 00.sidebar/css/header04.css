@@ -1,0 +1,137 @@
+.header-container {
+    background-color: #ffffff;
+    color: #505050;
+    font-family:  Nunito ;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom: solid;
+    border-bottom-color: gray ;
+    border-bottom-width: 0.1px ;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.274);
+    z-index: 2; /* Ensure it is above the sidebar */
+}
+
+/* This class to remove the shadow */
+.header-no-shadow {
+    box-shadow: none; /* Remove shadow */
+    border: none;
+  }
+
+  
+.left-section {
+    max-width: 450px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    position: relative;
+}
+
+nav {
+    margin-left: 8px;
+}
+
+.nav {
+    height: 40px ;
+    opacity: 0.7;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.nav-button:hover {
+    opacity: 0.5;
+}
+
+.nav-button:active {
+    opacity: 1;
+}
+
+.right-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.header-logo {
+    height: 65px;
+}
+
+.right-section .header-logo {
+    cursor: pointer;
+    transition: opacity 0.25s;
+    margin-right: 5px;
+}
+
+.header-logo:hover {
+    opacity: 0.7;
+}
+
+.header-logo:active {
+    opacity: 1;
+}
+
+.header-logo {
+    height: 80px;
+}
+
+.right-section button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: 550;
+    padding: 10px 30px 10px 30px;
+    color: rgba(57, 57, 57, 0.696);
+    border-color: rgb(57, 57, 57);
+    border-radius: 100px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+    
+.login-button {
+    background-color: rgba(52, 164, 162, 0);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+    
+.register-button {
+    background-color: rgba(120, 204, 196, 0);
+    margin-right: 30px;
+    transition: background-color 0.3s;
+}
+    
+.login-button:hover,
+.register-button:hover {
+    cursor: pointer;
+}
+    
+.login-button:hover {
+    background-color: rgba(52, 164, 162, 0);
+}
+
+.register-button:hover {
+    background-color: rgba(52, 164, 162, 0);
+}
+
+
+.login-button:active {
+    color: rgb(52, 164, 162);
+}
+
+.register-button:active {
+    color: rgb(92, 166, 159);
+}
