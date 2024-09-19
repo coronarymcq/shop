@@ -83,3 +83,86 @@
     border-bottom-width: 1px; /* Ensure the border width */
     outline: none; /* Remove default outline */
 }
+
+/* For max-width 619.9 */
+@media (max-width: 619.09px) {
+  .side-bar-container {
+    padding: 10px 30px 0px 15px;
+  }
+}
+
+/* For max-width 595px */
+@media (max-width: 595px) {
+  .nav-bar,
+  .nav-bar5 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 533.55px) {
+
+  .side-bar-container {
+    padding: 10px 30px 0px 15px;
+  }
+
+  .nav-bar,
+  .nav-bar5 {
+    white-space: normal;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400.14px) {
+  .side-bar-container {
+    padding: 10px 30px 0px 5px;
+  }
+
+  .nav-bar,
+  .nav-bar5 {
+    white-space: normal;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 285.75px) {
+  .side-bar-container {
+    padding: 10px 30px 0px 20px;
+  }
+
+  .nav-bar,
+  .nav-bar5 {
+    white-space: normal;
+    font-size: 12px;
+  }
+
+  #nav-bar4,
+  .nav-bar5 {
+    display: none;
+  }
+}
+
+/* For max-width 272.40px */
+@media (max-width: 272.40px) {
+
+  .side-bar-container {
+    padding: 10px 30px 0px 10px;
+  }
+
+  #nav-bar4,
+  .nav-bar5 {
+    display: none;
+  }
+}
+
+@media (max-width: 250px) {
+
+  .side-bar-container {
+    padding: 10px 30px 0px 25px;
+  }
+  
+  #nav-bar3,
+  #nav-bar2 {
+    display: none;
+  }
+ 
+}
