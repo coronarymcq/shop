@@ -1,0 +1,136 @@
+.header-container {
+    background-color: rgb(255, 255, 255);
+    font-family:  Nunito ;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom: solid;
+    border-bottom-color: gray ;
+    border-bottom-width: 0.1px ;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.274);
+}
+
+.left-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left-section button {
+border: solid;
+border-width: 1px;
+font-size: 15px;
+font-weight: 550;
+padding: 10px 30px 10px 30px;
+color: rgba(44, 42, 42, 0.679);
+border-color: rgb(139, 141, 143);
+border-radius: 100px;
+transition: background-color 0.3s;
+white-space: nowrap;
+}
+
+.login-button {
+background-color: rgb(52, 164, 162);
+margin-right: 10px;
+margin-left: 10px;
+}
+
+.register-button {
+    background-color: rgb(120, 204, 196);
+}
+
+.login-button:hover,
+.register-button:hover {
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: rgba(52, 164, 162, 0.873);
+}
+
+.register-button:hover {
+    background-color: rgba(120, 204, 196, 0.638);
+
+}
+
+.middle-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.middle-section input {
+    border: solid;
+    border-color: rgb(71, 71, 71);
+    color: rgb(57, 57, 57);
+    border-width: 0.1px;
+    border-radius: 100px;
+    font-size: 20px;
+    box-shadow: inset -1px 1px 10px rgba(0, 0, 0, 0.104);
+}
+
+
+
+input[type="text"] {
+    text-align: left;
+    padding: 20px 100px 20px 50px;
+    font-size: 15px;
+}
+
+
+.middle-section input:focus {
+    outline-style: none;
+}
+
+.search-icon {
+height: 25px;
+}
+
+.search-icon-button {
+    background-color: white;
+    border: none;
+    margin-left: -60px;
+    border-color: rgb(71, 71, 71);
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.search-icon-button:hover {
+opacity: 0.6;
+}
+
+.search-icon-button:active {
+    opacity: 1;
+    }
+
+.right-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.right-section .header-logo {
+    cursor: pointer;
+    transition: opacity 0.25s
+}
+
+.right-section:hover .header-logo {
+opacity: 0.7;
+}
+
+.right-section:active .header-logo {
+opacity: 1;
+}
+
+
+.header-logo {
+    height: 80px;
+}
