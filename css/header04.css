@@ -61,12 +61,52 @@ nav {
     opacity: 1;
 }
 
-
 .right-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 100px;
+}
+
+.login-button {
+    background-color: rgba(52, 164, 162, 0);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+    
+.register-button {
+    background-color: rgba(120, 204, 196, 0);
+    margin-right: 30px;
+    transition: background-color 0.3s;
+}
+
+.right-section button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: 550;
+    color: rgba(57, 57, 57, 0.696);
+    padding: 10px 30px 10px 30px;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    touch-action: manipulation;
+}
+
+.login-button:hover,
+.register-button:hover {
+    cursor: pointer;
+    color: rgb(52, 164, 162);
+}
+    
+.login-button:active,
+.register-button:active {
+    color: rgba(57, 57, 57, 0.696);
+}
+
+
+.login-button:focus,
+.register-button:focus {
+    background-color: rgba(52, 164, 162, 0.002); /* Example color */
 }
 
 .header-logo {
@@ -91,44 +131,100 @@ nav {
     height: 80px;
 }
 
-.right-section button {
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    font-weight: 550;
-    color: rgba(57, 57, 57, 0.696);
-    padding: 10px 30px 10px 30px;
-    border-radius: 2px;
-    transition: background-color 0.3s;
-    white-space: nowrap;
-    touch-action: manipulation;
+@media (max-width: 580px) {
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .login-button,
+    .register-button {
+        margin-right: 0px ;
+        padding: 10px 0px 10px 30px;
+    }
 }
-    
-.login-button {
-    background-color: rgba(52, 164, 162, 0);
-    margin-right: 10px;
-    margin-left: 10px;
+
+@media (max-width: 454.55px) {
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .header-logo {
+        display: none;
+    }
+
+    .login-button,
+    .register-button {
+        margin-right: 0px ;
+        padding: 10px 0px 10px 30px;
+    }
 }
+
+@media (max-width: 340.50px) {
+
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nav {
+        margin: 0px 0px 0px 0px !important;
+    }
     
-.register-button {
-    background-color: rgba(120, 204, 196, 0);
-    margin-right: 30px;
-    transition: background-color 0.3s;
+    .register-button {
+        padding: 0px 24px 0px 19px !important;
+    }
+
+    .login-button {
+        padding: 0px 19px 0px 19px !important;
+    }
+
+    
 }
-    
-.login-button:hover,
-.register-button:hover {
-    cursor: pointer;
-    color: rgb(52, 164, 162);
-}
-    
-.login-button:active,
-.register-button:active {
-    color: rgba(57, 57, 57, 0.696);
+
+@media (max-width: 272.40px) {
+
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        vertical-align: middle;
+        justify-content: center;
+    }
+
+    .left-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        vertical-align: middle;
+        justify-content: center;
+    }
+
+    .login-button,
+    .register-button {
+        display: none;
+    }
 }
 
 
-.login-button:focus,
-.register-button:focus {
-    background-color: rgba(52, 164, 162, 0.002); /* Example color */
-}
+
+
+
+
+
+
+
+
+
+    
+
