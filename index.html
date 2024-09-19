@@ -33,19 +33,27 @@
         <button class="login-button">Login</button>
         <button class="register-button">Sign Up</button>
         <section>
-          <img class="header-logo" src="icons/header-logo-2.webp" />
+          <img
+            class="header-logo"
+            src="icons/header-logo-2.webp"
+            onclick="goHome();"
+            alt="Home Logo"
+          />
         </section>
       </div>
     </header>
 
     <nav class="side-bar-container">
-      <button class="nav-bar">Home</button>
+      <button class="nav-bar" onclick="loadHome();">Home</button>
       <button class="nav-bar" id="nav-bar2">MCQS Library</button>
       <button class="nav-bar" id="nav-bar3">Profile</button>
       <button class="nav-bar" id="nav-bar4">Contact Us</button>
       <button class="nav-bar5">Help</button>
     </nav>
-    <div class="main"></div>
+    <div class="main">
+      <h1>Welcome to the Home Page!</h1>
+      <p>Here is your home page content.</p>
+    </div>
     <footer class="end-margin" style="font-size: 30px">
       <p class="end-margin-text01">
         &#169; 2024 Coronary Academic MCQs. All rights reserved.

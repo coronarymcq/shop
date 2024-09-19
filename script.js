@@ -44,3 +44,28 @@ document.addEventListener('click', function(event) {
       // });
   }
 });
+
+function goHome() {
+  if (window.location.pathname === '/index.html') {
+      location.reload();
+  } else {
+      window.location.href = 'index.html';
+  }
+}
+
+function loadHome() {
+  const mainContent = document.querySelector('.main');
+  fetch('cont/00.home/home.html') // Update this path to the correct location
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.text();
+      })
+      .then(data => {
+          mainContent.innerHTML = data; // Load content from home.html
+      })
+      .catch(error => console.error('Error loading home content:', error));
+}
+
+
