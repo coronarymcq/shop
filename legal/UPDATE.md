@@ -53,13 +53,15 @@
 
 1. Troubleshooting and bug fixes:
 
-   - [ UI fixes on iPhone and iPad ] 
+   - [UI fixes on iPhone and iPad] 
 
-   - [ Resizing issues related to the header ] 
+   - [Resizing issues related to the header] 
 
    - [ ] 
 
 2. Minor UI fixes.
+
+3. Smoothing out the transitions 
 
 ****
 

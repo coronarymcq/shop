@@ -10,7 +10,7 @@ document.querySelector('.nav-button').addEventListener('click', function() {
     // Delay the shadow and border reappearance to match the sidebar animation duration
     setTimeout(function() {
       header.classList.remove('header-no-shadow');
-    }, 200); // Same as your CSS transition duration (0.5s)
+    }, 200); // Same as your CSS transition duration (0.4s)
   } else {
     // Sidebar is hidden, so we're showing it now
     sidebar.classList.add('show');

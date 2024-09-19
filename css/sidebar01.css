@@ -8,7 +8,7 @@
   padding: 10px 30px 0px 30px;
   position: fixed;
   left: 0; 
-  top: 100px; 
+  top: 95px; 
   height: 100px; 
   right: 0; 
   border: none;
@@ -17,8 +17,8 @@
   border-bottom-width: 0.1px ;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.031);
   transform: translateY(-100%); /* Hide initially */
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out; /* Smooth transition */
-  visibility: hidden; 
+  transition: transform 0.39s ease-in-out, opacity 0.39s ease-in-out, visibility 0.39s ease-in-out; /* Smooth transition */
+  visibility: hidden ; 
   z-index: 1; 
 }
 
@@ -46,7 +46,7 @@
   border: none;
   border-bottom: solid transparent; /* Start with transparent border */
   border-width: 1px; /* Set border width */
-  transition: border-bottom-color 0.2s ease-in-out, border-bottom-width 0.2s ease-in-out; /* Transition properties */
+  transition: border-bottom-color 0.4s ease-in-out, border-bottom-width 0.4s ease-in-out; /* Transition properties */
   background-color: transparent;
 }
 
@@ -64,7 +64,7 @@
   border: none;
   border-bottom: solid transparent; /* Start with transparent border */
   border-width: 1px; /* Set border width */
-  transition: border-bottom-color 0.2s ease-in-out, border-bottom-width 0.2s ease-in-out; /* Transition properties */
+  transition: border-bottom-color 0.4s ease-in-out, border-bottom-width 0.4s ease-in-out; /* Transition properties */
   background-color: transparent;
 }
 
