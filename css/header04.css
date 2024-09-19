@@ -50,6 +50,7 @@ nav {
     margin-left: 5px;
     cursor: pointer;
     transition: opacity 0.2s;
+    touch-action: manipulation;
 }
 
 .nav-button:hover {
@@ -57,6 +58,10 @@ nav {
 }
 
 .nav-button:active {
+    opacity: 1;
+}
+
+.nav-button:focus {
     opacity: 1;
 }
 
@@ -118,6 +123,7 @@ nav {
 .login-button:hover,
 .register-button:hover {
     cursor: pointer;
+    color: rgb(52, 164, 162);
 }
     
 .login-button:hover {
@@ -139,4 +145,5 @@ nav {
 .login-button:focus,
 .register-button:focus {
     background-color: rgba(52, 164, 162, 0.002); /* Example color */
+    color: rgb(52, 164, 162);
 }
