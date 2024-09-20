@@ -31,6 +31,12 @@
   display: flex;
 }
 
+.nav-bar.active {
+  border-bottom-color: rgb(0, 0, 0);
+  border-bottom-width: 1px;
+  outline: none; /* Remove default outline */
+}
+
 .nav-bar {
   color: rgba(57, 57, 57, 0.696);
   padding: 0px 20px 0px 20px;
