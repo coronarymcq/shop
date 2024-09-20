@@ -67,4 +67,12 @@
 
 ****
 
+**Version 1.8 | September 20**
+
+1. Minor UI fixes and improvements.
+
+2. Login page created (1st version), but not compatible with mobile.
+
+   ![alt text](image-9.png)
+
 
