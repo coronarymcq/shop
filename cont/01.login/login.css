@@ -1,0 +1,178 @@
+img {
+  height: 80px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  margin-top: 0px;
+}
+
+:root {
+  /* CSS HEX */
+  --keppel: #36aaa3; /* Keppel */
+  --downy: #73cbc4; /* Downy */
+  --light-blue: rgba(54, 170, 163, 0.1); /* Very light Keppel */
+  --white: rgba(255, 255, 255, 0.9); /* Almost solid white */
+}
+
+body {
+  padding-top: 0px;
+  padding-bottom: 50px;
+  font-family: Nunito, Arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(180deg, 
+    var(--white), 
+    var(--light-blue), 
+    rgba(115, 203, 196, 0.2), /* Very light Downy */
+    rgba(54, 170, 163, 0.2), /* Very light Keppel */
+    var(--white));
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 50% 0%; /* Start from the top */
+  }
+  25% {
+    background-position: 50% 25%; /* Move slightly down */
+  }
+  50% {
+    background-position: 50% 50%; /* Center position */
+  }
+  75% {
+    background-position: 50% 75%; /* Move slightly up */
+  }
+  100% {
+    background-position: 50% 0%; /* Return to the top */
+  }
+}
+
+
+.h1 {
+  font-size: 40px;
+  white-space: nowrap;
+  margin: 0px;
+}
+
+.h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 400px; /* Set fixed width */
+  height: 400px; /* Set fixed height */
+}
+
+.container {
+  margin-top: 50px;
+  background: rgba(0, 0, 0, 0.03); /* Semi-transparent background */
+  backdrop-filter: blur(100px); /* Adjust blur level */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.108);
+  padding: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%; /* Make it fill the main */
+  height: 90%; /* Make it fill the main */
+}
+
+.Password,
+.Email {
+  font-size: 15px;
+  padding: 13px 15px; /* Adjusted padding */
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent; /* Set initial border to transparent */
+  border-radius: 5px;
+  width: calc(100% - 30px); /* Adjust width to account for padding */
+  transition: border-color 0.4s ease, border-width 0.4s ease; /* Add transition */
+}
+
+.Password:focus,
+.Email:focus {
+  outline: none;
+  outline-style: none;
+  border: solid;
+  border-color: rgba(115, 115, 115, 0.309);
+  border-width: 1px;
+}
+
+.Password::placeholder,
+.Email::placeholder {
+  font-family: Nunito, Arial;
+  font-size: 15px;
+}
+
+.login-in-button {
+  background: rgba(0, 0, 0, 0.03); /* Semi-transparent background */
+  backdrop-filter: blur(100px); /* Adjust blur level */
+  font-weight: bold;
+  font-family: Nunito, Arial;
+  font-size: 15px;
+  padding: 10px 30px 10px 30px;
+  margin-bottom: 20px;
+  border: 1px solid transparent; /* Set initial border to transparent */
+  border-radius: 2px;
+  border-width: 1px;
+  color: black;
+  transition: background-color 0.55s, padding 0.55s; /* Add transition */
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.login-in-button:hover {
+  padding: 10px 80px 10px 80px;
+  white-space: nowrap;
+  outline: none;
+  outline-style: none;
+}
+
+.Email,
+.Password {
+  padding-right: 45px; /* Add more space to the right for the icon */
+}
+
+.container3,
+.container4,
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Make it fill the main */
+  height: 100%; /* Make it fill the main */
+  margin: 0px;
+}
+
+.container3,
+.container4 {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  position: relative;
+}
+
+.container3 i,
+.container4 i {
+  opacity: 0.9;
+  position: absolute;
+  right: 20px;
+  bottom: 50%;
+}
+
