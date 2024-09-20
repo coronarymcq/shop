@@ -1,7 +1,7 @@
 img {
   height: 95px;
   margin-bottom: 50px;
-  padding-top: 30px;
+  padding-top: 50px;
   cursor: pointer;
   margin-top: 0px;
 }
@@ -178,3 +178,14 @@ body {
   bottom: 50%;
 }
 
+.sit {
+  text-decoration: underline;
+  transition: color 0.3s ease, font-weight 0.3s ease, text-decoration 0.3s ease;
+}
+
+.sit:hover {
+  color: black;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
