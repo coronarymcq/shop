@@ -1,4 +1,9 @@
-
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .background {
   display: flex;
@@ -51,10 +56,88 @@ html, body {
 }
 
 .container {
+  width: 50vw;
+  min-width: 280px; /* Minimum width to prevent shrinking below this */
+  font-family: Nunito, Arial;
   background-color: rgb(255, 255, 255);
   box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.039);
   height: 100%; /* Full height */
   margin: 0; /* No margin */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.right00 {
+  visibility: hidden;
+}
+
+@media (max-width: 853px ) {
+
+  body {
+    overflow-y: scroll; /* Allow scrolling on the page */
+  }
+
+.quote {
+  visibility: hidden;
+}
+
+  .all {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    width: 100vw; /* Full width of the viewport */
+    height: auto; /* Allow the height to expand based on content */
+    min-height: 100vh; /* Ensure full height for smaller screens */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    margin: 0; /* No margins */
+    padding: 0; /* No padding */
+    position: fixed; /* Ensure it stays in place */
+  }
+
+  .text,
+  .right {
+    visibility: hidden;
+  }
+
+  .input {
+    margin-bottom: 50px;
+  }
+
+  .right00 {
+    visibility:visible;
+    overflow: hidden;
+    margin-top: 200px;
+  }
+  
+}
+
+@media (min-width: 1000px) {
+  .container {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto; /* Enable vertical scrolling inside the container */
+  }
+
+  body {
+    overflow: hidden; /* Prevent scrolling on the body itself */
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 910px) {
+  .container {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto; /* Enable scrolling inside the container */
+  }
+
+  body {
+    overflow: hidden; /* Prevent body scroll */
+  }
 }
 
 .text {
@@ -62,20 +145,179 @@ html, body {
 }
 
 .quote {
+  position: relative;
   margin: 0; /* No margin */
   font-family: 'Georgia', serif;
   font-size: 50px; /* Fixed font size */
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; /* Center text */
-  padding: 20px; /* Fixed padding */
-  padding-left: 50px; /* Left padding */
+  text-align: right; 
+  padding: 15px; /* Fixed padding */
+  padding-right: 50px; /* Left padding */
   height: 100%; /* Full height */
+}
+
+.auth.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .image {
   opacity: 0.85;
-  height: 200px;
+  height: 85px;
   margin: 0; /* No margin */
+}
+
+.h1 {
+  font-size: 25px;
+  margin: 0;
+}
+
+.header {
+   overflow: hidden;
+   position: absolute;
+   top: 0;
+   right: 0; 
+   left: 0;
+   height: 85px;
+   margin-top: 40px;
+}
+
+.content {
+  overflow: hidden;
+  position: absolute;
+  top: 105px;
+  margin-top: 40px;
+  left: 0;
+  right: 0;
+  padding-right: 6.5px;
+}
+
+.card {
+  overflow: hidden;
+  position: absolute;
+  top: 200px;
+  right: 0;
+  left: 0;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 35px;
+  
+
+  input {
+    background-color: rgba(211, 211, 211, 0.331);
+    border: none;
+    margin-bottom: 15px;
+    padding: 20px 50px 20px 10px;
+    font-size: 15px;
+    border: 1px solid transparent; /* Set initial border to transparent */
+    border-radius: 5px;
+    width: calc(100% - 30px); /* Adjust width to account for padding */
+    transition: border-color 0.4s ease, border-width 0.4s ease; /* Add transition */
+    min-width: 75%; /* Ensure input bars take full width of the container */
+  }
+
+  input:focus {
+    outline: none;
+    outline-style: none;
+    border: solid;
+    border-color: rgba(0, 0, 0, 0.435);
+    border-width: 1px;
+  }
+
+  .h3 {
+    margin: 0;
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  #h3 {
+    margin-top: 20px;
+  }
+
+  .container-1,
+  .container-2 {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    position: relative;
+  }
+
+  .nun {
+    display: flex;
+    flex-direction: column;
+    margin-top: 13px;
+  }
+
+  .container-1 i,
+  .container-2 i {
+    position: absolute;
+    right: 20px;
+    bottom: 50%;
+  }
+
+} 
+
+.end {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  justify-content: space-between;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+
+.login-in-button {
+  overflow: hidden;
+  background-color: rgba(91, 91, 91, 0.106);
+  backdrop-filter: blur(100px); /* Adjust blur level */
+  font-weight: bold;
+  font-family: Nunito, Arial;
+  font-size: 15px;
+  padding: 10px 30px 10px 30px;
+  margin-bottom: 20px;
+  margin-top: 9.5px;
+  border: 1px solid transparent; /* Set initial border to transparent */
+  border-radius: 2px;
+  border-width: 1px;
+  color: black;
+  transition: background-color 0.55s, padding 0.55s; /* Add transition */
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.login-in-button:hover {
+  background-color: rgba(118, 118, 118, 0.192);
+  padding: 10px 100px 10px 100px;
+  white-space: nowrap;
+  outline: none;
+  outline-style: none;
+}
+
+.login-in-button:focus {
+  padding: 10px 30px 10px 30px;
+}
+
+.right {
+  font-family: Nunito, Arial;
+  font-size: 12px;
+  margin-top: 50px;
+  padding-left: 7px;
 }

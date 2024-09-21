@@ -53,6 +53,13 @@ body {
   }
 }
 
+img {
+  height: 95px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  cursor: pointer;
+  margin-top: 0px;
+}
 
 .h1 {
   font-size: 40px;
