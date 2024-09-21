@@ -46,6 +46,7 @@ html, body {
   padding: 0; /* Remove default padding */
   height: 100%; /* Full height */
   overflow: hidden; /* Prevent scrolling */
+  -webkit-tap-highlight-color: transparent; /* <-- this is new */
 }
 
 .all {
@@ -226,6 +227,12 @@ html, body {
     min-width: 75%; /* Ensure input bars take full width of the container */
   }
 
+  input:-webkit-autofill {
+    background-color: rgba(211, 211, 211, 0.331) !important; /* Match your background color */
+    box-shadow: 0 0 0 30px rgba(211, 211, 211, 0.331) inset; /* Prevent autofill color change */
+    -webkit-text-fill-color: rgb(0, 0, 0); /* Set your desired text color */
+  }
+
   input:focus {
     outline: none;
     outline-style: none;
@@ -298,7 +305,7 @@ html, body {
   border-radius: 2px;
   border-width: 1px;
   color: black;
-  transition: background-color 0.55s, padding 0.55s; /* Add transition */
+  transition: background-color 0.25s, padding 0.55s; /* Add transition */
   white-space: nowrap;
   cursor: pointer;
 }
@@ -311,8 +318,11 @@ html, body {
   outline-style: none;
 }
 
-.login-in-button:focus {
-  padding: 10px 30px 10px 30px;
+.login-in-button:active {
+  background-color: rgba(118, 118, 118, 0.3);
+  white-space: nowrap;
+  outline: none;
+  outline-style: none;
 }
 
 .right {
@@ -321,3 +331,5 @@ html, body {
   margin-top: 50px;
   padding-left: 7px;
 }
+
+
