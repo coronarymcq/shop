@@ -68,4 +68,24 @@ function loadHome() {
       .catch(error => console.error('Error loading home content:', error));
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const logo = document.querySelector('.header-logo'); // Assuming your logo has this class
+  const currentUrl = window.location.href;
+
+  // Check if we're on the home page
+  if (currentUrl.endsWith("index.html")) {
+      logo.title = "Reload"; // Change title to "Reload"
+  } else {
+      logo.title = "Home"; // Otherwise, set it to "Home"
+  }
+
+  logo.onclick = function () {
+      if (currentUrl.endsWith("index.html")) {
+          location.reload(); // Reload if on home page
+      } else {
+          window.location.href = "index.html"; // Redirect to home page
+      }
+  };
+});
+
 
