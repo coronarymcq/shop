@@ -67,7 +67,7 @@
 
 ****
 
-**Version 1.8 | September 20**
+**Version 1.8 | September 20-22**
 
 1. Minor UI fixes and improvements.
 
