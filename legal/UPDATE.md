@@ -75,4 +75,4 @@
 
    ![alt text](image-9.png)
 
-
+3. Updated login page with precise resizing and scrolling mechanics.
