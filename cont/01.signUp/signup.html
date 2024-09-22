@@ -23,7 +23,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
     <style>
       a {
         color: rgb(0, 0, 0); /* default color */
@@ -71,14 +76,28 @@
                   <h3 class="h3" id="h7">Last Name</h3>
                 </div>
                 <div class="name-container">
-                  <input type="text" id="first-name" />
-                  <input type="text" id="last-name" />
+                  <input type="text" id="first-name" required />
+                  <input type="text" id="last-name" required />
                 </div>
-
+                <p
+                  id="forbidden-message"
+                  style="
+                    color: red;
+                    display: none;
+                    text-align: left;
+                    font-size: 12px;
+                    margin-bottom: 0;
+                  "
+                ></p>
                 <div class="nun">
+                  <h3 class="h3">Username</h3>
+                  <section class="container-2">
+                    <input class="input1" type="text" id="email" required />
+                  </section>
+
                   <h3 class="h3">Email</h3>
                   <section class="container-2">
-                    <input class="input1" type="email" id="email" />
+                    <input class="input1" type="email" id="email" required />
                   </section>
 
                   <div class="heart">
@@ -93,7 +112,7 @@
                   <div class="both">
                     <div class="pass-container">
                       <div class="star1">
-                        <input type="password" id="first-pass" />
+                        <input type="password" id="first-pass" required />
                         <button
                           type="button"
                           id="togglePassword"
@@ -103,7 +122,7 @@
                         </button>
                       </div>
                       <div class="star2">
-                        <input type="password" id="last-pass" />
+                        <input type="password" id="last-pass" required />
                         <button
                           type="button"
                           id="toggleConfirmPassword"
@@ -142,6 +161,7 @@
       </div>
     </div>
     <div class="background"></div>
+    <script src="signup.js"></script>
     <script src="touch.js"></script>
     <script src="login01.js"></script>
     <script

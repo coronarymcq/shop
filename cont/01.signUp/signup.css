@@ -278,7 +278,7 @@ html, body {
   .nun {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 25px;
   }
 
   .container-1 i,
@@ -498,6 +498,15 @@ input {
   padding: 10px;
   box-sizing: border-box;
 }
+
+#first-name,
+#last-name {
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+    /* Default direction is left-to-right */
+    direction: ltr; 
+}
+
+
 
 #first-pass,
 #last-pass,
