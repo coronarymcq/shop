@@ -23,6 +23,28 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      a {
+        color: rgb(0, 0, 0); /* default color */
+        text-decoration: none; /* remove underline if you prefer */
+      }
+      a:visited {
+        color: rgb(0, 0, 0); /* keep it the same as the default color */
+      }
+
+      a:hover {
+        color: rgb(52, 164, 162);
+        text-decoration: underline;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      a {
+        font-weight: 1000;
+        transition: color 0.25s ease;
+      }
+    </style>
   </head>
   <body>
     <div class="all">
@@ -39,38 +61,69 @@
             </a>
           </div>
           <div class="content">
-            <h1 class="h1">Welcome Back!</h1>
+            <h1 class="h1">Welcome In!</h1>
           </div>
           <div class="card">
             <section class="auth-card">
               <div class="input">
-                <h3 class="h3" id="h3">Email or Username</h3>
-                <section class="container-1">
-                  <input class="input1" type="email" id="email" />
-                  <i class="fa-solid fa-user"></i>
-                </section>
+                <div class="heart">
+                  <h3 class="h3" id="h3">First Name</h3>
+                  <h3 class="h3" id="h7">Last Name</h3>
+                </div>
+                <div class="name-container">
+                  <input type="text" id="first-name" />
+                  <input type="text" id="last-name" />
+                </div>
+
                 <div class="nun">
-                  <h3 class="h3">Password</h3>
+                  <h3 class="h3">Email</h3>
                   <section class="container-2">
-                    <input class="input1" type="password" id="password" />
-                    <i class="fa-solid fa-lock"></i>
-                    <button
-                      type="button"
-                      id="togglePassword"
-                      class="show-password-btn"
-                    >
-                      Show
-                    </button>
+                    <input class="input1" type="email" id="email" />
                   </section>
+
+                  <div class="heart">
+                    <div class="Heart1-container">
+                      <h3 class="h3" id="h3">Password</h3>
+                    </div>
+
+                    <div class="Heart2-container">
+                      <h3 class="h3" id="h11">Confirm Password</h3>
+                    </div>
+                  </div>
+                  <div class="both">
+                    <div class="pass-container">
+                      <div class="star1">
+                        <input type="password" id="first-pass" />
+                        <button
+                          type="button"
+                          id="togglePassword"
+                          class="show-password-btn1"
+                        >
+                          Show
+                        </button>
+                      </div>
+                      <div class="star2">
+                        <input type="password" id="last-pass" />
+                        <button
+                          type="button"
+                          id="toggleConfirmPassword"
+                          class="show-password-btn2"
+                        >
+                          Show
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <button class="login-in-button">Login</button>
-              <p style="font-size: 15px" class="sit0">Forgot password?</p>
+              <button class="login-in-button" type="submit">Sign Up</button>
               <p>
                 <span
                   style="font-size: 15px; margin-top: 5px; margin-bottom: 5px"
-                  >Don't have an account?
-                  <span class="sit">Create one!</span></span
+                  >Already have an account?
+                  <span class="sit">
+                    <a href="../011215071914/login01.html">Login In!</a>
+                  </span></span
                 >
               </p>
               <p class="right00">

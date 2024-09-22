@@ -231,13 +231,11 @@ html, body {
     background-color: rgba(211, 211, 211, 0.331);
     border: none;
     margin-bottom: 15px;
-    padding: 20px 50px 20px 10px;
     font-size: 15px;
     border: 1px solid transparent; /* Set initial border to transparent */
     border-radius: 5px;
     width: calc(100% - 30px); /* Adjust width to account for padding */
     transition: border-color 0.4s ease, border-width 0.4s ease; /* Add transition */
-    min-width: 75%; /* Ensure input bars take full width of the container */
   }
 
   input:-webkit-autofill {
@@ -261,9 +259,12 @@ html, body {
     font-size: 16px;
   }
 
+  #h11,
+  #h7,
   #h3 {
     margin-top: 20px;
   }
+
 
   .container-1,
   .container-2 {
@@ -271,12 +272,13 @@ html, body {
     flex-direction: row;
     margin: 0px;
     position: relative;
+    width: 100%; /* Make this stretch full width */
   }
 
   .nun {
     display: flex;
     flex-direction: column;
-    margin-top: 13px;
+    margin-top: 30px;
   }
 
   .container-1 i,
@@ -287,6 +289,19 @@ html, body {
   }
 
 } 
+
+.input1 {
+  background-color: rgba(211, 211, 211, 0.331);
+  border: none;
+  margin-bottom: 15px;
+  font-size: 15px;
+  padding: 10px;
+  padding-right: 20px;
+  border: 1px solid transparent; /* Set initial border to transparent */
+  border-radius: 5px;
+  width: 100%; /* Make this stretch full width */
+  transition: border-color 0.4s ease, border-width 0.4s ease; /* Add transition */
+}
 
 .end {
   display: flex;
@@ -365,10 +380,12 @@ html, body {
   cursor: pointer;
 }
 
-.show-password-btn {
+.show-password-btn2,
+.show-password-btn1 {
   position: absolute;
-  bottom: -20px;
-  left: 1px;
+  bottom: 20%;
+  right: 10px;
+  transform: translateY(-50%);
   padding: 0;
   opacity: 0; /* Start hidden */
   transition: opacity 0.2s ease; /* Smooth transition */
@@ -376,11 +393,152 @@ html, body {
   border: none;
   cursor: pointer;
   position: absolute;
-  font-size: 14px;
+  font-size: 10px;
   color: rgba(0, 0, 0, 0.7);
   pointer-events: none; /* Prevent interaction when hidden */
+  z-index: 200;
+}
+
+
+.show-hide {
+  width: auto; /* Let the width adjust to content */
+  height: 40px; /* Set a height to match the input */
+  cursor: pointer;
+  position: relative;
+  z-index: 190;
+  display: flex;
+  cursor: default;
+}
+
+.show-hide1,
+.show-hide2 {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  border-radius: 5px;
+  position: relative;
+}
+
+.show-hide2 {
+  margin-left: 15px;
+}
+
+.Heart2-container,
+.Heart1-container {
+  position: relative;
+  display: flex;
+  flex: 1;
 }
 
 input {
   color: rgba(55, 55, 55, 0.829);
+}
+
+.star1, .star2,
+.name-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.star1 {
+  position: relative;
+}
+
+.star2 {
+  margin-left: 15px;
+}
+
+.both {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-input {
+  width: 50%;  /* Ensure both inputs share equal space */
+  padding: 10px;
+  box-sizing: border-box;  /* Include padding in the element's total width */
+}
+
+.name-input:first-child {
+  margin-right: 5px;  /* Adds a small gap between First Name and Last Name */
+}
+
+.heart {
+  display: flex;
+  margin-bottom: 10px; /* Adds space between the labels and input boxes */
+}
+
+
+.star1, .star2,
+.pass-container,
+.name-container {
+  display: flex;
+}
+
+.name-input {
+  display: flex;
+  flex-direction: column; /* Align label and input vertically */
+}
+
+.name-input label {
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+.name-input input {
+  width: 100%;  /* Full width of input container */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.pass-container input,
+.name-container input {
+  width: 48%;  /* Adjust width to fit both inputs within the container */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#first-pass,
+#last-pass,
+#first-name,
+#last-name {
+  width: 100%; /* Full width for each input */
+  margin-bottom: 0;
+}
+
+#h3, #h7, #h11 {
+  margin-bottom: 5px;  /* Adjust space between the labels and input boxes */
+  flex: 1;
+}
+
+#last-name {
+  margin-left: 15px;
+}
+
+#last-pass {
+  margin-left: 0px;
+  padding-right: 40px;
+}
+
+#first-pass {
+  padding-right: 40px;
+}
+
+#h11 {
+  margin-left: 8px;
+
+}
+
+#h7 {
+  margin-left: 18px;
+}
+
+.h3 {
+  margin: 10px;
+}
+
+#first-pass,
+#last-pass {
+  position: relative;
 }

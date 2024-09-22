@@ -23,6 +23,27 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      a {
+        color: rgb(0, 0, 0); /* default color */
+        text-decoration: none; /* remove underline if you prefer */
+      }
+      a:visited {
+        color: rgb(0, 0, 0); /* keep it the same as the default color */
+      }
+
+      a:hover {
+        color: rgb(52, 164, 162);
+        text-decoration: underline;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      a {
+        font-weight: 1000;
+        transition: color 0.25s ease;
+      }
+    </style>
   </head>
   <body>
     <div class="all">
@@ -70,7 +91,9 @@
                 <span
                   style="font-size: 15px; margin-top: 5px; margin-bottom: 5px"
                   >Don't have an account?
-                  <span class="sit">Create one!</span></span
+                  <span class="sit"
+                    ><a href="../01.signUp/signup.html">Create one!</a></span
+                  ></span
                 >
               </p>
               <p class="right00">
