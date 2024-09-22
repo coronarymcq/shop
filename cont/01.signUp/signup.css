@@ -275,6 +275,14 @@ html, body {
     width: 100%; /* Make this stretch full width */
   }
 
+  .container-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    position: relative;
+    width: 100%; /* Make this stretch full width */
+  }
+
   .nun {
     display: flex;
     flex-direction: column;
@@ -516,6 +524,11 @@ input {
   margin-bottom: 0;
 }
 
+#first-name,
+#last-name {
+  padding: 10px 20px 10px 10px;
+}
+
 #h3, #h7, #h11 {
   margin-bottom: 5px;  /* Adjust space between the labels and input boxes */
   flex: 1;
@@ -550,4 +563,18 @@ input {
 #first-pass,
 #last-pass {
   position: relative;
+}
+
+.password-strength {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.match-message {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.pass-container {
+  margin-bottom: 30px;
 }

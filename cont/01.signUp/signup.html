@@ -92,12 +92,47 @@
                 <div class="nun">
                   <h3 class="h3">Username</h3>
                   <section class="container-2">
-                    <input class="input1" type="text" id="email" required />
+                    <input
+                      class="input1"
+                      type="text"
+                      id="username"
+                      required
+                      pattern="[a-zA-Z0-9]{5,15}"
+                    />
+                    <p
+                      id="forbidden-message1"
+                      style="
+                        color: red;
+                        display: none;
+                        text-align: left;
+                        font-size: 12px;
+                        margin-bottom: 20px;
+                        margin-top: 0;
+                        display: block;
+                      "
+                    ></p>
                   </section>
 
                   <h3 class="h3">Email</h3>
                   <section class="container-2">
-                    <input class="input1" type="email" id="email" required />
+                    <input
+                      class="input1"
+                      type="email"
+                      id="email"
+                      required
+                      pattern=".+@.+\..+"
+                    />
+                    <p
+                      id="email-error-message"
+                      style="
+                        color: red;
+                        display: none;
+                        text-align: left;
+                        font-size: 12px;
+                        margin-bottom: 20px;
+                        margin-top: 0;
+                      "
+                    ></p>
                   </section>
 
                   <div class="heart">
@@ -130,6 +165,33 @@
                         >
                           Show
                         </button>
+                      </div>
+                    </div>
+                    <div
+                      class="measure"
+                      style="
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                      "
+                    >
+                      <div
+                        style="
+                          display: flex;
+                          flex: 1;
+                        "
+                      >
+                        <div id="strength1" class="password-strength"></div>
+                      </div>
+                      <div
+                        style="
+                          display: flex;
+                          flex: 1;
+                          margin-left: 15px;
+                          text-align: left;
+                        "
+                      >
+                        <div id="match-message" class="match-message"></div>
                       </div>
                     </div>
                   </div>
