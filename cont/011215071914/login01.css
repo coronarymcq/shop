@@ -238,7 +238,7 @@ html, body {
     background-color: rgba(211, 211, 211, 0.331);
     border: none;
     margin-bottom: 15px;
-    padding: 20px 90px 20px 10px;
+    padding: 20px 86px 20px 10px;
     font-size: 15px;
     border: 1px solid transparent; /* Set initial border to transparent */
     border-radius: 5px;
@@ -412,3 +412,19 @@ input {
   color: rgba(0, 0, 0, 0.7);
   pointer-events: none; /* Prevent interaction when hidden */
 }
+
+/* Add this to your CSS file */
+.fa-lock, .fa-unlock {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.fa-lock {
+  opacity: 1;
+}
+
+.fa-unlock {
+  opacity: 1;
+}
+
+
+
