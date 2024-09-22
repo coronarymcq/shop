@@ -97,7 +97,7 @@
                       type="text"
                       id="username"
                       required
-                      pattern="[a-zA-Z0-9]{5,15}"
+                      pattern="[a-zA-Z0-9_]{5,15}"
                     />
                     <p
                       id="forbidden-message1"
@@ -175,12 +175,7 @@
                         justify-content: space-between;
                       "
                     >
-                      <div
-                        style="
-                          display: flex;
-                          flex: 1;
-                        "
-                      >
+                      <div style="display: flex; flex: 1">
                         <div id="strength1" class="password-strength"></div>
                       </div>
                       <div

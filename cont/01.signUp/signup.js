@@ -90,7 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
     'عرص',
     'خول',
     'قحبة',
-    'لبوة'
+    'لبوة',
+    'حقير',
+    'كلب',
+    'وقح',
   ];
 
   function checkForCussWords(inputField) {
@@ -143,12 +146,13 @@ document.getElementById("username").addEventListener("input", function () {
   const forbiddenMessage = document.getElementById("forbidden-message1");
 
   if (!usernameInput.checkValidity()) {
-    forbiddenMessage.textContent = "Username must be 5-15 characters long and can only contain English letters and numbers.";
+    forbiddenMessage.textContent = "Username must be 5-15 characters long and can only contain English letters, numbers, and underscores (_).";
     forbiddenMessage.style.display = "block";
   } else {
     forbiddenMessage.style.display = "none";
   }
 });
+
 
 document.getElementById("email").addEventListener("input", function () {
   const emailInput = this;
