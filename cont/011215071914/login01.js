@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginButton = document.getElementById("loginButton");
     const togglePassword = document.getElementById('togglePassword');
     const passwordInput = document.getElementById('password');
+    passwordInput.style.transition = 'opacity 0.3s ease';
     const showPasswordBtn = document.querySelector('.show-password-btn');
     const lockIcon = document.querySelector('.fa-lock');
     const unlockIcon = document.querySelector('.fa-unlock');
@@ -54,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         // Update the show button text based on current type
         this.textContent = type === 'password' ? 'Show' : 'Hide';
-
+    
         // Handle icon visibility
         if (type === 'text') {
             lockIcon.style.opacity = '0';  // Hide lock icon smoothly
@@ -64,4 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
             unlockIcon.style.opacity = '1';  // Hide unlock icon
         }
     });
+    
+
+    
 });
+
+

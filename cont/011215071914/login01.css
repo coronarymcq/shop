@@ -413,7 +413,7 @@ input {
   pointer-events: none; /* Prevent interaction when hidden */
 }
 
-/* Add this to your CSS file */
+
 .fa-lock, .fa-unlock {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
@@ -425,6 +425,11 @@ input {
 .fa-unlock {
   opacity: 1;
 }
+
+#password {
+  transition: opacity 0.3s ease, width 0.3s ease; /* Add transitions for opacity and width if needed */
+}
+
 
 
 

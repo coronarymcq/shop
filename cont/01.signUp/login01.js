@@ -14,11 +14,21 @@ document.addEventListener("DOMContentLoaded", function () {
     setInitialStyles(togglePassword);
     setInitialStyles(toggleConfirmPassword);
 
+    // Set default type for password inputs
+    passwordInput.setAttribute('type', 'password');
+    confirmPasswordInput.setAttribute('type', 'password');
+
     // Show button when typing in the password input
     passwordInput.addEventListener('input', function () {
         const hasValue = passwordInput.value.length > 0;
         togglePassword.style.opacity = hasValue ? '1' : '0';
         togglePassword.style.pointerEvents = hasValue ? 'auto' : 'none';
+
+        // Reset type to password and button text if input is empty
+        if (!hasValue) {
+            passwordInput.setAttribute('type', 'password');
+            togglePassword.textContent = 'Show';
+        }
     });
 
     // Show button when typing in the confirm password input
@@ -26,6 +36,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const hasValue = confirmPasswordInput.value.length > 0;
         toggleConfirmPassword.style.opacity = hasValue ? '1' : '0';
         toggleConfirmPassword.style.pointerEvents = hasValue ? 'auto' : 'none';
+
+        // Reset type to password and button text if input is empty
+        if (!hasValue) {
+            confirmPasswordInput.setAttribute('type', 'password');
+            toggleConfirmPassword.textContent = 'Show';
+        }
     });
 
     // Toggle password visibility for the password input
