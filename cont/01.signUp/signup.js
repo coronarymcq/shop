@@ -1,7 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const firstNameInput = document.getElementById('first-name');
   const lastNameInput = document.getElementById('last-name');
+  const usernameInput = document.getElementById('username');
   const messageElement = document.getElementById('forbidden-message');
+  const forbiddenMessage = document.getElementById('forbidden-message1');
 
   const forbiddenWordsEncoded = [
     'ZnVjaw==',     
@@ -29,72 +31,20 @@ document.addEventListener('DOMContentLoaded', function() {
     'cHUkJHk=',
   ];
 
+  // List of forbidden Arabic words
+  const arabicForbiddenWords = [
+    'زب', 'عاهرة', 'خنزير', 'حيوان', 'بنت الكلب', 'كس', 'شرموط', 'منيك', 'قحبة', 'غبي', 'حمار', 'زنجي', 
+    'نيغا', 'نيغر', 'سكس', 'طيز', 'شرج', 'لعق', 'لحس', 'مص', 'تمص', 'بيضان', 'ثدي', 'بز', 'بزاز', 
+    'حلمة', 'مفلقسة', 'بظر', 'فرج', 'شهوة', 'شاذ', 'مبادل', 'جماع', 'قضيب', 'لوطي', 'لواط', 'سحاق', 
+    'سحاقية', 'اغتصاب', 'خنثي', 'احتلام', 'نيك', 'متناك', 'متناكة', 'عرص', 'خول', 'لبوة', 'حقير', 'كلب', 'وقح'
+  ];
+
   // Decode Base64
   function decodeBase64(encoded) {
     return atob(encoded);
   }
 
   const forbiddenWords = forbiddenWordsEncoded.map(decodeBase64);
-
-  // List of forbidden Arabic words
-  const arabicForbiddenWords = [
-    'زب',         // Example word 1
-    'عاهرة',     // Example word 2 (whore)
-    'خنزير',     // Example word 3 (pig)
-    'حيوان',      // Example word 4 (animal)
-    'بنت الكلب',  // Example word 5 (daughter of a dog)
-    'كس',
-    'شرموط',
-    'منيك',
-    'قحبة',
-    'منيك',
-    'غبي',
-    'حمار',
-    'زنجي',
-    'نيغا',
-    'نيغر',
-    'سكس',
-    'طيز',
-    'شرج',
-    'لعق',
-    'لحس',
-    'مص',
-    'تمص',
-    'بيضان',
-    'ثدي',
-    'بز',
-    'بزاز',
-    'حلمة',
-    'مفلقسة',
-    'بظر',
-    'كس',
-    'فرج',
-    'شهوة',
-    'شاذ',
-    'مبادل',
-    'عاهرة',
-    'جماع',
-    'قضيب',
-    'زب',
-    'لوطي',
-    'لواط',
-    'سحاق',
-    'سحاقية',
-    'اغتصاب',
-    'خنثي',
-    'احتلام',
-    'نيك',
-    'متناك',
-    'متناكة',
-    'شرموطة',
-    'عرص',
-    'خول',
-    'قحبة',
-    'لبوة',
-    'حقير',
-    'كلب',
-    'وقح',
-  ];
 
   function checkForCussWords(inputField) {
     const value = inputField.value.trim().toLowerCase(); // normalize and lowercase input
@@ -130,41 +80,82 @@ document.addEventListener('DOMContentLoaded', function() {
     inputField.style.direction = arabicRegex.test(value) ? 'rtl' : 'ltr';
   }
 
-  firstNameInput.addEventListener('input', function() {
+  // Event listeners for first and last name input fields
+  firstNameInput.addEventListener('input', function () {
     checkForCussWords(this);
     updateDirection(this);
   });
 
-  lastNameInput.addEventListener('input', function() {
+  lastNameInput.addEventListener('input', function () {
     checkForCussWords(this);
     updateDirection(this);
   });
+
+  // Function to check username input
+  usernameInput.addEventListener("input", function () {
+    const usernameValue = this.value.trim().toLowerCase();
+    
+    // First check if the username is valid based on the length and character rules
+    if (!usernameInput.checkValidity()) {
+      forbiddenMessage.textContent = "Username must be 5-15 characters long and can only contain English letters, numbers, and underscores (_).";
+      forbiddenMessage.style.display = "block";
+    } else {
+      forbiddenMessage.style.display = "none";
+    }
+
+    // Now check if the username contains any bad words (English or Arabic)
+    for (const word of forbiddenWords) {
+      if (usernameValue.includes(word)) {
+        forbiddenMessage.textContent = "Try another username.";
+        forbiddenMessage.style.display = "block";
+        usernameInput.value = ''; // Clear the username input
+        return;
+      }
+    }
+
+    for (const word of arabicForbiddenWords) {
+      if (usernameValue.includes(word)) {
+        forbiddenMessage.textContent = "Try another username.";
+        forbiddenMessage.style.display = "block";
+        usernameInput.value = ''; // Clear the username input
+        return;
+      }
+    }
+  });
 });
 
-document.getElementById("username").addEventListener("input", function () {
-  const usernameInput = this;
-  const forbiddenMessage = document.getElementById("forbidden-message1");
-
-  if (!usernameInput.checkValidity()) {
-    forbiddenMessage.textContent = "Username must be 5-15 characters long and can only contain English letters, numbers, and underscores (_).";
-    forbiddenMessage.style.display = "block";
-  } else {
-    forbiddenMessage.style.display = "none";
-  }
-});
 
 
 document.getElementById("email").addEventListener("input", function () {
   const emailInput = this;
   const errorMessage = document.getElementById("email-error-message");
 
-  if (!emailInput.checkValidity()) {
+  // Regular expression to check if email ends with invalid symbols except '.' and '@'
+  const invalidEndings = /[.,?!~!@]$/;
+  // Regular expression to check if email ends with ".co" but not ".com"
+  const endsWithCoNotCom = /\.co$/;
+
+  // Check if email ends with an invalid symbol
+  if (invalidEndings.test(emailInput.value)) {
+    errorMessage.textContent = "Invalid email.";
+    errorMessage.style.display = "block";
+  } 
+  // Check if email ends with ".co" but not ".com"
+  else if (endsWithCoNotCom.test(emailInput.value)) {
+    errorMessage.textContent = "Invalid email.";
+    errorMessage.style.display = "block";
+  } 
+  // Check for the general validity of the email
+  else if (!emailInput.checkValidity()) {
     errorMessage.textContent = "Email must contain an '@' symbol and a dot.";
     errorMessage.style.display = "block";
-  } else {
+  } 
+  // If all checks pass, hide the error message
+  else {
     errorMessage.style.display = "none";
   }
 });
+
 
 function updateStrengthIndicator(passwordInput, strengthIndicator) {
   const password = passwordInput.value;
