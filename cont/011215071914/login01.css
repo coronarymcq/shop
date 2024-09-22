@@ -351,16 +351,22 @@ html, body {
 .sit0:hover {
   color: rgb(52, 164, 162);
   text-decoration: underline;
+  cursor: pointer;
+}
+
+.sit:hover,
+.sit:active,
+.sit:focus {
+  color: rgb(48, 174, 172);
   text-decoration: underline;
   cursor: pointer;
 }
 
-.sit:hover {
+.sit.active {
   color: rgb(52, 164, 162);
   text-decoration: underline;
-  text-decoration: underline;
-  cursor: pointer;
 }
+
 
 
 

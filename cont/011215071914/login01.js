@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const lockIcon = document.querySelector('.fa-lock');
     const unlockIcon = document.querySelector('.fa-unlock');
 
+
+    
+
     if (loginButton) {
         loginButton.addEventListener("click", function () {
             // Handle login

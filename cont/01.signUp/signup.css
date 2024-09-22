@@ -366,18 +366,18 @@ html, body {
   transition: color 0.25s ease;
 }
 
-.sit0:hover {
-  color: rgb(52, 164, 162);
-  text-decoration: underline;
+
+.sit:hover,
+.sit:active,
+.sit:focus {
+  color: rgb(48, 174, 172);
   text-decoration: underline;
   cursor: pointer;
 }
 
-.sit:hover {
-  color: rgb(52, 164, 162);
+.sit.active {
+  color: rgb(48, 174, 172); /* The same color as hover */
   text-decoration: underline;
-  text-decoration: underline;
-  cursor: pointer;
 }
 
 .show-password-btn2,
