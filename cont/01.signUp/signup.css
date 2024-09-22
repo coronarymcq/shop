@@ -383,7 +383,7 @@ html, body {
 .show-password-btn2,
 .show-password-btn1 {
   position: absolute;
-  bottom: 20%;
+  bottom: 22%;
   right: 10px;
   transform: translateY(-50%);
   padding: 0;
@@ -518,11 +518,11 @@ input {
 
 #last-pass {
   margin-left: 0px;
-  padding-right: 40px;
+  padding-right: 45px;
 }
 
 #first-pass {
-  padding-right: 40px;
+  padding-right: 45px;
 }
 
 #h11 {
