@@ -50,20 +50,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const forbiddenWords = forbiddenWordsEncoded.map(decodeBase64);
 
+  // Delay function
+  let typingTimer;
+  const typingDelay = 1100; // delay time in ms
+
+  function checkForCussWordsWithDelay(inputField, messageElement) {
+    clearTimeout(typingTimer); // Reset the timer on each input
+
+    typingTimer = setTimeout(() => {
+      checkForCussWords(inputField, messageElement);
+    }, typingDelay);
+  }
+
   function checkForCussWords(inputField, messageElement) {
     const value = inputField.value.trim().toLowerCase();
-    messageElement.style.display = 'none'; 
-
-    for (const word of [...forbiddenWords, ...arabicForbiddenWords]) {
-      const regex = new RegExp(`(^|_)${word}(\\b|_)`, 'i'); 
-
-      if (regex.test(value)) {
+    messageElement.style.display = 'none';
+  
+    // Check Arabic words directly
+    for (const word of arabicForbiddenWords) {
+      const arabicRegex = new RegExp(`(^|\\s|_)${word}(\\s|_|$)`, 'i');
+      if (arabicRegex.test(value)) {
         messageElement.textContent = 'Please avoid using inappropriate language.';
-        messageElement.style.display = 'block'; 
+        messageElement.style.display = 'block';
         inputField.value = ''; 
         return true;
       }
     }
+  
+    // Check base64 decoded forbidden words
+    for (const word of forbiddenWords) {
+      const regex = new RegExp(`(^|\\s|_)${word}(\\s|_|$)`, 'i');
+      if (regex.test(value)) {
+        messageElement.textContent = 'Please avoid using inappropriate language.';
+        messageElement.style.display = 'block';
+        inputField.value = ''; 
+        return true;
+      }
+    }
+  
     return false;
   }
 
@@ -76,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
   [firstNameInput, lastNameInput].forEach(inputField => {
     if (inputField) {
       inputField.addEventListener('input', function() {
-        checkForCussWords(this, nameMessageElement); 
+        checkForCussWordsWithDelay(this, nameMessageElement); 
       });
     }
   });
@@ -91,11 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      if (checkForCussWords(this, usernameMessageElement)) {
-        usernameMessageElement.textContent = "Try another username.";
-        usernameMessageElement.style.display = "block";
-        this.value = '';  
-      }
+      checkForCussWordsWithDelay(this, usernameMessageElement);
     });
   }
 
@@ -134,27 +154,26 @@ document.addEventListener('DOMContentLoaded', function () {
     if (password.length < 5) {
       strength = "Password too short.";
       color = "red";
-  } else {
+    } else {
       const hasUpperCase = /[A-Z]/.test(password);
       const hasLowerCase = /[a-z]/.test(password);
       const hasNumbers = /[0-9]/.test(password);
       const hasSpecialChars = /[\W_]/.test(password);
       
-      const isLong = password.length >= 10;
+      const isLong = password.length >= 8;
   
       if (hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChars && isLong) {
-          strength = 'Strong';
-          color = 'green';
+        strength = 'Strong';
+        color = 'green';
       } else if ((hasUpperCase || hasLowerCase) && hasNumbers && (password.length >= 7 || hasSpecialChars)) {
-          strength = 'Medium';
-          color = 'orange';
+        strength = 'Medium';
+        color = 'orange';
       } else {
-          strength = 'Weak';
-          color = 'red';
+        strength = 'Weak';
+        color = 'red';
       }
-  }
+    }
   
-
     strengthIndicator.textContent = strength;
     strengthIndicator.style.color = color;
   }
