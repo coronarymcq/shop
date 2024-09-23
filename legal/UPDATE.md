@@ -1,4 +1,4 @@
-# UPDATES
+# UPDATES (current version: 1.8(:1.2.4.2.3))
 
 ****
 
@@ -75,6 +75,19 @@
 
    ![alt text](images/image-9.png)
 
-3. Updated login page with precise resizing and scrolling mechanics.
+3. Updated login page with precise resizing and scrolling mechanics for all devices (2nd version).
 
    ![alt text](images/image-11.png)
+
+4. Show and hide button with an animated lock and unlock icon synced with the show and hide button on the login page.
+
+5. Sign In page created (1st version), with warning messages for different rules.
+
+   ![Sign In Page](images/image-12.png)
+
+6. Translation service is now available (so far for the index page, but not other pages).
+
+   ![Translation 1](images/image-13.png)
+   ![Translation 2](images/image-14.png)
+   ![Translation 3](images/image-16.png)
+
