@@ -65,31 +65,35 @@ document.addEventListener('DOMContentLoaded', function () {
   function checkForCussWords(inputField, messageElement) {
     const value = inputField.value.trim().toLowerCase();
     messageElement.style.display = 'none';
-  
+
+    // Define the symbols you want to check for
+    const boundarySymbols = '[_.$@&%#-+=!~?^]';
+
     // Check Arabic words directly
     for (const word of arabicForbiddenWords) {
-      const arabicRegex = new RegExp(`(^|\\s|_)${word}(\\s|_|$)`, 'i');
-      if (arabicRegex.test(value)) {
-        messageElement.textContent = 'Please avoid using inappropriate language.';
-        messageElement.style.display = 'block';
-        inputField.value = ''; 
-        return true;
-      }
+        const arabicRegex = new RegExp(`(^|\\s|${boundarySymbols})${word}(${boundarySymbols}|$)`, 'i'); // Updated regex
+        if (arabicRegex.test(value)) {
+            messageElement.textContent = 'Please avoid using inappropriate language.';
+            messageElement.style.display = 'block';
+            inputField.value = ''; 
+            return true;
+        }
     }
-  
+
     // Check base64 decoded forbidden words
     for (const word of forbiddenWords) {
-      const regex = new RegExp(`(^|\\s|_)${word}(\\s|_|$)`, 'i');
-      if (regex.test(value)) {
-        messageElement.textContent = 'Please avoid using inappropriate language.';
-        messageElement.style.display = 'block';
-        inputField.value = ''; 
-        return true;
-      }
+        const regex = new RegExp(`(^|\\s|${boundarySymbols})${word}(${boundarySymbols}|$)`, 'i'); // Updated regex
+        if (regex.test(value)) {
+            messageElement.textContent = 'Please avoid using inappropriate language.';
+            messageElement.style.display = 'block';
+            inputField.value = ''; 
+            return true;
+        }
     }
-  
+
     return false;
-  }
+}
+
 
   function validateUsername(username) {
     const isValidLength = username.length >= 5 && username.length <= 15;
