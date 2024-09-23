@@ -164,3 +164,26 @@ document.querySelectorAll('#lang-dropdown button').forEach(btn => {
     translatePage(lang);
   });
 });
+
+  // Select the navigation button and the second rectangle bar
+  const navButton = document.querySelector('.nav-button');
+  const secondBar = document.getElementById('secondBar');
+
+  // Variable to track the toggle state
+  let isToggled = false;
+
+  // Add click event to the navigation button
+  navButton.addEventListener('click', () => {
+    if (isToggled) {
+      // If toggled, set the second bar width back to 70 and adjust y position
+      secondBar.setAttribute('width', '70');
+      secondBar.setAttribute('y', '70');
+    } else {
+      // Shrink it to 0 width and move it up to align with the top bar
+      secondBar.setAttribute('width', '0');
+      secondBar.setAttribute('y', '40'); // Same y-position as the top bar for smooth collapse
+    }
+
+    // Toggle the state
+    isToggled = !isToggled;
+  });

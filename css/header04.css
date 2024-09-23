@@ -78,7 +78,7 @@ nav {
     
 .register-button {
     background-color: rgba(120, 204, 196, 0);
-    margin-right: 30px;
+    margin-right: 10px;
     transition: background-color 0.3s;
 }
 
@@ -128,7 +128,7 @@ nav {
 }
 
 .header-logo {
-    height: 60px;
+    height: 50px;
 }
 
 /* Default transition settings */
