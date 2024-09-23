@@ -265,7 +265,7 @@ nav {
 }
 
 .dropdown-content button.active {
-    background-color: #d1d1d1; /* Slightly darker background for active option */
+    background-color: rgba(237, 237, 237, 0.435); /* Slightly darker background for active option */
     color: #000; /* Change text color if needed */
   }
   
