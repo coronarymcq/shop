@@ -70,8 +70,6 @@ nav {
 
 .login-button {
     background-color: rgba(52, 164, 162, 0);
-    margin-right: 10px;
-    margin-left: 10px;
 }
     
 .register-button {
@@ -175,6 +173,10 @@ nav {
         margin-right: 0px;
         padding: 10px 0px 10px 30px;
     }
+
+    .lang-button {
+        display: none;
+    }
 }
 
 /* For max-width 340.50px */
@@ -229,3 +231,34 @@ nav {
         visibility: hidden; /* Use this instead of display: none for smooth transition */
     }
 }
+
+.lang-button {
+    margin-left: 10px; /* Space between buttons */
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 0 0px 16px rgba(0, 0, 0, 0.089);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+.dropdown-content button:hover {
+    background-color: #f1f1f1; /* Highlight on hover */
+}
+
+.dropdown-content button.active {
+    background-color: #d1d1d1; /* Slightly darker background for active option */
+    color: #000; /* Change text color if needed */
+  }
+  

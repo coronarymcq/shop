@@ -2,20 +2,11 @@ document.querySelector('.nav-button').addEventListener('click', function() {
   var sidebar = document.querySelector('.side-bar-container');
   var header = document.querySelector('.header-container');
 
-  // Check if the sidebar is currently shown
   if (sidebar.classList.contains('show')) {
-    // Sidebar is shown, so we're hiding it now
     sidebar.classList.remove('show');
-    
-    // Delay the shadow and border reappearance to match the sidebar animation duration
-    setTimeout(function() {
-      header.classList.remove('header-no-shadow');
-    }, 200); // Same as your CSS transition duration (0.4s)
+    setTimeout(() => header.classList.remove('header-no-shadow'), 200);
   } else {
-    // Sidebar is hidden, so we're showing it now
     sidebar.classList.add('show');
-    
-    // Immediately remove the shadow and border
     header.classList.add('header-no-shadow');
   }
 });
@@ -23,69 +14,146 @@ document.querySelector('.nav-button').addEventListener('click', function() {
 // Add event listeners to all sidebar buttons
 document.querySelectorAll('.nav-bar, .nav-bar5').forEach(button => {
   button.addEventListener('click', function() {
-      // Remove 'active' class from all buttons
-      document.querySelectorAll('.nav-bar, .nav-bar5').forEach(btn => {
-          btn.classList.remove('active');
-      });
-
-      // Add 'active' class to the clicked button
-      this.classList.add('active');
+    document.querySelectorAll('.nav-bar, .nav-bar5').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    this.classList.add('active');
   });
 });
 
-// Add an event listener to the document to manage clicks outside the sidebar
+// Manage clicks outside the sidebar
 document.addEventListener('click', function(event) {
   if (!document.querySelector('.side-bar-container').contains(event.target)) {
-      // Optionally, you can add code here if you want to manage focus differently when clicking outside
-      // For instance, keeping the last clicked button highlighted
-      // Remove this part if you want the focus to stay on the last clicked button
-      // document.querySelectorAll('.nav-bar, .nav-bar5').forEach(button => {
-      //     button.classList.remove('active');
-      // });
+    // Optional focus management can be added here
   }
 });
 
 function goHome() {
-  if (window.location.pathname === '/index.html') {
-      location.reload();
-  } else {
-      window.location.href = 'index.html';
-  }
+  window.location.pathname === '/index.html' ? location.reload() : window.location.href = 'index.html';
 }
 
 function loadHome() {
   const mainContent = document.querySelector('.main');
-  fetch('cont/00.home/home.html') // Update this path to the correct location
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Network response was not ok');
-          }
-          return response.text();
-      })
-      .then(data => {
-          mainContent.innerHTML = data; // Load content from home.html
-      })
-      .catch(error => console.error('Error loading home content:', error));
+  fetch('cont/00.home/home.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.text();
+    })
+    .then(data => mainContent.innerHTML = data)
+    .catch(error => console.error('Error loading home content:', error));
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const logo = document.querySelector('.header-logo'); // Assuming your logo has this class
-  const currentUrl = window.location.href;
-
-  // Check if we're on the home page
-  if (currentUrl.endsWith("index.html")) {
-      logo.title = "Reload"; // Change title to "Reload"
-  } else {
-      logo.title = "Home"; // Otherwise, set it to "Home"
-  }
-
-  logo.onclick = function () {
-      if (currentUrl.endsWith("index.html")) {
-          location.reload(); // Reload if on home page
-      } else {
-          window.location.href = "index.html"; // Redirect to home page
-      }
-  };
+document.addEventListener("DOMContentLoaded", function() {
+  const logo = document.querySelector('.header-logo');
+  logo.title = window.location.href.endsWith("index.html") ? "Reload" : "Home";
+  logo.onclick = goHome;
 });
 
+function toggleDropdown() {
+  const dropdown = document.getElementById("lang-dropdown");
+  dropdown.style.display = (dropdown.style.display === "none" || dropdown.style.display === "") ? "block" : "none";
+}
 
+// Close the dropdown if clicked outside
+window.onclick = function(event) {
+  if (!event.target.matches('.lang-button')) {
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+    Array.from(dropdowns).forEach(openDropdown => {
+      if (openDropdown.style.display === "block") {
+        openDropdown.style.display = "none";
+      }
+    });
+  }
+};
+
+const translations = {
+  en: {
+    title: "MCQs Coronary Academic",
+    language: "Language",
+    login: "Login",
+    register: "Sign Up",
+    home: "Home",
+    mcqsLibrary: "MCQs Library",
+    profile: "Profile",
+    contactUs: "Contact Us",
+    help: "Help",
+    welcome: "Welcome to the Home Page!",
+    homeContent: "Here is your home page content.",
+    footerText: "© 2024 Coronary Academic MCQs. All rights reserved.",
+    beta: "Beta Version – Work in Progress",
+    btnEn: "English",
+    btnAr: "Arabic"
+  },
+  ar: {
+    title: "MCQs كوروناري أكاديمي",
+    language: "اللغة",
+    login: "تسجيل الدخول",
+    register: "إنشاء حساب",
+    home: "الصفحة الرئيسية",
+    mcqsLibrary: "مكتبة الأسئلة",
+    profile: "الملف الشخصي",
+    contactUs: "اتصل بنا",
+    help: "المساعدة",
+    welcome: "مرحبًا بكم في الصفحة الرئيسية!",
+    homeContent: "هنا محتوى صفحتك الرئيسية.",
+    footerText: "© 2024 أم سي كيو كوروناري أكاديمي. جميع الحقوق محفوظة.",
+    beta: "النسخة التجريبية - قيد التطوير",
+    btnEn: "إنجليزي",
+    btnAr: "عربي"
+  },
+};
+
+function translatePage(lang) {
+  const trans = translations[lang];
+
+  // Update title and buttons
+  document.title = trans.title;
+  document.querySelector('.lang-button').textContent = trans.language;
+  document.querySelector('.login-button').textContent = trans.login;
+  document.querySelector('.register-button').textContent = trans.register;
+
+  // Update all sidebar buttons
+  document.querySelectorAll('.nav-bar').forEach((btn, index) => {
+    if (index === 0) { // Assuming the first button is the Home button
+      btn.textContent = trans.home;
+    } else if (index === 1) {
+      btn.textContent = trans.mcqsLibrary;
+    } else if (index === 2) {
+      btn.textContent = trans.profile;
+    } else if (index === 3) {
+      btn.textContent = trans.contactUs;
+    }
+  });
+  document.querySelector('.nav-bar5').textContent = trans.help;
+
+  // Update main content
+  document.querySelector('.main h1').textContent = trans.welcome;
+  document.querySelector('.main p').textContent = trans.homeContent;
+  document.querySelector('.end-margin-text01').textContent = trans.footerText;
+  document.querySelector('.end-margin-text02').textContent = trans.beta;
+
+  // Update dropdown button texts
+  document.getElementById('btn-en').textContent = trans.btnEn;
+  document.getElementById('btn-ar').textContent = trans.btnAr;
+
+  // Manage active state for dropdown buttons
+  const langButtons = document.querySelectorAll('#lang-dropdown button');
+  langButtons.forEach(btn => btn.classList.remove('active'));
+  document.getElementById(lang === 'en' ? 'btn-en' : 'btn-ar').classList.add('active');
+}
+
+// Set default language to English
+translatePage('en');
+
+// Hide dropdown on window resize
+window.addEventListener('resize', function() {
+  document.getElementById('lang-dropdown').style.display = 'none';
+});
+
+// Language button click events
+document.querySelectorAll('#lang-dropdown button').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const lang = this.id === 'btn-en' ? 'en' : 'ar';
+    translatePage(lang);
+  });
+});
