@@ -91,3 +91,9 @@
    ![Translation 2](images/image-14.png)
    ![Translation 3](images/image-16.png)
 
+7. Updated Header (5th version) and logo animation on all pages
+
+   ![alt text](images/image-17.png)
+   ![alt text](images/image-18.png)
+   ![alt text](images/image-20.png) 
+   ![alt text](images/image-19.png)
