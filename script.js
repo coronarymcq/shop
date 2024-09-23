@@ -140,6 +140,13 @@ function translatePage(lang) {
   const langButtons = document.querySelectorAll('#lang-dropdown button');
   langButtons.forEach(btn => btn.classList.remove('active'));
   document.getElementById(lang === 'en' ? 'btn-en' : 'btn-ar').classList.add('active');
+
+  // Set the Arabic font for the body if Arabic is selected
+  if (lang === 'ar') {
+    document.body.classList.add('arabic-font');
+  } else {
+    document.body.classList.remove('arabic-font');
+  }
 }
 
 // Set default language to English

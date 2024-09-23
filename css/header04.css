@@ -1,3 +1,7 @@
+.arabic-font {
+    font-family: "Baloo Bhaijaan 2", Arial, sans-serif;
+  }
+  
 .header-container {
     background-color: #ffffff;
     color: #505050;
@@ -90,18 +94,20 @@ nav {
     touch-action: manipulation;
 }
 
+.lang-button:hover,
 .login-button:hover,
 .register-button:hover {
     cursor: pointer;
     color: rgb(52, 164, 162);
 }
-    
+
+.lang-button:active,
 .login-button:active,
 .register-button:active {
     color: rgba(57, 57, 57, 0.696);
 }
 
-
+.lang-button:focus,
 .login-button:focus,
 .register-button:focus {
     background-color: rgba(52, 164, 162, 0.002); /* Example color */
@@ -234,6 +240,7 @@ nav {
 
 .lang-button {
     margin-left: 10px; /* Space between buttons */
+    margin-right: 5px;
 }
 
 .dropdown-content {
