@@ -29,8 +29,23 @@ document.addEventListener('click', function(event) {
 });
 
 function goHome() {
-  window.location.pathname === '/index.html' ? location.reload() : window.location.href = 'index.html';
+  // Check if on the main index page
+  if (window.location.pathname.endsWith('index.html')) {
+      location.reload(); // Reload if on the index page
+  } else {
+      window.location.href = 'index.html'; // Go to index page otherwise
+  }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const logo = document.querySelector('.hover-logo');
+
+  // Set the title based on the current URL
+  logo.title = window.location.pathname.endsWith('index.html') ? "Reload" : "Home";
+  
+  // Attach the click event
+  logo.onclick = goHome;
+});
 
 function loadHome() {
   const mainContent = document.querySelector('.main');
@@ -43,11 +58,6 @@ function loadHome() {
     .catch(error => console.error('Error loading home content:', error));
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const logo = document.querySelector('.header-logo');
-  logo.title = window.location.href.endsWith("index.html") ? "Reload" : "Home";
-  logo.onclick = goHome;
-});
 
 function toggleDropdown() {
   const dropdown = document.getElementById("lang-dropdown");

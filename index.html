@@ -28,7 +28,6 @@
         cursor: pointer;
       }
 
-      /* Transition effect for the bars */
       svg rect {
         transition: width 0.4s ease, y 0.4s ease; /* Smooth transition for width and position */
       }
@@ -74,13 +73,18 @@
         <a href="cont/01.signUp/signup.html">
           <button class="register-button">Sign Up</button>
         </a>
-        <section>
+        <section class="logo-container">
           <img
             class="header-logo"
             src="icons/header-logo-2.webp"
-            onclick="goHome();"
+            alt="Home Logo"
+          />
+          <img
+            class="header-logo hover-logo"
+            src="icons/header-logo.webp"
             alt="Home Logo"
             title="Home"
+            onclick="goHome();"
           />
         </section>
       </div>

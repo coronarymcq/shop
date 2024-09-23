@@ -136,6 +136,34 @@ nav {
     transition: all 0.3s ease-in-out;
 }
 
+.logo-container {
+    position: relative;
+    margin-left: 60px; /* Pushes the logo container to the right */
+    height: 50px; /* Ensures the container matches the header height */
+}
+
+.header-logo,
+.hover-logo {
+    position: absolute;
+    top: 0;
+    right: 0; /* Align to the right */
+    transition: opacity 0.1s ease; /* Smooth transition with ease-out */
+}
+
+.hover-logo {
+    opacity: 0.15; /* Hide the second image by default */
+}
+
+.logo-container:hover .header-logo {
+    opacity: 1; 
+}
+
+.logo-container:hover .hover-logo {
+    opacity: 1; /* Fade in the second image */
+}
+
+
+
 /* For max-width 580px */
 @media (max-width: 580px) {
     .header-container {
@@ -172,6 +200,10 @@ nav {
         opacity: 0;
         visibility: hidden; /* Makes it invisible but keeps space */
         position: absolute;
+    }
+
+    .logo-container {
+        margin-left: 0px;
     }
 
     .login-button,
@@ -240,7 +272,7 @@ nav {
 
 .lang-button {
     margin-left: 10px; /* Space between buttons */
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 .dropdown-content {
@@ -268,4 +300,7 @@ nav {
     background-color: rgba(237, 237, 237, 0.435); /* Slightly darker background for active option */
     color: #000; /* Change text color if needed */
   }
+
+
+
   

@@ -191,16 +191,6 @@ html, body {
   margin: 0;
 }
 
-.header {
-   overflow: hidden;
-   position: absolute;
-   top: 0;
-   right: 0; 
-   left: 0;
-   height: 85px;
-   margin-top: 40px;
-}
-
 .content {
   overflow: hidden;
   position: absolute;
@@ -578,3 +568,45 @@ input {
 .measure {
   margin-bottom: 20px;
 }
+
+
+.header {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0; 
+  left: 0;
+  height: 85px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center;
+}
+
+.logo-container {
+  position: relative; /* Keep relative positioning for logos */
+  height: 100%; /* Ensure the container takes full height */
+}
+
+.header-logo,
+.hover-logo {
+  position: absolute; /* Stack logos on top of each other */
+  top: 50%; /* Center both images vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  transition: opacity 0.1s ease; /* Smooth transition */
+}
+
+.hover-logo {
+  opacity: 0.15; /* Hide the second image by default */
+}
+
+.logo-container:hover .header-logo {
+  opacity: 1; 
+}
+
+.logo-container:hover .hover-logo {
+  opacity: 1; /* Fade in the second image */
+}
+
