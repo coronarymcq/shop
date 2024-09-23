@@ -84,7 +84,7 @@ const translations = {
     register: "Sign Up",
     home: "Home",
     mcqsLibrary: "MCQs Library",
-    profile: "Profile",
+    Uni: "BAU",
     contactUs: "Contact Us",
     help: "Help",
     welcome: "Welcome to the Home Page!",
@@ -101,7 +101,7 @@ const translations = {
     register: "إنشاء حساب",
     home: "الصفحة الرئيسية",
     mcqsLibrary: "مكتبة الأسئلة",
-    profile: "الملف الشخصي",
+    Uni: "جامعة البلقاء التطبيقية",
     contactUs: "اتصل بنا",
     help: "المساعدة",
     welcome: "مرحبًا بكم في الصفحة الرئيسية!",
@@ -129,7 +129,7 @@ function translatePage(lang) {
     } else if (index === 1) {
       btn.textContent = trans.mcqsLibrary;
     } else if (index === 2) {
-      btn.textContent = trans.profile;
+      btn.textContent = trans.Uni;
     } else if (index === 3) {
       btn.textContent = trans.contactUs;
     }
