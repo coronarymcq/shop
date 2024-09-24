@@ -108,6 +108,45 @@ function goHome() {
   window.location.href = 'index.html'; // Always go to the main index page
 }
 
+function NavHome() {
+  sessionStorage.clear(); // Clear sessionStorage
+
+  // Check if content is already stored in localStorage
+  const savedContent = localStorage.getItem('homeContent');
+
+  if (savedContent) {
+    // If content is in localStorage, load it into .main
+    document.querySelector('.main').innerHTML = savedContent;
+  } else {
+    // Fetch the HTML file if not in localStorage
+    fetch('cont/00.home/home.html')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.querySelector('.main').innerHTML = data; // Insert the fetched HTML into .main
+        localStorage.setItem('homeContent', data); // Save content to localStorage
+      })
+      .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+      });
+  }
+}
+
+// When the page loads, automatically check for saved content
+window.addEventListener('load', () => {
+  const savedContent = localStorage.getItem('homeContent');
+  if (savedContent) {
+    document.querySelector('.main').innerHTML = savedContent;
+  }
+});
+
+
+
+
 // Simulated fetch function to demonstrate changing content
 function fetchContent(contentType) {
   console.log(`Fetching ${contentType} content...`);
