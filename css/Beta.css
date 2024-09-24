@@ -134,9 +134,9 @@ li {
 }
 
 
-
-
-
+.TORdiv {
+  font-size: 8px;
+}
 
 
 
@@ -181,10 +181,14 @@ li {
     line-height: 60px;
   }
 
+  .TORdiv {
+    font-size: 8px;
+  }
+
 }
 
 
-@media (max-width: 460px) {
+@media (max-width: 540px) {
 
   .BAUTitle {
     font-size: 25px;
@@ -223,6 +227,10 @@ li {
     transition: background-color 0.2s;
     list-style-type: disc;
     line-height: 50px;
+  }
+
+  .TORdiv {
+    font-size: 5px;
   }
 
 }
@@ -269,6 +277,10 @@ li {
     line-height: 50px;
   }
 
+  .TORdiv {
+    font-size: 4px;
+  }
+
 }
 
 
@@ -307,10 +319,14 @@ li {
   }
 
   li {
-    font-size: 7px;
+    font-size: 5px;
     transition: background-color 0.2s;
     list-style-type: disc;
     line-height: 30px;
+  }
+
+  .TORdiv {
+    font-size: 3px;
   }
 
 }
@@ -351,10 +367,14 @@ li {
   }
 
   li {
-    font-size: 5px;
+    font-size: 3px;
     transition: background-color 0.2s;
     list-style-type: disc;
     line-height: 20px;
+  }
+
+  .TORdiv {
+    font-size: 2px;
   }
 
 }
