@@ -114,6 +114,12 @@ function NavHome() {
   // Check if content is already stored in localStorage
   const savedContent = localStorage.getItem('homeContent');
 
+
+  // Update the logo title
+  const logo = document.querySelector('.hover-logo');
+  logo.title = "Reload"; // Update the title when navigating to home
+
+
   if (savedContent) {
     // If content is in localStorage, load it into .main
     document.querySelector('.main').innerHTML = savedContent;
