@@ -37,15 +37,338 @@ footer {
   top: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 .main {
   flex: 1;
-  margin: auto;
-  text-align: center;
+  margin: 0;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: left;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 100px;
-  padding-bottom: 700px;
+  padding-bottom: 70px;
+  a:visited {
+    color: inherit; /* Keeps the original color */
+
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .Clickhere {
+    color: rgb(94, 93, 93);
+    transition: color 0.2s ease;
+  }
+
+  .Clickhere:active,
+  .Clickhere:hover {
+  color: rgb(47, 174, 172);
+  text-decoration: underline;
+  }
+
+  .Clickhere.active {
+    color: rgb(52, 164, 162);
+    text-decoration: underline;
+  }
 }
+
+
+.BAUTitle {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 45px;
+  margin-bottom: 40px;
+}
+
+.OurUNI {
+  color: rgba(45, 45, 45, 0.812);
+  font-weight: bold;
+}
+
+.all-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+}
+
+.label-container,
+.info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* Center the text vertically */
+  text-align: right;
+  font-size: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 50px; /* Ensure containers have a set height */
+}
+
+.QS, .FA, .ST {
+  margin-left: 5px;
+  margin-right: 5px;
+  line-height: 50px; /* Match line height to the container height */
+  color: rgb(52, 164, 162);
+}
+
+li {
+  font-size: 23px;
+  transition: background-color 0.2s;
+  list-style-type: disc;
+  line-height: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 750px) {
+
+  .BAUTitle {
+    font-size: 30px;
+  }
+
+  .label-container,
+  .info-container {
+    display: flex;
+    flex-direction: row; /* Change to row to make them side by side */
+    justify-content: space-between;
+    align-items: center; /* Vertically center the text */
+    text-align: left;
+    font-size: 20px; /* Adjust font size for better mobile display */
+    white-space: nowrap;
+    overflow: hidden;
+    height: 30px;
+  }
+
+  .QS, .FA, .ST {
+    line-height: 30px;
+  }
+
+  .label-container div, 
+  .info-container div {
+    margin-right: 10px; /* Add some spacing between labels and stats */
+  }
+
+  li {
+    font-size: 19px;
+    transition: background-color 0.2s;
+    list-style-type: disc;
+    line-height: 60px;
+  }
+
+}
+
+
+@media (max-width: 460px) {
+
+  .BAUTitle {
+    font-size: 25px;
+  }
+
+  .OurUNI {
+    font-size: 17px;
+    
+  }
+
+  .label-container,
+  .info-container {
+    display: flex;
+    flex-direction: row; /* Change to row to make them side by side */
+    justify-content: space-between;
+    align-items: center; /* Vertically center the text */
+    text-align: left;
+    font-size: 15px; /* Adjust font size for better mobile display */
+    white-space: nowrap;
+    overflow: hidden;
+    height: 20px;
+
+  }
+
+  .QS, .FA, .ST {
+    line-height: 20px;
+  }
+
+  .label-container div, 
+  .info-container div {
+    margin-right: 10px; /* Add some spacing between labels and stats */
+  }
+
+  li {
+    font-size: 13px;
+    transition: background-color 0.2s;
+    list-style-type: disc;
+    line-height: 50px;
+  }
+
+}
+
+@media (max-width: 380px) {
+
+
+  .BAUTitle {
+    font-size: 20px;
+  }
+
+  .OurUNI {
+    font-size: 15px;
+    
+  }
+
+  .label-container,
+  .info-container {
+    display: flex;
+    flex-direction: row; /* Change to row to make them side by side */
+    justify-content: space-between;
+    align-items: center; /* Vertically center the text */
+    text-align: left;
+    font-size: 10px; /* Adjust font size for better mobile display */
+    white-space: nowrap;
+    overflow: hidden;
+    height: 15px;
+
+  }
+
+  .QS, .FA, .ST {
+    line-height: 15px;
+  }
+
+  .label-container div, 
+  .info-container div {
+    margin-right: 10px; /* Add some spacing between labels and stats */
+  }
+
+  li {
+    font-size: 10px;
+    transition: background-color 0.2s;
+    list-style-type: disc;
+    line-height: 50px;
+  }
+
+}
+
+
+@media (max-width: 260px) {
+
+  .BAUTitle {
+    font-size: 13px;
+  }
+
+  .OurUNI {
+    font-size: 10px;
+    
+  }
+
+  .label-container,
+  .info-container {
+    display: flex;
+    flex-direction: row; /* Change to row to make them side by side */
+    justify-content: space-between;
+    align-items: center; /* Vertically center the text */
+    text-align: left;
+    font-size: 6px; /* Adjust font size for better mobile display */
+    white-space: nowrap;
+    overflow: hidden;
+    height: 13px;
+
+  }
+
+  .QS, .FA, .ST {
+    line-height: 13px;
+  }
+
+  .label-container div, 
+  .info-container div {
+    margin-right: 10px; /* Add some spacing between labels and stats */
+  }
+
+  li {
+    font-size: 7px;
+    transition: background-color 0.2s;
+    list-style-type: disc;
+    line-height: 30px;
+  }
+
+}
+
+
+@media (max-width: 220px) {
+
+  .BAUTitle {
+    font-size: 10px;
+  }
+
+  .OurUNI {
+    font-size: 5px;
+    
+  }
+
+  .label-container,
+  .info-container {
+    display: flex;
+    flex-direction: row; /* Change to row to make them side by side */
+    justify-content: space-between;
+    align-items: center; /* Vertically center the text */
+    text-align: left;
+    font-size: 5px; /* Adjust font size for better mobile display */
+    white-space: nowrap;
+    overflow: hidden;
+    height: 5px;
+
+  }
+
+  .QS, .FA, .ST {
+    line-height: 5px;
+  }
+
+  .label-container div, 
+  .info-container div {
+    margin-right: 10px; /* Add some spacing between labels and stats */
+  }
+
+  li {
+    font-size: 5px;
+    transition: background-color 0.2s;
+    list-style-type: disc;
+    line-height: 20px;
+  }
+
+}
+
+.TOR {
+  margin-top: 50px;
+}
+
+
+
+
+
+
+
 
 .end-margin {
   position: relative; 
