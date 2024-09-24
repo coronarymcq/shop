@@ -257,7 +257,7 @@ const translations = {
     language: "Language",
     login: "Login",
     register: "Sign Up",
-    home: "Home",
+    HomeNavButton: "Home",
     mcqsLibrary: "MCQs Library",
     Uni: "BAU",
     contactUs: "Contact Us",
@@ -272,7 +272,7 @@ const translations = {
     language: "اللغة",
     login: "تسجيل الدخول",
     register: "إنشاء حساب",
-    home: "الصفحة الرئيسية",
+    HomeNavButton: "الصفحة الرئيسية",
     mcqsLibrary: "مكتبة الأسئلة",
     Uni: "جامعة البلقاء التطبيقية",
     contactUs: "اتصل بنا",
@@ -296,7 +296,7 @@ function translatePage(lang) {
   // Update all sidebar buttons
   document.querySelectorAll('.nav-bar').forEach((btn, index) => {
     if (index === 0) {
-      btn.textContent = trans.home;
+      btn.textContent = trans.HomeNavButton;
     } else if (index === 1) {
       btn.textContent = trans.mcqsLibrary;
     } else if (index === 2) {
