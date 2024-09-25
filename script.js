@@ -1,43 +1,58 @@
 document.querySelector('.nav-button').addEventListener('click', function() {
   var sidebar = document.querySelector('.side-bar-container');
   var header = document.querySelector('.header-container');
-  const secondBar = document.getElementById('secondBar'); // Select the second rectangle bar
-  let isToggled = secondBar.getAttribute('width') === '0'; // Check toggle state based on width
+  const secondBar = document.getElementById('secondBar');
+  let isToggled = secondBar.getAttribute('width') === '0';
 
   // Toggle sidebar
   if (sidebar.classList.contains('show')) {
     sidebar.classList.remove('show');
     setTimeout(() => header.classList.remove('header-no-shadow'), 200);
-    secondBar.setAttribute('width', '70'); // Reset second bar width when sidebar is hidden
+    secondBar.setAttribute('width', '70');
     secondBar.setAttribute('y', '70');
   } else {
     sidebar.classList.add('show');
     header.classList.add('header-no-shadow');
-    secondBar.setAttribute('width', '0'); // Shrink second bar when sidebar is shown
-    secondBar.setAttribute('y', '40'); // Align with top bar for smooth collapse
+    secondBar.setAttribute('width', '0');
+    secondBar.setAttribute('y', '40');
   }
 });
 
 // Add event listeners to all sidebar buttons
 document.querySelectorAll('.nav-bar, .nav-bar5').forEach(button => {
   button.addEventListener('click', function() {
+    // Remove active class from all buttons
     document.querySelectorAll('.nav-bar, .nav-bar5').forEach(btn => {
       btn.classList.remove('active');
     });
+    // Add active class to the clicked button
     this.classList.add('active');
+    // Store the active button's ID in sessionStorage
+    sessionStorage.setItem('activeButton', this.id);
   });
+});
+
+// Load the active button state on page load
+window.addEventListener('load', function() {
+  const activeButtonId = sessionStorage.getItem('activeButton');
+  if (activeButtonId) {
+    const activeButton = document.getElementById(activeButtonId);
+    if (activeButton) {
+      activeButton.classList.add('active'); // Set the active class to the stored button
+    }
+  }
 });
 
 // Hide sidebar on scroll
 window.addEventListener('scroll', function() {
   var sidebar = document.querySelector('.side-bar-container');
   var header = document.querySelector('.header-container');
-  const secondBar = document.getElementById('secondBar'); // Select the second rectangle bar
+  const secondBar = document.getElementById('secondBar');
 
   if (sidebar.classList.contains('show')) {
     sidebar.classList.remove('show');
     header.classList.remove('header-no-shadow');
-    secondBar.setAttribute('width', '70'); // Reset second bar width when sidebar is hidden on scroll
+    secondBar.setAttribute('width', '70');
     secondBar.setAttribute('y', '70');
   }
 });
@@ -47,18 +62,20 @@ document.addEventListener('click', function(event) {
   var sidebar = document.querySelector('.side-bar-container');
   var header = document.querySelector('.header-container');
   var navButton = document.querySelector('.nav-button');
-  const secondBar = document.getElementById('secondBar'); // Select the second rectangle bar
+  const secondBar = document.getElementById('secondBar');
 
-  // Check if click is outside the sidebar and nav button
   if (!sidebar.contains(event.target) && !navButton.contains(event.target)) {
     if (sidebar.classList.contains('show')) {
       sidebar.classList.remove('show');
       header.classList.remove('header-no-shadow');
-      secondBar.setAttribute('width', '70'); // Reset second bar width when sidebar is hidden on outside click
+      secondBar.setAttribute('width', '70');
       secondBar.setAttribute('y', '70');
     }
   }
 });
+
+// Remaining code for fetching content and other functionalities...
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const logo = document.querySelector('.hover-logo');
@@ -356,3 +373,57 @@ document.querySelectorAll('#lang-dropdown button').forEach(btn => {
     translatePage(lang);
   });
 });
+function loadContactUs() {
+  fetch('cont/00.contact/contact.html')
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.text();
+      })
+      .then(data => {
+          // Load the content into the main div
+          document.querySelector('.main').innerHTML = data;
+
+          // Store the current page in sessionStorage
+          sessionStorage.setItem('currentPage', 'contact');
+      })
+      .catch(error => {
+          console.error('There was a problem with the fetch operation:', error);
+      });
+}
+
+// Function to load the page based on session storage
+function loadCurrentPage() {
+  const currentPage = sessionStorage.getItem('currentPage');
+
+  if (currentPage === 'contact') {
+      loadContactUs();
+  } else {
+      // Load home content or other default content
+      loadHomeContent(); // Define this function to load the home page
+  }
+}
+
+// Call loadCurrentPage on page load
+window.onload = loadCurrentPage;
+
+// Optionally define the loadHomeContent function
+function loadHomeContent() {
+  // Example to fetch home content
+  fetch('cont/home.html')
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.text();
+      })
+      .then(data => {
+          document.querySelector('.main').innerHTML = data;
+          // Optionally store the home page state
+          sessionStorage.setItem('currentPage', 'home');
+      })
+      .catch(error => {
+          console.error('There was a problem with the fetch operation:', error);
+      });
+}
