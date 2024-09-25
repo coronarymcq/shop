@@ -36,3 +36,7 @@
 <!-- This bug has been fixed -->
 
 16. Add: When clicking on one of the Nav buttons on the side bar to automatically hide the sidebar back to where it was 
+
+17. Remove the title of the index header-logo to save time and avoid complexity fixing the translation and the updating the function for diff pages
+
+18. Fix: The alignment of the numbers to their labels in the counting container (bau.html)
