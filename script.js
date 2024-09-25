@@ -170,7 +170,7 @@ function loadContent(page) {
       activeNavButton = 'nav-bar3'; // Set the active button for BAU
       break;
     case 'main':
-      filePath = 'cont/main.html'; // Replace with your main content file path
+      filePath = 'cont/00.home/home.html'; // Update to fetch from the correct main content file
       activeNavButton = 'nav-bar1'; // Set the active button for Main
       break;
     // Add cases for other pages if needed
@@ -189,16 +189,17 @@ function loadContent(page) {
         existingScript.remove();
       }
 
-      // Load bau.js dynamically after content is loaded
-      const script = document.createElement('script');
-      script.src = 'cont/00.bau/bau.js'; // Path to your JS file
-      script.type = 'text/javascript';
-      script.onload = () => {
-        console.log("BAU JavaScript loaded");
-        // Call the counting function here if needed
-        startCounting(); // Ensure you call startCounting() if defined in bau.js
-      };
-      document.body.appendChild(script);
+      // Load bau.js dynamically after content is loaded if the page is 'bau'
+      if (page === 'bau') {
+        const script = document.createElement('script');
+        script.src = 'cont/00.bau/bau.js'; // Path to your JS file
+        script.type = 'text/javascript';
+        script.onload = () => {
+          console.log("BAU JavaScript loaded");
+          startCounting(); // Ensure you call startCounting() if defined in bau.js
+        };
+        document.body.appendChild(script);
+      }
 
       // Activate the correct nav button
       document.querySelectorAll('.nav-bar, .nav-bar5').forEach(btn => {
