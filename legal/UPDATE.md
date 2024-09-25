@@ -1,4 +1,4 @@
-# UPDATES (current version: 1.8(:1.2.4.2.3))
+# UPDATES (current version: 1.9.1.2.4.4.1)
 
 ****
 
@@ -97,3 +97,13 @@
    ![alt text](images/image-18.png)
    ![alt text](images/image-20.png) 
    ![alt text](images/image-19.png)
+
+****
+**Version 1.9 | September 24-26**
+
+1. Various issues and bugs have been fixed with the new content being prepared (so far, adding the Contact Us page)
+
+
+2. Planning for more features and system for the whole site coming soon with a better management
+
+****

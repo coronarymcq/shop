@@ -2,13 +2,13 @@
 
 ****
 
-1. **Fix: ~~Logo title not being translated probably~~** 
+1. **Fix: ~~Logo title not being translated probably (EASY)~~** 
 <!-- Will be ignored for doing a major fix -->
 
 
 2. Add: Translation not yet added for other content 
 
-3. **Fix: ~~The Home logo in the Login and Reg page is not redirecting to the Home correctly~~**
+3. **Fix: ~~The Home logo in the Login and Reg page is not redirecting to the Home correctly (EASY)~~**
 <!-- This bug has been fixed -->
 
 4. Add: Home content 
@@ -32,7 +32,7 @@
 13. **Fix: ~~Counting animation isn't starting after fetching the BAU content (HARD)~~**
 <!-- This bug has been fixed -->
 
-14. **Fix: ~~Update the title from Reload to Home on the contact us page~~**
+14. **Fix: ~~Update the title from Reload to Home on the contact us page (EASY)~~**
 <!-- Will be ignored for doing a major fix -->
 
 
@@ -41,7 +41,7 @@
 
 16. Add: When clicking on one of the Nav buttons on the side bar to automatically hide the sidebar back to where it was 
 
-17. **~~Remove the title of the index header-logo to save time and avoid complexity fixing the translation and the updating the function for diff pages~~**
+17. **Remove: ~~The title of the index header-logo and for the sign up, and login in page html to save time and avoid complexity fixing the translation and the updating the function for diff pages (EASY)~~**
 <!-- This has been removed and updated -->
 
 
@@ -53,5 +53,5 @@
 
 4.  Update: Update the BAU page to add more content and animation for scrolling through the content 
 
-5.  **Add: ~~A file structure that explains the scheme of the website~~**
+5.  **Add: ~~A file structure that explains the scheme of the website (EASY)~~**
 <!-- This has been created and updated -->
