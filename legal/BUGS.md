@@ -6,4 +6,6 @@
 
 2. Translation not yet added for other content 
 
-3. The Home logo in the Login and Reg page is not redirecting to the Home correctly
+3. ~~The Home logo in the Login and Reg page is not redirecting to the Home correctly~~
+<!-- This bug has been fixed -->
+
