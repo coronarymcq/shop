@@ -51,4 +51,5 @@
 
 21. Update: Update the BAU page to add more content and animation for scrolling through the content 
 
-22. Add: A file structure that explains the scheme of the website 
+22. **Add: ~~A file structure that explains the scheme of the website~~**
+<!-- This has been created and updated -->

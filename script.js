@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const logo = document.querySelector('.hover-logo');
 
   function updateLogoTitle(contentType) {
-    logo.title = contentType === 'home' ? "Reload" : "Home";
+    logo.title = contentType === '' ? "" : "";
   }
 
   // Check the current content type
