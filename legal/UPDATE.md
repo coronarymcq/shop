@@ -106,6 +106,6 @@
 1. Various issues and bugs have been fixed with the new content being prepared (so far, adding the Contact Us page)
 
 
-2. Planning for more features and system for the whole site coming soon with a better management
+2. More features and improved system management coming soon to enhance the entire site.
 
 ****
