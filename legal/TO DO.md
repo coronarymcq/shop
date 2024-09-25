@@ -2,11 +2,13 @@
 
 ****
 
-1. Fix: Logo title not being translated probably 
+1. **Fix: ~~Logo title not being translated probably~~** 
+<!-- Will be ignored for doing a major fix -->
+
 
 2. Add: Translation not yet added for other content 
 
-3. ~~Fix: The Home logo in the Login and Reg page is not redirecting to the Home correctly~~
+3. **Fix: ~~The Home logo in the Login and Reg page is not redirecting to the Home correctly~~**
 <!-- This bug has been fixed -->
 
 4. Add: Home content 
@@ -27,12 +29,14 @@
 
 12. Fix: Logo title Reload and Home refresh problem 
 
-13. Fix: ~~Counting animation isn't starting after fetching the BAU content~~
+13. **Fix: ~~Counting animation isn't starting after fetching the BAU content~~**
 <!-- This bug has been fixed -->
 
-14. Fix: Update the title from Reload to Home on the contact us page
+14. **Fix: ~~Update the title from Reload to Home on the contact us page~~**
+<!-- Will be ignored for doing a major fix -->
 
-15. Fix: ~~A problem of the counting animation when nav back from a diff nav button~~
+
+15. **Fix: ~~A problem of the counting animation when nav back from a diff nav button~~**
 <!-- This bug has been fixed -->
 
 16. Add: When clicking on one of the Nav buttons on the side bar to automatically hide the sidebar back to where it was 
@@ -40,3 +44,11 @@
 17. Remove the title of the index header-logo to save time and avoid complexity fixing the translation and the updating the function for diff pages
 
 18. Fix: The alignment of the numbers to their labels in the counting container (bau.html)
+
+19. Fix: the resizing footer and the text font that is too big 
+
+20. Add: A new design for the footer to match the header and the whole look in general
+
+21. Update: Update the BAU page to add more content and animation for scrolling through the content 
+
+22. Add: A file structure that explains the scheme of the website 
