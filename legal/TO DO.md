@@ -1,4 +1,4 @@
-# TO DO (current version: 1.8(:1.2.4.2.3))
+# TO DO (current version: 1.9.1.2.4.4.1)
 
 ****
 
@@ -25,9 +25,12 @@
 
 10. Add: Google service for login or signing in 
 
-11. Fix: When Nav from BAU to MCQ lib to Home then back to BAU, BAU doesn't load correctly
+11. **Fix: ~~When Nav from BAU to MCQ lib to Home then back to BAU, BAU doesn't load correctly (HARD)~~**
+<!-- This bug has been fixed -->
 
-12. Fix: Logo title Reload and Home refresh problem 
+12. **Fix: ~~Logo title Reload and Home refresh problem~~**
+<!-- This bug has been fixed -->
+
 
 13. **Fix: ~~Counting animation isn't starting after fetching the BAU content (HARD)~~**
 <!-- This bug has been fixed -->
@@ -44,14 +47,14 @@
 17. **Remove: ~~The title of the index header-logo and for the sign up, and login in page html to save time and avoid complexity fixing the translation and the updating the function for diff pages (EASY)~~**
 <!-- This has been removed and updated -->
 
+20.  Add: A new design for the footer to match the header and the whole look in general
 
-1.  Fix: The alignment of the numbers to their labels in the counting container (bau.html)
+21.  Update: Update the BAU page to add more content and animation for scrolling through the content 
 
-2.  Fix: the resizing footer and the text font that is too big 
-
-3.  Add: A new design for the footer to match the header and the whole look in general
-
-4.  Update: Update the BAU page to add more content and animation for scrolling through the content 
-
-5.  **Add: ~~A file structure that explains the scheme of the website (EASY)~~**
+22.  **Add: ~~A file structure that explains the scheme of the website (EASY)~~**
 <!-- This has been created and updated -->
+
+23.  **~~Moving the bugs and fixes req's to the github issues page (EASY)~~**
+<!-- This has been done and updated -->
+
+24. Add: Dark and light theme option
