@@ -210,3 +210,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+
+function goHome() {
+  sessionStorage.clear(); // Clear sessionStorage when navigating to home
+  window.location.href = '../../index.html'; // Always go to the main index page
+}
+
+// Attach the click event to the logo
+logo.onclick = function() {
+  goHome(); // This will navigate to home
+  fetchContent('home'); // Simulate loading home content
+};
