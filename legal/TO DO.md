@@ -1,0 +1,25 @@
+# TO DO (current version: 1.8(:1.2.4.2.3))
+
+****
+
+1. Fix: Logo title not being translated probably 
+
+2. Add: Translation not yet added for other content 
+
+3. ~~Fix: The Home logo in the Login and Reg page is not redirecting to the Home correctly~~
+<!-- This bug has been fixed -->
+
+4. Add: Home content 
+
+5. Add: Contact us content
+
+6. Add: Help content 
+
+7. Add: Terms and policy for the data protection system and usage 
+
+8. Add: Sign Up and Login In system 
+
+9. Add: Code generator for activating the premium content - used only once 
+
+10. Add: Google service for login or signing in 
+
