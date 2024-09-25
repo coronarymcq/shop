@@ -29,14 +29,14 @@
 
 12. Fix: Logo title Reload and Home refresh problem 
 
-13. **Fix: ~~Counting animation isn't starting after fetching the BAU content~~**
+13. **Fix: ~~Counting animation isn't starting after fetching the BAU content (HARD)~~**
 <!-- This bug has been fixed -->
 
 14. **Fix: ~~Update the title from Reload to Home on the contact us page~~**
 <!-- Will be ignored for doing a major fix -->
 
 
-15. **Fix: ~~A problem of the counting animation when nav back from a diff nav button~~**
+15. **Fix: ~~A problem of the counting animation when nav back from a diff nav button (HARD)~~**
 <!-- This bug has been fixed -->
 
 16. Add: When clicking on one of the Nav buttons on the side bar to automatically hide the sidebar back to where it was 
