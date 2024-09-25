@@ -91,15 +91,17 @@
     </header>
 
     <nav class="side-bar-container">
-      <button class="nav-bar active" onclick="NavHome();" id="nav-bar1">
+      <button class="nav-bar active" data-page="main" id="nav-bar1">
         Home
       </button>
-      <button class="nav-bar" id="nav-bar2">MCQS Library</button>
-      <button class="nav-bar" id="nav-bar3" onclick="loadBAU();">BAU</button>
-      <button class="nav-bar" id="nav-bar4" onclick="loadContactUs();">
+      <button class="nav-bar" data-page="library" id="nav-bar2">
+        MCQS Library
+      </button>
+      <button class="nav-bar" data-page="bau" id="nav-bar3">BAU</button>
+      <button class="nav-bar" data-page="contact" id="nav-bar4">
         Contact Us
       </button>
-      <button class="nav-bar5">Help</button>
+      <button class="nav-bar5" data-page="help" id="nav-bar5">Help</button>
     </nav>
 
     <div class="main"></div>

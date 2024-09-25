@@ -24,3 +24,7 @@
 10. Add: Google service for login or signing in 
 
 11. Fix: When Nav from BAU to MCQ lib to Home then back to BAU, BAU doesn't load correctly
+
+12. Fix: Logo title Reload and Home refresh problem 
+
+13. Fix: Counting animation isn't starting after fetching the BAU content
