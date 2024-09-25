@@ -41,15 +41,17 @@
 
 16. Add: When clicking on one of the Nav buttons on the side bar to automatically hide the sidebar back to where it was 
 
-17. Remove the title of the index header-logo to save time and avoid complexity fixing the translation and the updating the function for diff pages
+17. **~~Remove the title of the index header-logo to save time and avoid complexity fixing the translation and the updating the function for diff pages~~**
+<!-- This has been removed and updated -->
 
-18. Fix: The alignment of the numbers to their labels in the counting container (bau.html)
 
-19. Fix: the resizing footer and the text font that is too big 
+1.  Fix: The alignment of the numbers to their labels in the counting container (bau.html)
 
-20. Add: A new design for the footer to match the header and the whole look in general
+2.  Fix: the resizing footer and the text font that is too big 
 
-21. Update: Update the BAU page to add more content and animation for scrolling through the content 
+3.  Add: A new design for the footer to match the header and the whole look in general
 
-22. **Add: ~~A file structure that explains the scheme of the website~~**
+4.  Update: Update the BAU page to add more content and animation for scrolling through the content 
+
+5.  **Add: ~~A file structure that explains the scheme of the website~~**
 <!-- This has been created and updated -->
