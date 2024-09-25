@@ -27,4 +27,10 @@
 
 12. Fix: Logo title Reload and Home refresh problem 
 
-13. Fix: Counting animation isn't starting after fetching the BAU content
+13. Fix: ~~Counting animation isn't starting after fetching the BAU content~~
+<!-- This bug has been fixed -->
+
+14. Fix: Update the title from Reload to Home on the contact us page
+
+15. Fix: ~~A problem of the counting animation when nav back from a diff nav button~~
+<!-- This bug has been fixed -->
