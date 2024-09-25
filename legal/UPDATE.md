@@ -98,6 +98,8 @@
    ![alt text](images/image-20.png) 
    ![alt text](images/image-19.png)
 
+8. The small default title icon has been changed for the current logo of the website
+
 ****
 **Version 1.9 | September 24-26**
 
