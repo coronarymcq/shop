@@ -224,6 +224,4 @@ function resetCounters() {
   });
 }
 
-// Additional dropdown and translation functions remain unchanged
-
 /*-----------------------------------------------------------------------*/ 
