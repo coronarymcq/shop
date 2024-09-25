@@ -145,10 +145,17 @@ function NavHome() {
 // When the page loads, automatically check for saved content
 window.addEventListener('load', () => {
   const savedContent = localStorage.getItem('homeContent');
-  if (savedContent) {
-    document.querySelector('.main').innerHTML = savedContent;
+  const currentPage = sessionStorage.getItem('currentPage');
+  
+  if (!currentPage) {
+    // If there's no current page stored, fetch the home page by default
+    NavHome(); // Fetch and display home content
+  } else {
+    // Load the stored page
+    loadContent(currentPage); 
   }
 });
+
 
 
 
