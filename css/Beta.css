@@ -53,12 +53,12 @@ footer {
 .main {
   flex: 1;
   margin: 0;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 70px;
+  margin-right: 70px;
   text-align: left;
   margin-top: 0px;
   margin-bottom: 0px;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 70px;
   a:visited {
     color: inherit; /* Keeps the original color */

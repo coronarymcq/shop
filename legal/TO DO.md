@@ -34,3 +34,5 @@
 
 15. Fix: ~~A problem of the counting animation when nav back from a diff nav button~~
 <!-- This bug has been fixed -->
+
+16. Add: When clicking on one of the Nav buttons on the side bar to automatically hide the sidebar back to where it was 
