@@ -1,24 +1,32 @@
+
+
 :root {
   /* Light theme variables (default) */
   --bg-color: #ffffff;
-  --text-color: #000000;
+  --text-color: rgb(0, 0, 0); /* General text color */
+  --specific-text-color: gray; /* Specific text color variable */
   --header-bg: #ffffff;
   --link-color: rgb(94, 93, 93);
-  --link-hover-color: rgb(47, 174, 172);
+  --link-hover-color: rgb(52, 164, 162);
+  --bottom-border-color: gray;
+  --footer-text-color: gray;
   --header-shadow: rgba(0, 0, 0, 0.1);
   --header-border: 0px solid gray;
 }
 
 /* Dark theme variables */
 [data-theme='dark'] {
-  --bg-color: #2c2c2c;
-  --text-color: #f0f0f0;
-  --header-bg: #333333;
+  --bg-color: #454545f9;
+  --text-color: #f0f0f0; /* General text color */
+  --specific-text-color: rgb(255, 255, 255); /* Specific text color for dark theme */
+  --header-bg: #303030;
   --link-color: rgb(162, 162, 162);
-  --link-hover-color: rgb(47, 174, 172);
+  --link-hover-color: rgb(44, 201, 199);
+  --bottom-border-color:  rgb(255, 255, 255);
   --header-shadow: rgba(0, 0, 0, 0.15);
-  --header-border: 1px solid #50c7c77c;
+  --header-border: 1px solid #50c7c700;
 }
+
 
 /* Apply the theme variables */
 body {
@@ -47,21 +55,28 @@ a:hover {
 
 /* Button styles */
 .right-section button {
-  color: #50c7c7;
+  color: var(--specific-text-color);
+  transition: color 0.3s;
 }
 
 .login-button:hover,
 .register-button:hover {
-  color: #ffffff;
-  background-color: #50c7c7;
+  color: rgb(52, 164, 162);
 }
 
 .nav-button {
-  opacity: 0.9;
+  opacity: 0.7;
+  background-color: transparent;
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  touch-action: manipulation;
 }
 
+
 .nav-button:hover {
-  background-color: #50c7c7;
+  opacity: 1;
 }
 
 .logo-container:hover .header-logo {
@@ -70,33 +85,37 @@ a:hover {
 
 /* Side Bar styles */
 .side-bar-container {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: var(--header-bg);
+  color: var(--specific-text-color);
 }
 
 .side-bar-container .nav-bar,
 .side-bar-container .nav-bar5 {
-  color: var(--text-color);
+  color: var(--specific-text-color);
+
 }
 
 .side-bar-container .nav-bar:hover,
 .side-bar-container .nav-bar5:hover {
   background-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: var(--bottom-border-color);
+
 }
 
 .side-bar-container .nav-bar.active,
 .side-bar-container .nav-bar5.active {
-  border-bottom-color: var(--text-color);
+  border-bottom-color: var(--bottom-border-color);
+  border-bottom-width: 1px;
 }
 
 /* Footer styles */
 .end-margin {
   background-color: var(--bg-color);
-  color: var(--text-color);
+  color: var(--footer-text-color);
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
 .end-margin-text01,
 .end-margin-text02 {
-  color: var(--text-color);
+  color: var(--footer-text-color);
 }

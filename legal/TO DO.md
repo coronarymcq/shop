@@ -1,4 +1,4 @@
-# TO DO (current version: 1.9.1.2.4.4.1)
+1# TO DO (current version: 1.9.1.2.4.4.1)
 
 ****
 
@@ -63,4 +63,4 @@
 
 26. There’s room for making it more visually appealing, Some color contrasts or better fonts could help
 
-27. Fix: Restyle the white theme and edit the dark theme to be more appealing 
+
