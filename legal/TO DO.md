@@ -62,3 +62,5 @@
 25. It works on mobile, but some adjustments in text size and spacing would improve the experience for mobile users (RESIZE ISSUES)
 
 26. There’s room for making it more visually appealing, Some color contrasts or better fonts could help
+
+27. Fix: Restyle the white theme and edit the dark theme to be more appealing 
