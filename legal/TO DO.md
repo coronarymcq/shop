@@ -58,3 +58,7 @@
 <!-- This has been done and updated -->
 
 24. Add: Dark and light theme option
+
+25. It works on mobile, but some adjustments in text size and spacing would improve the experience for mobile users (RESIZE ISSUES)
+
+26. There’s room for making it more visually appealing, Some color contrasts or better fonts could help
