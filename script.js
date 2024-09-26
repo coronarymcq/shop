@@ -2,17 +2,21 @@ document.querySelector('.nav-button').addEventListener('click', function() {
   var sidebar = document.querySelector('.side-bar-container');
   var header = document.querySelector('.header-container');
   const secondBar = document.getElementById('secondBar');
-  let isToggled = secondBar.getAttribute('width') === '0';
 
   // Toggle sidebar
   if (sidebar.classList.contains('show')) {
     sidebar.classList.remove('show');
-    setTimeout(() => header.classList.remove('header-no-shadow'), 200);
+    
+    // Delay the removal of the no-shadow class to sync with sidebar animation
+    setTimeout(() => {
+      header.classList.remove('no-shadow'); // Remove no-shadow class after delay
+    }, 300); // Set this delay to match sidebar animation duration
+
     secondBar.setAttribute('width', '70');
     secondBar.setAttribute('y', '70');
   } else {
     sidebar.classList.add('show');
-    header.classList.add('header-no-shadow');
+    header.classList.add('no-shadow'); // Add no-shadow class immediately
     secondBar.setAttribute('width', '0');
     secondBar.setAttribute('y', '40');
   }
@@ -42,7 +46,12 @@ window.addEventListener('scroll', function() {
 
   if (sidebar.classList.contains('show')) {
     sidebar.classList.remove('show');
-    header.classList.remove('header-no-shadow');
+
+    // Delay the removal of the no-shadow class
+    setTimeout(() => {
+      header.classList.remove('no-shadow'); // Remove no-shadow class after delay
+    }, 300); // Match with sidebar animation duration
+
     secondBar.setAttribute('width', '70');
     secondBar.setAttribute('y', '70');
   }
@@ -58,12 +67,18 @@ document.addEventListener('click', function(event) {
   if (!sidebar.contains(event.target) && !navButton.contains(event.target)) {
     if (sidebar.classList.contains('show')) {
       sidebar.classList.remove('show');
-      header.classList.remove('header-no-shadow');
+
+      // Delay the removal of the no-shadow class
+      setTimeout(() => {
+        header.classList.remove('no-shadow'); // Remove no-shadow class after delay
+      }, 300); // Match with sidebar animation duration
+
       secondBar.setAttribute('width', '70');
       secondBar.setAttribute('y', '70');
     }
   }
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const logo = document.querySelector('.hover-logo');

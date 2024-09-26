@@ -1,0 +1,102 @@
+:root {
+  /* Light theme variables (default) */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --header-bg: #ffffff;
+  --link-color: rgb(94, 93, 93);
+  --link-hover-color: rgb(47, 174, 172);
+  --header-shadow: rgba(0, 0, 0, 0.1);
+  --header-border: 0px solid gray;
+}
+
+/* Dark theme variables */
+[data-theme='dark'] {
+  --bg-color: #2c2c2c;
+  --text-color: #f0f0f0;
+  --header-bg: #333333;
+  --link-color: rgb(162, 162, 162);
+  --link-hover-color: rgb(47, 174, 172);
+  --header-shadow: rgba(0, 0, 0, 0.15);
+  --header-border: 1px solid #50c7c77c;
+}
+
+/* Apply the theme variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+/* Header container styles */
+.header-container {
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  box-shadow: 0px 0px 10px var(--header-shadow);
+  border-bottom: var(--header-border);
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+
+/* Link styles */
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Button styles */
+.right-section button {
+  color: #50c7c7;
+}
+
+.login-button:hover,
+.register-button:hover {
+  color: #ffffff;
+  background-color: #50c7c7;
+}
+
+.nav-button {
+  opacity: 0.9;
+}
+
+.nav-button:hover {
+  background-color: #50c7c7;
+}
+
+.logo-container:hover .header-logo {
+  opacity: 0.85;
+}
+
+/* Side Bar styles */
+.side-bar-container {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.side-bar-container .nav-bar,
+.side-bar-container .nav-bar5 {
+  color: var(--text-color);
+}
+
+.side-bar-container .nav-bar:hover,
+.side-bar-container .nav-bar5:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.side-bar-container .nav-bar.active,
+.side-bar-container .nav-bar5.active {
+  border-bottom-color: var(--text-color);
+}
+
+/* Footer styles */
+.end-margin {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.end-margin-text01,
+.end-margin-text02 {
+  color: var(--text-color);
+}

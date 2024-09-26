@@ -24,10 +24,13 @@
     z-index: 2; /* Ensure it is above the sidebar */
 }
 
-/* This class to remove the shadow */
-.header-no-shadow {
-    box-shadow: none; /* Remove shadow */
-    border: none;
+.header-container {
+    /* other styles */
+    transition: box-shadow 0.3s ease; /* Adjust duration and easing as needed */
+  }
+  
+  .header-container.no-shadow {
+    box-shadow: none; /* Or adjust to your default shadow */
   }
 
   
