@@ -68,3 +68,5 @@
 27. Add: The rest of the pages like login and sign up the dark theme
 
 28. Edit: The page content text and design of BAU in the dark theme
+
+29. Clean the files

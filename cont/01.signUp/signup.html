@@ -9,6 +9,7 @@
     <title>Sign Up - MCQs CA</title>
     <link rel="icon" href="header-logo-32x32.png" type="image/x-icon" />
     <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="theme.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,11 +32,7 @@
     />
     <style>
       a {
-        color: rgb(0, 0, 0); /* default color */
         text-decoration: none; /* remove underline if you prefer */
-      }
-      a:visited {
-        color: rgb(0, 0, 0); /* keep it the same as the default color */
       }
 
       a:hover {
@@ -63,14 +60,16 @@
             <div class="logo-container">
               <img
                 class="header-logo"
-                src="header-logo-2.webp"
+                id="main-logo"
                 alt="Home Logo"
+                src="header-logo-2.webp"
               />
               <img
                 class="header-logo hover-logo"
-                src="header-logo.webp"
+                id="hover-logo"
                 alt="Home Logo"
                 onclick="goHome();"
+                src="header-logo.webp"
               />
             </div>
           </div>
@@ -233,6 +232,7 @@
     <script src="signup.js"></script>
     <script src="touch.js"></script>
     <script src="login01.js"></script>
+    <script src="theme.js"></script>
     <script
       src="https://kit.fontawesome.com/607f9f57fe.js"
       crossorigin="anonymous"

@@ -104,10 +104,15 @@ document.addEventListener('DOMContentLoaded', function () {
   [firstNameInput, lastNameInput].forEach(inputField => {
     if (inputField) {
       inputField.addEventListener('input', function() {
-        checkForCussWordsWithDelay(this, nameMessageElement); 
+        const isArabic = /[\u0600-\u06FF]/.test(this.value); // Check for Arabic characters
+        this.style.textAlign = isArabic ? 'right' : 'left'; // Align right for Arabic, left for others
+        this.style.direction = isArabic ? 'rtl' : 'ltr'; // Set direction to rtl for Arabic, ltr for others
+  
+        checkForCussWordsWithDelay(this, nameMessageElement);
       });
     }
   });
+  
 
   if (usernameInput) {
     usernameInput.addEventListener("input", function () {
@@ -151,10 +156,12 @@ document.addEventListener('DOMContentLoaded', function () {
       strengthIndicator.textContent = "";
       return;
     }
-
+  
     let strength = 'Weak';
     let color = 'red';
-
+  
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light'; // Check current theme
+  
     if (password.length < 5) {
       strength = "Password too short.";
       color = "red";
@@ -168,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
       if (hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChars && isLong) {
         strength = 'Strong';
-        color = 'green';
+        color = currentTheme === 'dark' ? 'lightgreen' : 'green';  // Adjust color based on theme
       } else if ((hasUpperCase || hasLowerCase) && hasNumbers && (password.length >= 7 || hasSpecialChars)) {
         strength = 'Medium';
         color = 'orange';
@@ -181,15 +188,18 @@ document.addEventListener('DOMContentLoaded', function () {
     strengthIndicator.textContent = strength;
     strengthIndicator.style.color = color;
   }
+  
 
   function checkPasswordMatch(firstInput, secondInput, messageElement) {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';  // Check current theme
+  
     if (secondInput.value) {
       if (!firstInput.value) {
         messageElement.textContent = "Fill the password field first.";
         messageElement.style.color = "red";
       } else if (firstInput.value === secondInput.value) {
         messageElement.textContent = "Passwords match.";
-        messageElement.style.color = "green";
+        messageElement.style.color = currentTheme === 'dark' ? 'lightgreen' : 'green';  // Adjust color based on theme
       } else {
         messageElement.textContent = "Passwords do not match.";
         messageElement.style.color = "red";
@@ -198,6 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
       messageElement.textContent = "";
     }
   }
+  
 
   if (firstPasswordInput && secondPasswordInput && strengthIndicator && matchMessage) {
     firstPasswordInput.addEventListener("input", function () {

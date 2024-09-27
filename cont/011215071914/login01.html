@@ -26,11 +26,7 @@
     />
     <style>
       a {
-        color: rgb(0, 0, 0); /* default color */
         text-decoration: none; /* remove underline if you prefer */
-      }
-      a:visited {
-        color: rgb(0, 0, 0); /* keep it the same as the default color */
       }
 
       a:hover {
@@ -80,7 +76,14 @@
               <div class="input">
                 <h3 class="h3" id="h3">Email or Username</h3>
                 <section class="container-1">
-                  <input class="input1" type="email" id="email" required />
+                  <input
+                    class="input1"
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="off"
+                    required
+                  />
                   <i class="fa-solid fa-user"></i>
                 </section>
                 <div class="nun">
@@ -91,6 +94,8 @@
                         class="input1"
                         type="password"
                         id="password"
+                        name="password"
+                        autocomplete="off"
                         required
                       />
                       <i class="fa-solid fa-lock"></i>

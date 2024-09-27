@@ -21,6 +21,7 @@
   --show: black;
   --ia: rgba(226, 226, 226, 0.519);
   --bg-gradient:linear-gradient(270deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7), rgba(54, 170, 163, 0.2), rgba(115, 203, 196, 0.3), rgba(115, 203, 196, 0.5), rgba(54, 170, 163, 0.4), rgba(54, 130, 140, 0.4), rgba(54, 130, 140, 0.6), rgba(255, 255, 255, 0.9));
+  --font-w: 700;
 }
 
 /* Dark theme variables */
@@ -55,6 +56,8 @@
   rgba(115, 203, 196, 0.5), 
   rgba(54, 170, 162, 0.357)
 );
+  --font-w: 950;
+
 
 }
 
@@ -99,20 +102,22 @@
 input {
   background-color: var(--input);
   color: var(--text-color);
-  border: 1px solid transparent; /* Set initial border to transparent */
-  transition: border-color 0.4s ease, border-width 0.4s ease; /* Add transition */
 }
 
-
-
-#password:hover,
-#email:hover {
+#last-name:hover,
+#first-name:hover,
+#last-pass:hover,
+#first-pass:hover,
+.input1:hover {
   border-color: var(--input-border);
  cursor: pointer;
 }
 
-#password:focus,
-#email:focus {
+#last-name:focus,
+#first-name:focus,
+#last-pass:focus,
+#first-pass:focus,
+.input1:focus {
   border-color: var(--input-border);
   cursor: text;
 }
@@ -146,3 +151,16 @@ a:visited,
 a {
   color: var(--text-color);
 }
+
+#forbidden-message1,
+#forbidden-message,
+#email-error-message,
+.measure {
+  font-weight: var(--font-w);
+}
+
+#toggleConfirmPassword,
+#togglePassword {
+  color: var(--text-color);
+}
+

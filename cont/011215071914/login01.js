@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginButton = document.getElementById("loginButton");
     const togglePassword = document.getElementById('togglePassword');
     const passwordInput = document.getElementById('password');
-    passwordInput.style.transition = 'opacity 0.3s ease';
+    passwordInput.style.transition = 'opacity 0.3s ease, border-color 0.4s ease, border-width 0.4s ease';
     const showPasswordBtn = document.querySelector('.show-password-btn');
     const lockIcon = document.querySelector('.fa-lock');
     const unlockIcon = document.querySelector('.fa-unlock');

@@ -224,58 +224,52 @@ html, body {
   padding-left: 30px;
   padding-right: 30px;
   margin-top: 35px;
-  
-
-  input {
-    background-color: rgba(211, 211, 211, 0.331);
-    border: none;
-    margin-bottom: 15px;
-    padding: 20px 86px 20px 10px;
-    font-size: 15px;
-    border: 1px solid transparent; /* Set initial border to transparent */
-    border-radius: 5px;
-    width: 100%;
-    transition: border-color 0.4s ease, border-width 0.4s ease; /* Add transition */
-  }
-
-  input:-webkit-autofill {
-    background-color: rgba(211, 211, 211, 0.331) !important; /* Match your background color */
-    box-shadow: 0 0 0 30px rgba(211, 211, 211, 0.331) inset; /* Prevent autofill color change */
-    -webkit-text-fill-color: rgb(0, 0, 0); /* Set your desired text color */
-  }
-
-  input:focus {
-    outline: none;
-    outline-style: none;
-    border: solid;
-    border-color: rgba(0, 0, 0, 0.435);
-    border-width: 1px;
-  }
-
-  .h3 {
-    margin: 0;
-    text-align: left;
-    margin-bottom: 15px;
-    font-size: 16px;
-  }
-
-  #h3 {
-    margin-top: 20px;
-  }
-
-  .container-1,
-  .container-2 {
-    display: flex;
-    flex-direction: row;
-    margin: 0px;
-    position: relative;
-  }
+} 
 
  
+input {
+  background-color: rgba(211, 211, 211, 0.331);
+  border: none;
+  margin-bottom: 15px;
+  padding: 20px 86px 20px 10px;
+  font-size: 15px;
+  border: 1px solid transparent; /* Set initial border to transparent */
+  border-radius: 5px;
+  width: 100%;
+}
 
-  
+input:-webkit-autofill {
+  background-color: rgba(211, 211, 211, 0.331) !important; /* Match your background color */
+  box-shadow: 0 0 0 30px rgba(211, 211, 211, 0.331) inset; /* Prevent autofill color change */
+  -webkit-text-fill-color: rgb(0, 0, 0); /* Set your desired text color */
+}
 
-} 
+input:focus {
+  outline: none;
+  outline-style: none;
+  border: solid;
+  border-color: rgba(0, 0, 0, 0.435);
+  border-width: 1px;
+}
+
+.h3 {
+  margin: 0;
+  text-align: left;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+#h3 {
+  margin-top: 20px;
+}
+
+.container-1,
+.container-2 {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  position: relative;
+}
 
 .end {
   display: flex;
@@ -422,10 +416,6 @@ input {
 
 .fa-unlock {
   opacity: 1;
-}
-
-#password {
-  transition: opacity 0.3s ease, width 0.3s ease; /* Add transitions for opacity and width if needed */
 }
 
 .header {
