@@ -129,7 +129,7 @@ html, body {
   }
 }
 
-@media (max-width: 1000px) and (min-width: 910px) {
+@media (max-width: 1000px) and (min-width: 810px) {
   .container {
     height: auto;
     min-height: 100vh;

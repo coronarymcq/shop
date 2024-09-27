@@ -12,19 +12,26 @@
   --footer-text-color: gray;
   --header-shadow: rgba(0, 0, 0, 0.1);
   --header-border: 0px solid gray;
+  --lang-bg: white;
+  --lang-txt: rgb(96, 96, 96); 
+  --lang-hover: #f1f1f1;
 }
 
 /* Dark theme variables */
 [data-theme='dark'] {
-  --bg-color: #454545f9;
+  --bg-color: #454545;
   --text-color: #f0f0f0; /* General text color */
   --specific-text-color: rgb(255, 255, 255); /* Specific text color for dark theme */
+  --quote: black;
   --header-bg: #303030;
   --link-color: rgb(162, 162, 162);
   --link-hover-color: rgb(44, 201, 199);
   --bottom-border-color:  rgb(255, 255, 255);
   --header-shadow: rgba(0, 0, 0, 0.15);
   --header-border: 1px solid #50c7c700;
+  --lang-bg: rgba(59, 59, 59, 0.961);
+  --lang-txt: white; 
+  --lang-hover: #555555;
 }
 
 
@@ -119,3 +126,31 @@ a:hover {
 .end-margin-text02 {
   color: var(--footer-text-color);
 }
+
+.dropdown-content {
+  position: absolute;
+  background-color: var(--lang-bg);
+  min-width: 100px;
+  box-shadow: 0 0px 16px rgba(0, 0, 0, 0.089);
+  z-index: 1;
+}
+
+.dropdown-content button {
+  background-color: var(--lang-bg);
+  color: var(--lang-txt);
+  border: none;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropdown-content button:hover {
+  background-color: var(--lang-hover); /* Highlight on hover */
+}
+
+.dropdown-content button.active {
+  background-color: rgba(183, 183, 183, 0.386); /* Slightly darker background for active option */
+  color: var(--lang-txt); /* Change text color if needed */
+}
+

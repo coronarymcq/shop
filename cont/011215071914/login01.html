@@ -9,6 +9,7 @@
     <title>Login - MCQs CA</title>
     <link rel="icon" href="header-logo-32x32.png" type="image/x-icon" />
     <link rel="stylesheet" href="login01.css" />
+    <link rel="stylesheet" href="theme.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -54,19 +55,21 @@
       <div class="container">
         <div class="flex">
           <div class="header">
-            <div class="logo-container">
+            <section class="logo-container">
               <img
                 class="header-logo"
-                src="header-logo-2.webp"
+                id="main-logo"
                 alt="Home Logo"
+                src="header-logo-2.webp"
               />
               <img
                 class="header-logo hover-logo"
-                src="header-logo.webp"
+                id="hover-logo"
                 alt="Home Logo"
                 onclick="goHome();"
+                src="header-logo.webp"
               />
-            </div>
+            </section>
           </div>
 
           <div class="content">
@@ -134,6 +137,7 @@
     <div class="background"></div>
     <script src="touch0.js"></script>
     <script src="login01.js"></script>
+    <script src="theme.js"></script>
     <script
       src="https://kit.fontawesome.com/607f9f57fe.js"
       crossorigin="anonymous"

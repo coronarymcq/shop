@@ -57,10 +57,14 @@
 23.  **~~Moving the bugs and fixes req's to the github issues page (EASY)~~**
 <!-- This has been done and updated -->
 
-24. Add: Dark and light theme option
+24. **Add: ~~Dark and light theme option (MEDIUM)~~**
+<!-- This has been done and updated -->
+
 
 25. It works on mobile, but some adjustments in text size and spacing would improve the experience for mobile users (RESIZE ISSUES)
 
 26. There’s room for making it more visually appealing, Some color contrasts or better fonts could help
 
+27. Add: The rest of the pages like login and sign up the dark theme
 
+28. Edit: The page content text and design of BAU in the dark theme

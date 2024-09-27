@@ -296,7 +296,7 @@ nav {
 }
 
 .dropdown-content button:hover {
-    background-color: #f1f1f1; /* Highlight on hover */
+    background-color:  #555555;; /* Highlight on hover */
 }
 
 .dropdown-content button.active {
