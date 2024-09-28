@@ -71,6 +71,5 @@
 
 28. Edit: The page content text and design of BAU in the dark theme
 
-29. Clean the files
-
-30. Add: New button that gather the utilities of the website together in the header
+29. **Add: ~~New button that gather the utilities of the website together in the header~~**
+<!-- This has been done and updated -->
