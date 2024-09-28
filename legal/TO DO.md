@@ -65,8 +65,12 @@
 
 26. There’s room for making it more visually appealing, Some color contrasts or better fonts could help
 
-27. Add: The rest of the pages like login and sign up the dark theme
+27. **Add: ~~The rest of the pages like login and sign up the dark theme~~**
+<!-- This has been done and updated -->
+
 
 28. Edit: The page content text and design of BAU in the dark theme
 
 29. Clean the files
+
+30. Add: New button that gather the utilities of the website together in the header
