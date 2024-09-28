@@ -169,15 +169,22 @@ a:hover {
 
 
 
+
 .nested-dropdown-content {
   position: absolute;
   background-color: var(--header-bg);
   padding: 10px;
-  min-width: 110px;
   top: 0;
   z-index: 2;
   right: auto;
   left: -130px;
+  width: 110px;
+}
+
+#theme-dropdown {
+  right: auto;
+  left: -210px;
+  width: 190px;
 }
 
 .nested-dropdown-content button {
@@ -198,9 +205,13 @@ a:hover {
   background-color: var(--selc-la);
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
 
-  .nested-dropdown-content {
+  #theme-dropdown {
+      left: 159px;
+    }
+
+    .nested-dropdown-content {
       left: 160px;
       min-width: 120px;
     }

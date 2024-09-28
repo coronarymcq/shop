@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
   
-  // Set logos based on saved theme
+  // Set logos and active class based on saved theme
   setInitialLogo(savedTheme);
+  setActiveThemeButton(savedTheme);
 });
 
 // Function to set the logo based on the theme
@@ -25,19 +26,20 @@ function setInitialLogo(theme) {
   }
 }
 
-// Function to toggle between light and dark themes
-function toggleTheme() {
-  const currentTheme = document.documentElement.getAttribute('data-theme') || 'light'; 
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+// Function to set the light theme
+function setLightTheme() {
+  document.documentElement.setAttribute('data-theme', 'light');
+  localStorage.setItem('theme', 'light');
+  switchLogo('light');
+  setActiveThemeButton('light');
+}
 
-  // Apply the new theme
-  document.documentElement.setAttribute('data-theme', newTheme);
-  
-  // Save the new theme to localStorage
-  localStorage.setItem('theme', newTheme);
-  
-  // Update logos immediately on toggle
-  switchLogo(newTheme);
+// Function to set the dark theme
+function setDarkTheme() {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  localStorage.setItem('theme', 'dark');
+  switchLogo('dark');
+  setActiveThemeButton('dark');
 }
 
 // Function to switch logos based on the theme
@@ -58,8 +60,28 @@ function switchLogo(theme) {
   }
 }
 
-// Event listener for the theme toggle button
-document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+// Function to set active theme button
+function setActiveThemeButton(theme) {
+  const lightButton = document.getElementById('light-theme-button');
+  const darkButton = document.getElementById('dark-theme-button');
+  
+  // Remove "active" class from both buttons
+  lightButton.classList.remove('active');
+  darkButton.classList.remove('active');
+  
+  // Add "active" class to the selected theme button
+  if (theme === 'light') {
+    lightButton.classList.add('active');
+  } else {
+    darkButton.classList.add('active');
+  }
+}
+
+// Event listener for the light theme button
+document.getElementById('light-theme-button').addEventListener('click', setLightTheme);
+
+// Event listener for the dark theme button
+document.getElementById('dark-theme-button').addEventListener('click', setDarkTheme);
 
 // Preload logos for better performance
 function preloadLogos() {

@@ -1,39 +1,74 @@
 function toggleDropdown() {
-  const dropdown = document.getElementById("settings-dropdown");
-  const langDropdown = document.getElementById("lang-dropdown");
+    const dropdown = document.getElementById("settings-dropdown");
+    dropdown.style.display = (dropdown.style.display === "none" || dropdown.style.display === "") ? "block" : "none";
 
-  // Toggle the settings dropdown
-  dropdown.style.display = (dropdown.style.display === "none" || dropdown.style.display === "") ? "block" : "none";
-
-  // Hide the language dropdown if the settings dropdown is being closed
-  if (dropdown.style.display === "none") {
-    langDropdown.style.display = "none"; // Close the language dropdown
-  }
+    // Close both dropdowns if the settings dropdown is being closed
+    if (dropdown.style.display === "none") {
+        closeAllDropdowns();
+    }
 }
 
 function toggleLangDropdown() {
-  const langDropdown = document.getElementById("lang-dropdown");
-  langDropdown.style.display = (langDropdown.style.display === "none" || langDropdown.style.display === "") ? "block" : "none";
+    const langDropdown = document.getElementById("lang-dropdown");
+    const themeDropdown = document.getElementById("theme-dropdown");
+
+    // Toggle the language dropdown
+    langDropdown.style.display = (langDropdown.style.display === "none" || langDropdown.style.display === "") ? "block" : "none";
+
+    // If opening language dropdown, close theme dropdown
+    if (langDropdown.style.display === "block") {
+        themeDropdown.style.display = "none";
+    }
+}
+
+function toggleThemeDropdown() {
+    const themeDropdown = document.getElementById("theme-dropdown");
+    const langDropdown = document.getElementById("lang-dropdown");
+
+    // Toggle the theme dropdown
+    themeDropdown.style.display = (themeDropdown.style.display === "none" || themeDropdown.style.display === "") ? "block" : "none";
+
+    // If opening theme dropdown, close language dropdown
+    if (themeDropdown.style.display === "block") {
+        langDropdown.style.display = "none";
+    }
+}
+
+function closeAllDropdowns() {
+    const langDropdown = document.getElementById("lang-dropdown");
+    const themeDropdown = document.getElementById("theme-dropdown");
+    langDropdown.style.display = "none"; // Close the language dropdown
+    themeDropdown.style.display = "none"; // Close the theme dropdown
+}
+
+// Dummy theme functions (implement your actual theme switching logic)
+function setLightTheme() {
+    // Implement light theme logic here
+    console.log("Light theme selected");
+}
+
+function setDarkTheme() {
+    // Implement dark theme logic here
+    console.log("Dark theme selected");
 }
 
 // Close the dropdown if clicked outside
 window.onclick = function(event) {
-  if (!event.target.matches('.lang-button') && !event.target.matches('.lang-toggle')) {
-    const dropdowns = document.getElementsByClassName("dropdown-content");
-    Array.from(dropdowns).forEach(openDropdown => {
-      if (openDropdown.style.display === "block") {
-        openDropdown.style.display = "none";
-      }
-    });
+    if (!event.target.matches('.lang-button') && 
+        !event.target.matches('.lang-toggle') && 
+        !event.target.matches('.th-toggle')) { // Added .th-toggle along with .lang-toggle
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        Array.from(dropdowns).forEach(openDropdown => {
+            if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+            }
+        });
 
-    const nestedDropdowns = document.getElementsByClassName("nested-dropdown-content");
-    Array.from(nestedDropdowns).forEach(openDropdown => {
-      if (openDropdown.style.display === "block") {
-        openDropdown.style.display = "none";
-      }
-    });
-  }
+        closeAllDropdowns(); // Close both nested dropdowns
+    }
 };
+
+
 
 const translations = {
   en: {
@@ -50,8 +85,10 @@ const translations = {
     beta: "Beta Version – Work in Progress",
     btnEn: "English",
     btnAr: "Arabic",
-    switchTheme: "Switch Theme", // New entry for theme switch
-    language: "Language"
+    switchTheme: "Themes", // New entry for theme switch
+    language: "Language",
+    light: "Light Theme",
+    dark: "Dark Theme"
   },
   ar: {
     title: "MCQs كوروناري أكاديمي",
@@ -68,7 +105,9 @@ const translations = {
     btnEn: "الإنجليزية",
     btnAr: "العربية",
     switchTheme: "المظهر", // New entry for theme switch
-    language: "اللغة"
+    language: "اللغة",
+    light: "فاتح",
+    dark: "غامق"
   },
 };
 
@@ -104,8 +143,10 @@ function translatePage(lang) {
   document.getElementById('btn-ar').textContent = trans.btnAr;
 
   // Update theme switch button
-  document.querySelector('.theme-switch-button').textContent = trans.switchTheme;
   document.querySelector('.lang-toggle').textContent = trans.language;
+  document.querySelector('.th-toggle').textContent = trans.switchTheme;
+  document.querySelector('.light-trans').textContent = trans.light;
+  document.querySelector('.dark-trans').textContent = trans.dark;
 
 
   // Manage active state for dropdown buttons
@@ -135,11 +176,13 @@ window.onload = function() {
 
 // Hide dropdowns on window resize
 window.addEventListener('resize', function() {
-  const settingsDropdown = document.getElementById('settings-dropdown');
-  const langDropdown = document.getElementById('lang-dropdown');
+    const settingsDropdown = document.getElementById('settings-dropdown');
+    const langDropdown = document.getElementById('lang-dropdown');
+    const themeDropdown = document.getElementById('theme-dropdown');
 
-  settingsDropdown.style.display = 'none'; // Close the settings dropdown
-  langDropdown.style.display = 'none'; // Close the language dropdown
+    settingsDropdown.style.display = 'none'; // Close the settings dropdown
+    langDropdown.style.display = 'none'; // Close the language dropdown
+    themeDropdown.style.display = 'none'; // Close the theme dropdown
 });
 
 // Language button click events

@@ -90,7 +90,21 @@
               <button id="btn-en" onclick="translatePage('en')">English</button>
               <button id="btn-ar" onclick="translatePage('ar')">Arabic</button>
             </div>
-            <button id="theme-toggle" class="theme-switch-button">Switch Theme</button>
+            <button class="th-toggle" onclick="toggleThemeDropdown()">
+              Themes
+            </button>
+            <div
+              id="theme-dropdown"
+              class="nested-dropdown-content"
+              style="display: none"
+            >
+              <button id="light-theme-button" class="light-trans" onclick="setLightTheme()">
+                Light Theme
+              </button>
+              <button id="dark-theme-button" class="dark-trans" onclick="setDarkTheme()">
+                Dark Theme
+              </button>
+            </div>
           </div>
         </div>
 
