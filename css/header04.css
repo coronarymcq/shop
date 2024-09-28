@@ -97,6 +97,12 @@ nav {
     touch-action: manipulation;
 }
 
+.lang-button:focus,
+.lang-button.active {
+    color: rgb(52, 164, 162);
+    /* Active color */
+}
+
 .lang-button:hover,
 .login-button:hover,
 .register-button:hover {
@@ -104,16 +110,14 @@ nav {
     color: rgb(52, 164, 162);
 }
 
-.lang-button:active,
 .login-button:active,
 .register-button:active {
     color: rgba(57, 57, 57, 0.696);
 }
 
-.lang-button:focus,
 .login-button:focus,
 .register-button:focus {
-    background-color: rgba(52, 164, 162, 0.002); /* Example color */
+    background-color: rgba(52, 164, 162, 0.002);
 }
 
 .right-section .header-logo {

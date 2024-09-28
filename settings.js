@@ -11,6 +11,7 @@ function toggleDropdown() {
 function toggleLangDropdown() {
     const langDropdown = document.getElementById("lang-dropdown");
     const themeDropdown = document.getElementById("theme-dropdown");
+    const langButton = document.querySelector('.lang-button');
 
     // Toggle the language dropdown
     langDropdown.style.display = (langDropdown.style.display === "none" || langDropdown.style.display === "") ? "block" : "none";
@@ -18,12 +19,14 @@ function toggleLangDropdown() {
     // If opening language dropdown, close theme dropdown
     if (langDropdown.style.display === "block") {
         themeDropdown.style.display = "none";
+        langButton.classList.add('active'); // Add active class
     }
 }
 
 function toggleThemeDropdown() {
     const themeDropdown = document.getElementById("theme-dropdown");
     const langDropdown = document.getElementById("lang-dropdown");
+    const langButton = document.querySelector('.lang-button');
 
     // Toggle the theme dropdown
     themeDropdown.style.display = (themeDropdown.style.display === "none" || themeDropdown.style.display === "") ? "block" : "none";
@@ -31,6 +34,7 @@ function toggleThemeDropdown() {
     // If opening theme dropdown, close language dropdown
     if (themeDropdown.style.display === "block") {
         langDropdown.style.display = "none";
+        langButton.classList.add('active'); // Keep the active state
     }
 }
 
@@ -56,7 +60,8 @@ function setDarkTheme() {
 window.onclick = function(event) {
     if (!event.target.matches('.lang-button') && 
         !event.target.matches('.lang-toggle') && 
-        !event.target.matches('.th-toggle')) { // Added .th-toggle along with .lang-toggle
+        !event.target.matches('.th-toggle') && 
+        !event.target.closest('.dropdown-content')) { // Check if clicked outside dropdown content
         const dropdowns = document.getElementsByClassName("dropdown-content");
         Array.from(dropdowns).forEach(openDropdown => {
             if (openDropdown.style.display === "block") {
@@ -65,6 +70,16 @@ window.onclick = function(event) {
         });
 
         closeAllDropdowns(); // Close both nested dropdowns
+        document.querySelector('.lang-button').classList.remove('active'); // Reset active class
+    } else {
+        // If clicked inside the dropdowns, keep the lang-button active
+        const langDropdown = document.getElementById("lang-dropdown");
+        const themeDropdown = document.getElementById("theme-dropdown");
+        const langButton = document.querySelector('.lang-button');
+
+        if (langDropdown.style.display === "block" || themeDropdown.style.display === "block") {
+            langButton.classList.add('active'); // Keep the active class if dropdown is open
+        }
     }
 };
 
@@ -192,3 +207,4 @@ document.querySelectorAll('#lang-dropdown button').forEach(btn => {
     translatePage(lang);
   });
 });
+
