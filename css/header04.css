@@ -165,6 +165,10 @@ nav {
     opacity: 1; /* Fade in the second image */
 }
 
+.lang-button {
+    margin-left: 9.7px;
+    margin-right: 8px;
+}
 
 
 /* For max-width 580px */
@@ -181,6 +185,10 @@ nav {
     .register-button {
         margin-right: 0px;
         padding: 10px 0px 10px 30px;
+    }
+
+    .lang-button {
+      margin-right: 0 ;
     }
 }
 
@@ -273,17 +281,14 @@ nav {
     }
 }
 
-.lang-button {
-    margin-left: 9.7px; /* Space between buttons */
-    margin-right: 8px;
-}
 
 .dropdown-content {
     position: absolute;
     background-color: white;
-    min-width: 100px;
+    min-width: 150px;
     box-shadow: 0 0px 16px rgba(0, 0, 0, 0.089);
     z-index: 1;
+    padding: 10px;
 }
 
 .dropdown-content button {
@@ -296,13 +301,32 @@ nav {
 }
 
 .dropdown-content button:hover {
-    background-color:  #555555;; /* Highlight on hover */
+    background-color: #555555;
 }
 
-.dropdown-content button.active {
-    background-color: rgba(237, 237, 237, 0.435); /* Slightly darker background for active option */
-    color: #000; /* Change text color if needed */
-  }
+.nested-dropdown-content {
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    left: -110px;
+    /* Position the nested dropdown to the left */
+    top: 0;
+    box-shadow: 0 0px 16px rgba(0, 0, 0, 0.089);
+    z-index: 2;
+}
+
+.nested-dropdown-content button {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+.nested-dropdown-content button:hover {
+    background-color: #555555;
+}
 
 
 
