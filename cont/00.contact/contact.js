@@ -66,7 +66,6 @@ peakObserver.observe(document.getElementById('section2'));
 
 /*----------------------------------------------------*/
 
-var botToken = '7387220791:AAHE6iN4wMU_1Xp8yMO6Uk-Vqk3X3quGMj8';
 var channelId = '@coronarymcq';
 var currentCount = 0; // Keep track of the current displayed count
 var isCounting = false; // Track if the counting animation is currently running
