@@ -131,6 +131,7 @@ function loadContent(page) {
           break;
       case 'contact': // Handle the Contact Us page
           filePath = 'cont/00.contact/contact.html';
+          scriptPath = 'cont/00.contact/contact.js'; // Path to about us specific JavaScript
           activeNavButton = 'nav-bar4';
           break;
       default:

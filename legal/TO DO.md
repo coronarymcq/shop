@@ -5,7 +5,6 @@
 1. **Fix: ~~Logo title not being translated probably (EASY)~~** 
 <!-- Will be ignored for doing a major fix -->
 
-
 2. Add: Translation not yet added for other content 
 
 3. **Fix: ~~The Home logo in the Login and Reg page is not redirecting to the Home correctly (EASY)~~**
@@ -31,13 +30,11 @@
 12. **Fix: ~~Logo title Reload and Home refresh problem~~**
 <!-- This bug has been fixed -->
 
-
 13. **Fix: ~~Counting animation isn't starting after fetching the BAU content (HARD)~~**
 <!-- This bug has been fixed -->
 
 14. **Fix: ~~Update the title from Reload to Home on the contact us page (EASY)~~**
 <!-- Will be ignored for doing a major fix -->
-
 
 15. **Fix: ~~A problem of the counting animation when nav back from a diff nav button (HARD)~~**
 <!-- This bug has been fixed -->
@@ -60,14 +57,12 @@
 24. **Add: ~~Dark and light theme option (MEDIUM)~~**
 <!-- This has been done and updated -->
 
-
 25. It works on mobile, but some adjustments in text size and spacing would improve the experience for mobile users (RESIZE ISSUES) (BAU PAGE)
 
 26. There’s room for making it more visually appealing, Some color contrasts or better fonts could help
 
 27. **Add: ~~The rest of the pages like login and sign up the dark theme~~**
 <!-- This has been done and updated -->
-
 
 28. Edit: The page content text and design of BAU in the dark theme
 
