@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     'cHUkJHk=',
   ];
 
+  /* This list of words is sourced from an open-source GitHub repository to test the forbidden words system and ensure a clean, appropriate signup process. This may change in future updates of MCAW (MCQ Coronary Academic Website) to maintain a cleaner and more efficient source code. */
   const arabicForbiddenWords = [
     'زب', 'عاهرة', 'خنزير', 'حيوان', 'بنت الكلب', 'كس', 'شرموط', 'منيك', 'قحبة', 'غبي', 'حمار', 'زنجي', 
     'نيغا', 'نيغر', 'سكس', 'طيز', 'شرج', 'لعق', 'لحس', 'مص', 'تمص', 'بيضان', 'ثدي', 'بز', 'بزاز', 

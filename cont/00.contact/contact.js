@@ -110,10 +110,6 @@ var observer = new IntersectionObserver(function(entries) {
 // Observe the section for visibility
 observer.observe(document.getElementById('section3'));
 
-// Optionally start the animation immediately (uncomment if desired)
-// animateNumber();
-
-
 /*-------------------------------------------------*/
 
 var targetMCQCount = 1000;
@@ -145,9 +141,116 @@ var mcqsObserver = new IntersectionObserver(function(entries) {
             hasMCQAnimated = true; // Set the flag to true to prevent multiple counts
             countUpMCQs();
         }
-        // Remove the else block that resets the count and displayed number
     });
 });
 
 // Observe the MCQs section
 mcqsObserver.observe(document.getElementById('section4'));
+
+/*------------------------------------------*/
+
+// Function to set the logo based on the theme
+function setLogoBasedOnTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'light'; // Default to light theme
+    const logoImg = document.querySelector('.logo-aboutus'); // Select the logo image
+
+    // Set the appropriate logo based on the theme
+    if (logoImg) {
+        if (savedTheme === 'dark') {
+            logoImg.src = '../../icons/logo-dark.webp'; // Dark theme logo
+        } else {
+            logoImg.src = '../../icons/logo.webp'; // Light theme logo
+        }
+    } else {
+        console.error("Element with class 'logo-aboutus' not found.");
+    }
+}
+
+// Call this function to set the logo when the script loads
+setLogoBasedOnTheme();
+
+document.querySelectorAll('.homeLink').forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      loadContent('main'); // Fetch content for Home
+    });
+  });
+
+
+  /*---------------------------------------*/
+  
+  (async () => {
+    const pdfjsLib = await import('../../pdfjs/build/pdf.mjs'); // Adjust the path to pdf.mjs
+    pdfjsLib.GlobalWorkerOptions.workerSrc = '../../pdfjs/build/pdf.worker.mjs'; // Adjust the path to pdf.worker.mjs
+
+    const url = '../../CORONARY FINAL PUBLIC HEALTH.pdf'; // Path to your PDF file
+    let pdfDoc = null; // Variable to hold the PDF document
+    let currentPage = 1; // Track the current page number
+    let scale = 1.0; // Initial scale (zoom level)
+
+    const loadPDF = async (url) => {
+        try {
+            const loadingTask = pdfjsLib.getDocument(url);
+            pdfDoc = await loadingTask.promise;
+            renderPage(currentPage); // Render the first page
+        } catch (error) {
+            console.error("Error loading PDF: ", error);
+        }
+    };
+
+    const renderPage = async (pageNum) => {
+        const page = await pdfDoc.getPage(pageNum);
+        const viewport = page.getViewport({ scale }); // Use the current scale
+
+        // Clear the viewer and create a new canvas
+        const pdfViewer = document.getElementById('pdf-viewer');
+        pdfViewer.innerHTML = ''; // Clear previous content
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        pdfViewer.appendChild(canvas); // Append the new canvas
+
+        const renderContext = {
+            canvasContext: context,
+            viewport: viewport
+        };
+        await page.render(renderContext).promise;
+
+        // Update page info
+        document.getElementById('page-info').textContent = `Page ${pageNum} of ${pdfDoc.numPages}`;
+    };
+
+    // Handle Previous Page
+    document.getElementById('prev-page').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderPage(currentPage);
+        }
+    });
+
+    // Handle Next Page
+    document.getElementById('next-page').addEventListener('click', () => {
+        if (currentPage < pdfDoc.numPages) {
+            currentPage++;
+            renderPage(currentPage);
+        }
+    });
+
+    // Handle Zoom In
+    document.getElementById('zoom-in').addEventListener('click', () => {
+        scale += 0.1; // Increase scale by 10%
+        renderPage(currentPage); // Re-render the current page
+    });
+
+    // Handle Zoom Out
+    document.getElementById('zoom-out').addEventListener('click', () => {
+        if (scale > 0.1) { // Prevent zooming out too much
+            scale -= 0.1; // Decrease scale by 10%
+            renderPage(currentPage); // Re-render the current page
+        }
+    });
+
+    loadPDF(url);
+})();

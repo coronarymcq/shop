@@ -24,14 +24,14 @@ a:visited {
   padding: 50px;
   margin: 50px 0;
   opacity: 0; /* Hidden initially */
-  transition: all 0.5s ease-out;
+  transition: all 1s ease-out;
 }
 
 /* Default animation for all sections except Section 1 and li5 */
 .scroll-section {
   transform: translateY(50px); /* Default Y animation */
   opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
 }
 
 .scroll-section.visible {
@@ -59,11 +59,21 @@ a:visited {
 /*-------------------------------------------*/
 
 h1 {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 h2 {
+  font-size: 30px;
   font-weight: 900;
+}
+
+.desc01 {
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.desc1 {
+  font-size: 20px;
 }
 
 #section4,
@@ -88,25 +98,30 @@ h2 {
   margin-top: 0;
 }
 
+#section1 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
 #info0,
 #info {
   color: rgb(52, 164, 162);
-  font-size: 60px;
+  font-size: 30px;
   text-align: center;
   border-bottom: 1px solid gray;
   margin: 0;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   padding-bottom: 50px;
-  margin-top: 70px;
+  margin-top: 5px;
 }
 
 #info0 {
-  margin-top: 200px;
+  margin-top: 40px;
 }
 
 #aboutus {
   color: rgb(52, 164, 162);
-  font-size: 60px;
+  font-size: 30px;
   text-align: center;
   border-bottom: 1px solid gray;
   margin: 0;
@@ -121,8 +136,55 @@ h2 {
 #lit {
   font-size: 30px;
   margin-bottom: 0;
-  
+  margin-top: 0;
   h2 {
     margin-bottom: 0;
   }
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.desc {
+  font-size: 15px;
+  color: rgb(135, 135, 135);
+}
+
+#section1 {
+  position: relative;
+}
+
+.tl {
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
+
+.flex-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.logo-aboutus {
+  height: 250px;
+  padding-left: 25px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  border: 1px dashed transparent; /* Keep a border with transparent color */
+  border-radius: 20px;
+  transition: border-color 0.5s, opacity 0.5s; /* Transition for border color and opacity */
+}
+
+.logo-aboutus:hover {
+  border-color: rgb(130, 130, 130); /* Change to the desired color on hover */
+  opacity: 1; /* Set to full opacity */
+  cursor: crosshair;
+}
+
+.admins { 
+  margin: 0;
+  margin-top: 80px;
+  margin-bottom: 24.9px;
+
 }

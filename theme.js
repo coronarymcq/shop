@@ -17,6 +17,7 @@ function setInitialLogo(theme) {
   const lightLogo1 = 'icons/header-logo-2.webp';
   const lightLogo2 = 'icons/header-logo.webp';
 
+  // Set the appropriate logo based on the theme
   if (theme === 'dark') {
     logoElement.src = darkLogo1;
     hoverLogoElement.src = darkLogo2;
@@ -24,6 +25,9 @@ function setInitialLogo(theme) {
     logoElement.src = lightLogo1;
     hoverLogoElement.src = lightLogo2;
   }
+
+  // Update the additional logo based on the theme
+  updateLogo(theme);
 }
 
 // Function to set the light theme
@@ -58,6 +62,21 @@ function switchLogo(theme) {
     logoElement.src = lightLogo1;
     hoverLogoElement.src = lightLogo2;
   }
+
+  // Update the additional logo based on the theme
+  updateLogo(theme);
+}
+
+// Function to update the additional logo based on the theme
+function updateLogo(theme) {
+  const logoImg = document.querySelector('.logo-aboutus'); // Select the logo image
+  if (logoImg) { // Check if logoImg exists
+    if (theme === 'dark') {
+      logoImg.src = '../../icons/logo-dark.webp'; // Change to dark logo
+    } else {
+      logoImg.src = '../../icons/logo.webp'; // Change to light logo
+    }
+  }
 }
 
 // Function to set active theme button
@@ -89,7 +108,9 @@ function preloadLogos() {
     'icons/dark-logo.webp',
     'icons/dark-logo-line.webp',
     'icons/header-logo-2.webp',
-    'icons/header-logo.webp'
+    'icons/header-logo.webp',
+    '../../icons/logo-dark.webp',
+    '../../icons/logo.webp'
   ];
   logosToPreload.forEach(logoSrc => {
     const img = new Image();
@@ -99,3 +120,14 @@ function preloadLogos() {
 
 // Preload logos on initial load
 preloadLogos();
+
+/*---------------------------------------*/
+
+// Call ensureLogoIsUpdated on page load to set the logo correctly
+ensureLogoIsUpdated();
+
+// Function to ensure the correct logo is displayed based on the theme
+function ensureLogoIsUpdated() {
+  const currentTheme = localStorage.getItem('theme') || 'light'; // Get current theme
+  updateLogo(currentTheme); // Call updateLogo with the current theme
+}

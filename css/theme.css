@@ -229,3 +229,14 @@ body.arabic-font .dropdown-content button {
   text-align: right;
 }
 
+
+.logo-aboutus:hover {
+  border-color:var(--text-color); /* Change to the desired color on hover */
+  opacity: 1; /* Set to full opacity */
+  cursor: crosshair;
+}
+
+.desc {
+  font-size: 15px;
+  color: var(--text-color)
+}
