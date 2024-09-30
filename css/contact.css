@@ -1,3 +1,15 @@
+a {
+  text-decoration: none; /* remove underline if you prefer */
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:visited {
+  color: rgb(52, 164, 162);
+}
+
 #contact-container {
   font-family: Nunito, Arial;
   padding-bottom: 3000px;
@@ -15,25 +27,33 @@
   transition: all 0.5s ease-out;
 }
 
-/* Default animation for all sections except Section 1 */
-.scroll-section:not(#section1) {
+/* Default animation for all sections except Section 1 and li5 */
+.scroll-section {
   transform: translateY(50px); /* Default Y animation */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
-.scroll-section:not(#section1).visible {
+.scroll-section.visible {
   opacity: 1; /* Fully visible */
   transform: translateY(0); /* Moves to its normal position */
 }
 
-/* Specific animation for Section 1 */
+/* Specific animations for li5 and section1 */
+#lit,
+#li5,
 #section1 {
   transform: translateX(50px); /* Moves content off to the right */
+  opacity: 0; /* Initially hidden */
 }
 
+#lit.visible,
+#li5.visible,
 #section1.visible {
   opacity: 1; /* Fully visible */
   transform: translateX(0); /* Back to its normal position */
 }
+
 
 
 /*-------------------------------------------*/
@@ -50,7 +70,7 @@ h2 {
 #section3,
 #section2,
 #section1 {
-  font-size: 4.25rem;
+  font-size: 30px;
   text-align: left;
 }
 
@@ -62,4 +82,47 @@ h2 {
 
 #section3 {
   margin-bottom: 50px;
+}
+
+#section2 {
+  margin-top: 0;
+}
+
+#info0,
+#info {
+  color: rgb(52, 164, 162);
+  font-size: 60px;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  margin: 0;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
+  margin-top: 70px;
+}
+
+#info0 {
+  margin-top: 200px;
+}
+
+#aboutus {
+  color: rgb(52, 164, 162);
+  font-size: 60px;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  margin: 0;
+  padding-bottom: 50px;
+}
+
+#li5 {
+  margin: 0;
+  padding: 0 50px;
+}
+
+#lit {
+  font-size: 30px;
+  margin-bottom: 0;
+  
+  h2 {
+    margin-bottom: 0;
+  }
 }

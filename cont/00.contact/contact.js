@@ -66,36 +66,38 @@ peakObserver.observe(document.getElementById('section2'));
 
 /*----------------------------------------------------*/
 
-var botToken = '7387220791:AAHE6iN4wMU_1Xp8yMO6Uk-Vqk3X3quGMj8';
-var channelId = '@coronarymcq';
-var currentCount = 0; // Keep track of the current displayed count
-var isCounting = false; // Track if the counting animation is currently running
-var hasAnimated = false; // Flag to track if the animation has already completed
+// Load environment variables
+require('dotenv').config();
+
+var botToken = process.env.BOT_TOKEN;
+var channelId = process.env.CHANNEL_ID;
+var currentCount = 0;
+var isCounting = false;
+var hasAnimated = false;
 
 // Function to animate the subscriber count
 var animateNumber = function(targetNumber) {
-    var increment = Math.ceil(targetNumber / 300); // Slower increment for smoother animation
+    var increment = Math.ceil(targetNumber / 300);
     var subscriberCountElement = document.getElementById('subscriberCount');
 
-    // Ensure no multiple animations run at the same time
     if (isCounting) return;
 
-    isCounting = true; // Set counting to true
-    currentCount = 0; // Reset current count
+    isCounting = true;
+    currentCount = 0;
 
     var updateCount = function() {
         if (currentCount < targetNumber) {
             currentCount += increment;
-            if (currentCount > targetNumber) currentCount = targetNumber; // Clamp to target number
-            subscriberCountElement.innerText = currentCount.toLocaleString(); // Format number with commas
-            requestAnimationFrame(updateCount); // Continue animation
+            if (currentCount > targetNumber) currentCount = targetNumber;
+            subscriberCountElement.innerText = currentCount.toLocaleString();
+            requestAnimationFrame(updateCount);
         } else {
-            isCounting = false; // Stop animation when complete
-            hasAnimated = true; // Mark as animated
+            isCounting = false;
+            hasAnimated = true;
         }
     };
 
-    updateCount(); // Start the counting animation
+    updateCount();
 };
 
 // Function to fetch and update the subscriber count from Telegram API
@@ -104,36 +106,34 @@ var updateSubscriberCount = function() {
         .then(response => response.json())
         .then(data => {
             if (data.ok) {
-                var subscriberCount = data.result; // Get subscriber count
-                if (!hasAnimated) { // Only animate if it hasn't been done before
+                var subscriberCount = data.result;
+                if (!hasAnimated) {
                     animateNumber(subscriberCount);
                 }
             } else {
-                console.error('Error fetching data:', data.description); // Handle error
+                console.error('Error fetching data:', data.description);
             }
         })
-        .catch(error => console.error('Fetch error:', error)); // Handle fetch error
+        .catch(error => console.error('Fetch error:', error));
 };
 
 // Create an Intersection Observer for the subscriber count section
 var observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
-        if (entry.isIntersecting && !hasAnimated) { // Only start counting if not already animated
-            updateSubscriberCount(); // Start counting when the section becomes visible
+        if (entry.isIntersecting && !hasAnimated) {
+            updateSubscriberCount();
         }
     });
-}, { threshold: 0.1 }); // Trigger when 10% of the section is visible
+}, { threshold: 0.1 });
 
-// Observe the section for visibility
 observer.observe(document.getElementById('section3'));
 
 // Optional: Set an interval to update the count every minute if visible
 setInterval(() => {
-    if (!isCounting && !hasAnimated) { // Fetch only if not already counting or animated
+    if (!isCounting && !hasAnimated) {
         updateSubscriberCount();
     }
-}, 60000); // Update every 60 seconds
-
+}, 60000);
 
 /*-------------------------------------------------*/
 
