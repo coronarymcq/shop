@@ -216,19 +216,38 @@
   </section>
   <section class="scroll-section" id="section2">
     <h2 id="info" class="info">Our Work</h2>
-    <div
-      id="pdf-viewer"
-      style="border: 1px solid #000; overflow: auto; max-height: 600px"
-    ></div>
+    <div class="pdf-container">
+      <div class="toolbar">
+        <div class="toolbut">
+          <div class="pnx">
+            <button id="prev-page">Previous Page</button>
+            <span style="font-family: Arial, Helvetica, sans-serif">|</span>
+            <button id="next-page">Next Page</button>
+          </div>
+          <div class="znx">
+            <button id="zoom-in">Zoom In</button>
+            <button id="zoom-out">Zoom Out</button>
+          </div>
+        </div>
+        <div class="page-info-div">
+          <div id="page-info"></div>
+        </div>
+      </div>
 
-    <div>
-      <button id="prev-page">Previous Page</button>
-      <button id="next-page">Next Page</button>
+      <div id="pdf-viewer-container" style="height: 700px; overflow: hidden">
+        <!-- Set a fixed height -->
+        <div
+          id="pdf-viewer"
+          style="
+            border: 1px solid;
+            border-top: none;
+            overflow-y: auto; /* Enable vertical scrolling */
+            height: 100%; /* Full height of the container */
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+          "
+        ></div>
+      </div>
     </div>
-    <div>
-      <button id="zoom-in">Zoom In</button>
-      <button id="zoom-out">Zoom Out</button>
-    </div>
-    <div id="page-info"></div>
   </section>
 </div>

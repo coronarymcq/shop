@@ -188,3 +188,80 @@ h2 {
   margin-bottom: 24.9px;
 
 }
+
+.page-info-div {
+  display: flex;
+  align-items: center;
+  border-left: dashed;
+  border-width: 1px;
+  padding-left: 15px;
+  padding-right: 3px;
+}
+
+#page-info {
+  font-size: 13px;
+  font-weight: 700;
+  padding-right: 7px;
+  padding-top: 0;
+}
+
+#pdf-viewer-container {
+  height: 600px; /* Set a specific height for the viewer */
+  overflow: hidden; /* Prevent overflowing from the container */
+}
+
+#pdf-viewer {
+  border: 1px solid;
+  border-top-width: 0;
+  overflow: auto; /* Enable scrolling */
+  flex-grow: 1; /* Allow it to grow within the container */
+  max-height: 600px; /* Restrict height */
+  height: 100%; /* Make sure it occupies the full height */
+  padding: 10px; /* Add padding if necessary */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+
+canvas {
+  width: 100%; /* Allow canvas to take full width */
+  /* Remove max-height to allow it to grow beyond the container */
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  vertical-align: bottom;
+  border: solid;
+  border-width: 1px;
+  margin-bottom: 0px;
+  border-bottom-width: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0px 5px;
+}
+
+.toolbut {
+  display: flex;
+  white-space: nowrap;
+  padding-left: 7px;
+  padding: 10px 7px;
+
+  button {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.pnx, 
+.znx {
+  display: flex;
+  overflow: hidden;
+}
+
+.znx {
+  display: none;
+}

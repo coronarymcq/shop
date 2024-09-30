@@ -186,7 +186,7 @@ document.querySelectorAll('.homeLink').forEach(link => {
     const url = '../../CORONARY FINAL PUBLIC HEALTH.pdf'; // Path to your PDF file
     let pdfDoc = null; // Variable to hold the PDF document
     let currentPage = 1; // Track the current page number
-    let scale = 1.0; // Initial scale (zoom level)
+    let scale = 1.6; // Initial scale (zoom level)
 
     const loadPDF = async (url) => {
         try {
@@ -200,11 +200,12 @@ document.querySelectorAll('.homeLink').forEach(link => {
 
     const renderPage = async (pageNum) => {
         const page = await pdfDoc.getPage(pageNum);
-        const viewport = page.getViewport({ scale }); // Use the current scale
+        const viewport = page.getViewport({ scale });
 
-        // Clear the viewer and create a new canvas
+        // Clear the viewer before rendering a new page
         const pdfViewer = document.getElementById('pdf-viewer');
-        pdfViewer.innerHTML = ''; // Clear previous content
+        pdfViewer.innerHTML = ''; // Clear previous canvases
+
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
         canvas.height = viewport.height;
@@ -220,6 +221,11 @@ document.querySelectorAll('.homeLink').forEach(link => {
 
         // Update page info
         document.getElementById('page-info').textContent = `Page ${pageNum} of ${pdfDoc.numPages}`;
+    };
+
+    const scrollToTop = (pdfViewer) => {
+        // Scroll to the top of the PDF viewer
+        pdfViewer.scrollTop = 0; // Set scrollTop to 0 to ensure the upper part is visible
     };
 
     // Handle Previous Page
@@ -254,3 +260,24 @@ document.querySelectorAll('.homeLink').forEach(link => {
 
     loadPDF(url);
 })();
+
+/*-------------------------------------------*/
+
+document.querySelectorAll('.toolbut button').forEach(button => {
+    button.addEventListener('touchstart', () => {
+        button.classList.add('touched'); // Add class on touch
+    });
+
+    button.addEventListener('touchend', () => {
+        button.classList.remove('touched'); // Remove class when touch ends
+    });
+
+    // Optional: Prevents color change on click after touch
+    button.addEventListener('mousedown', () => {
+        button.classList.add('touched');
+    });
+
+    button.addEventListener('mouseup', () => {
+        button.classList.remove('touched');
+    });
+});

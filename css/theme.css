@@ -18,6 +18,7 @@
   --nav-hover: rgba(122, 122, 122, 0.034) ;
   --drop-down: rgba(44, 44, 44, 0.068);
   --selc-la: rgba(82, 82, 82, 0.123);
+  --button-pdf: rgba(147, 147, 147, 0.502) ;
 }
 
 /* Dark theme variables */
@@ -38,6 +39,7 @@
   --nav-hover: rgba(255, 255, 255, 0.048);
   --drop-down: rgba(255, 255, 255, 0.082);
   --selc-la: rgb(58, 58, 58);
+  --button-pdf: rgb(219, 219, 219) ;
 }
 
 
@@ -239,4 +241,37 @@ body.arabic-font .dropdown-content button {
 .desc {
   font-size: 15px;
   color: var(--text-color)
+}
+
+.toolbut {
+  button {
+    font-family: Nunito, Arial;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+  }
+
+  button:hover {
+    color: var(--link-hover-color);
+  }
+
+  button:focus {
+    outline: none; /* Remove outline on focus */
+    color: var(--text-color); /* Reset color on focus */
+  }
+
+  button:active {
+    outline: none;
+    color: var(--text-color); /* Reset color on active */
+  }
+
+  button.touched { /* Class added for touch state */
+    color: var(--link-hover-color); /* Change to hover color on touch */
+  }
+
+  button:focus {
+    outline: none; /* Remove outline on focus */
+  }
 }
