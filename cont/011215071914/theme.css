@@ -17,10 +17,11 @@
   --back: white;
   --input: rgba(128, 128, 128, 0.13);
   --selc: rgba(52, 164, 162, 0.533);
-  --input-border: gray;
+  --input-border: rgb(44, 201, 199);
   --show: black;
   --ia: rgba(226, 226, 226, 0.519);
   --bg-gradient:linear-gradient(270deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7), rgba(54, 170, 163, 0.2), rgba(115, 203, 196, 0.3), rgba(115, 203, 196, 0.5), rgba(54, 170, 163, 0.4), rgba(54, 130, 140, 0.4), rgba(54, 130, 140, 0.6), rgba(255, 255, 255, 0.9));
+  --font-w: 700;
 }
 
 /* Dark theme variables */
@@ -41,7 +42,7 @@
   --back: black  ;
   --input:  rgba(124, 124, 124, 0.277);
   --selc: rgba(52, 164, 162, 0.533);
-  --input-border: rgba(255, 255, 255, 0.308);
+  --input-border: rgb(44, 201, 199);
   --show: white;
   --ia: gray;
   --bg-gradient: linear-gradient(270deg, 
@@ -55,6 +56,8 @@
   rgba(115, 203, 196, 0.5), 
   rgba(54, 170, 162, 0.357)
 );
+  --font-w: 950;
+
 
 }
 
@@ -97,22 +100,22 @@
 }
 
 input {
-  background-color: var(--input);
   color: var(--text-color);
-  border: 1px solid transparent; /* Set initial border to transparent */
-  transition: border-color 0.4s ease, border-width 0.4s ease; /* Add transition */
 }
 
-
-
-#password:hover,
-#email:hover {
+#last-name:hover,
+#first-name:hover,
+#last-pass:hover,
+#first-pass:hover,
+.input1:hover {
   border-color: var(--input-border);
- cursor: pointer;
 }
 
-#password:focus,
-#email:focus {
+#last-name:focus,
+#first-name:focus,
+#last-pass:focus,
+#first-pass:focus,
+.input1:focus {
   border-color: var(--input-border);
   cursor: text;
 }
@@ -145,4 +148,56 @@ input:-webkit-autofill:active {
 a:visited,
 a {
   color: var(--text-color);
+}
+
+#forbidden-message1,
+#forbidden-message,
+#email-error-message,
+.measure {
+  font-weight: var(--font-w);
+}
+
+#toggleConfirmPassword,
+#togglePassword {
+  color: var(--text-color);
+}
+
+
+.placeholder-last {
+  color: var(--text-color);
+}
+
+.placeholder {
+  color: var(--text-color);
+}
+
+input[type="email"]:hover + .placeholder {
+  color: var(--link-hover-color); /* Special color when hovering over the input */
+}
+input[type="password"]:hover + .placeholder {
+  color: var(--link-hover-color); /* Special color when hovering over the input */
+}
+
+/* Move placeholder when input is focused or filled */
+input:focus + .placeholder,
+input:not(:placeholder-shown) + .placeholder {
+  color: var(--link-hover-color);
+}
+
+input:focus + .placeholder-last,
+input:not(:placeholder-shown) + .placeholder-last {
+  color: var(--link-hover-color);
+}
+
+.container-1 i {
+  color: var(--text-color);
+} 
+
+input {
+  border-bottom-color: var(--text-color) ;
+  transition: border-bottom-color 0.4s ease;
+}
+
+input:hover {
+  border-bottom-color: var(--link-hover-color);
 }

@@ -82,9 +82,13 @@ html, body {
     overflow-y: scroll; /* Allow scrolling on the page */
   }
 
-.quote {
-  visibility: hidden;
-}
+  .card {
+    padding-bottom: 100%;
+  }
+
+  .quote {
+    visibility: hidden;
+  }
 
   .all {
     grid-template-columns: 1fr;
@@ -114,7 +118,11 @@ html, body {
     overflow: hidden;
     margin-top: 200px;
   }
-  
+
+  .login-in-button {
+    font-size: 10px;
+  }
+
 }
 
 @media (min-width: 1000px) {
@@ -209,6 +217,7 @@ html, body {
   top: 200px;
   right: 0;
   left: 0;
+  margin-top: 50px;
 }
 
 .nun {
@@ -228,7 +237,7 @@ html, body {
 
  
 input {
-  background-color: rgba(211, 211, 211, 0.331);
+  background-color: rgba(211, 211, 211, 0);
   border: none;
   margin-bottom: 15px;
   padding: 20px 86px 20px 10px;
@@ -247,9 +256,6 @@ input:-webkit-autofill {
 input:focus {
   outline: none;
   outline-style: none;
-  border: solid;
-  border-color: rgba(0, 0, 0, 0.435);
-  border-width: 1px;
 }
 
 .h3 {
@@ -293,7 +299,7 @@ input:focus {
   backdrop-filter: blur(100px); /* Adjust blur level */
   font-weight: bold;
   font-family: Nunito, Arial;
-  font-size: 15px;
+  font-size: 13px;
   padding: 10px 30px 10px 30px;
   margin-bottom: 20px;
   margin-top: 25px;
@@ -364,6 +370,7 @@ input {
   display: flex;
   flex: 1;
   position: relative;
+  margin-top: 40px;
 }
 
 #email,
@@ -371,8 +378,12 @@ input {
   margin-bottom: 0;
 }
 
+#password {
+ padding: 10px 90px 10px 5px;
+}
+
 #email {
-  padding-right: 45px;
+  padding: 10px 45px 10px 5px;
 }
 
 .container-1 i {
@@ -400,7 +411,7 @@ input {
   border: none;
   cursor: pointer;
   position: absolute;
-  font-size: 12px;
+  font-size: 11px;
   color: rgba(0, 0, 0, 0.7);
   pointer-events: none; /* Prevent interaction when hidden */
 }
@@ -458,3 +469,47 @@ input {
   opacity: 1; /* Fade in the second image */
 }
 
+.placeholder {
+  position: absolute;
+  left: 0px;
+  top: 0px; /* Adjust initial position */
+  transition: all 0.4s ease;
+  padding: 0 5px; /* Add padding for better fit */
+  pointer-events: none; /* Prevent interaction */
+  overflow: hidden;
+  font-size: 14px;
+}
+
+/* Move placeholder when input is focused or filled */
+input:focus + .placeholder,
+input:not(:placeholder-shown) + .placeholder {
+  top: -20px; /* Move up */
+  left: 0px;
+  font-size: 13px; /* Smaller font size when label is above */
+  overflow: hidden;
+
+}
+
+input:focus + .placeholder-last,
+input:not(:placeholder-shown) + .placeholder-last {
+  top: -20px; /* Move up */
+  left: 0px;
+  font-size: 13px; /* Smaller font size when label is above */
+  overflow: hidden;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #4a4a4a;
+  border-radius: 0px;
+  outline: none;
+}
+
+.alr {
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 10px;
+}
