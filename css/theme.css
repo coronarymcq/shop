@@ -176,10 +176,6 @@ a:hover {
   border: none;
 }
 
-
-
-
-
 .nested-dropdown-content {
   position: absolute;
   background-color: var(--header-bg);

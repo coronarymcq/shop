@@ -1,4 +1,4 @@
-# UPDATES (current version: 1.9.1.2.4.4.1)
+# UPDATES (current version: 1.11.6.4.4.4.3)
 
 ****
 
@@ -98,7 +98,9 @@
    ![alt text](images/image-20.png) 
    ![alt text](images/image-19.png)
 
-8. The small default title icon has been changed for the current logo of the website
+8. ~~The small default title icon has been changed for the current logo of the website.~~
+
+- **New (1st Oct)**: This has been **deleted** in the modern update to prevent source code complications.
 
 ****
 **Version 1.9 | September 24-26**
@@ -107,5 +109,48 @@
 
 
 2. More features and improved system management coming soon to enhance the entire site.
+
+****
+**Version 1.10-1.11 | The end of September - 1st of Oct**
+
+1. Major and minor bugs and alignment issues on all pages except for the BAU page as it will be updated later on with a new design.
+
+2. Animation while scrolling in the About Us page is now improved depending on the text that is fetched.
+
+3. Planning for a better UI on mobile and tablets including the Main pages Like Home, BAU, About Us and others, along side the header and the footer
+
+4. New dark and light theme been added with a synced theme logo and a total new color scheme for the whole project. (Now can be found in the Settings Button)  
+
+- Synced with the Login and Sign up page. 
+
+- The specific theme for the moving background for each the light or the dark have been updated in the Login and Sign up page.
+
+5. New Auth Card design for both the Login and Sign Up page.
+
+   ![alt text](images/image-22.png) 
+   ![alt text](images/image-21.png)
+   ![alt text](images/image-23.png)
+   ![alt text](images/image-24.png) 
+   ![alt text](images/image-25.png) 
+
+6. A new "Settings" button has been added to the header which is subject to change later on the next updates.
+
+- It include both the "Language" and "Themes" Button which a user-friendly and easy to interact with.
+
+- This button also has the translation and both themes applied to it.
+
+- Resize measures is also applied.
+
+   ![alt text](images/image-26.png)
+   ![alt text](images/image-27.png) 
+   ![alt text](images/image-28.png)
+
+7. A modern synced custom UI for the first pdf viewer on the About Us page. 
+
+- Though, an issue preventing the pdf viewer from working on the online github page, it will be fixed on the next update.
+
+![alt text](images/image-29.png) 
+![alt text](images/image-30.png) 
+![alt text](images/image-31.png)
 
 ****
