@@ -253,10 +253,6 @@ body.arabic-font .dropdown-content button {
     transition: color 0.3s;
   }
 
-  button:hover {
-    color: var(--link-hover-color);
-  }
-
   button:focus {
     outline: none; /* Remove outline on focus */
     color: var(--text-color); /* Reset color on focus */

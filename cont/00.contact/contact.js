@@ -157,9 +157,9 @@ function setLogoBasedOnTheme() {
     // Set the appropriate logo based on the theme
     if (logoImg) {
         if (savedTheme === 'dark') {
-            logoImg.src = '../../icons/logo-dark.webp'; // Dark theme logo
+            logoImg.src = 'icons/logo-dark.webp'; // Dark theme logo
         } else {
-            logoImg.src = '../../icons/logo.webp'; // Light theme logo
+            logoImg.src = 'icons/logo.webp'; // Light theme logo
         }
     } else {
         console.error("Element with class 'logo-aboutus' not found.");
