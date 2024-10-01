@@ -76,10 +76,21 @@ html, body {
   visibility: hidden;
 }
 
+.alr {
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 10px;
+}
+
 @media (max-width: 853px ) {
 
   body {
     overflow-y: scroll; /* Allow scrolling on the page */
+  }
+
+  .alr {
+    font-size: 10px;
   }
 
 .quote {
@@ -107,6 +118,7 @@ html, body {
 
   .input {
     margin-bottom: 50px;
+    padding-bottom: 100%;
   }
 
   .right00 {
@@ -129,7 +141,7 @@ html, body {
   }
 }
 
-@media (max-width: 1000px) and (min-width: 910px) {
+@media (max-width: 1000px) and (min-width: 850px) {
   .container {
     height: auto;
     min-height: 100vh;
@@ -158,14 +170,6 @@ html, body {
   padding: 15px; /* Fixed padding */
   padding-right: 50px; /* Left padding */
   height: 100%; /* Full height */
-}
-
-.auth.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .image {
@@ -215,17 +219,20 @@ html, body {
   padding-left: 30px;
   padding-right: 30px;
   margin-top: 35px;
+
   
 
   input {
     background-color: rgba(211, 211, 211, 0);
     border: none;
-    margin-bottom: 15px;
-    font-size: 15px;
+    margin-bottom: 16px;
+    font-size: 13px;
     border-bottom: 1px solid; /* Set initial border to transparent */
     border-radius: 0px;
     width: calc(100% - 30px); /* Adjust width to account for padding */
     transition: border-color 0.4s ease, border-width 0.4s ease; /* Add transition */
+    padding: 10px;
+    padding-left: 5.5px;
   }
 
   input:-webkit-autofill {
@@ -253,6 +260,7 @@ html, body {
   }
 
 
+  .container-3,
   .container-1,
   .container-2 {
     display: flex;
@@ -262,6 +270,7 @@ html, body {
     width: 100%; /* Make this stretch full width */
   }
 
+  .container-3,
   .container-2 {
     display: flex;
     flex-direction: column;
@@ -270,12 +279,18 @@ html, body {
     width: 100%; /* Make this stretch full width */
   }
 
+  .container-3 {
+    margin-bottom: 70px;
+    margin-top: 50px;
+  }
+
   .nun {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
   }
 
+  .container-3 i,
   .container-1 i,
   .container-2 i {
     position: absolute;
@@ -320,7 +335,7 @@ html, body {
   backdrop-filter: blur(100px); /* Adjust blur level */
   font-weight: bold;
   font-family: Nunito, Arial;
-  font-size: 15px;
+  font-size: 12px;
   padding: 10px 30px 10px 30px;
   margin-bottom: 10px;
   margin-top: 25px;
@@ -375,11 +390,28 @@ html, body {
   text-decoration: underline;
 }
 
-.show-password-btn2,
+.show-password-btn2 {
+  position: absolute;
+  bottom: 20%;
+  right: 0px;
+  transform: translateY(-50%);
+  padding: 0;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.2s ease; /* Smooth transition */
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.7);
+  pointer-events: none; /* Prevent interaction when hidden */
+  z-index: 200;
+}
+
 .show-password-btn1 {
   position: absolute;
   bottom: 20%;
-  right: 10px;
+  right: 0px;
   transform: translateY(-50%);
   padding: 0;
   opacity: 0; /* Start hidden */
@@ -429,6 +461,7 @@ input {
   color: rgba(55, 55, 55, 0.829);
 }
 
+.input-container,
 .star1, .star2,
 .name-container {
   position: relative;
@@ -437,12 +470,20 @@ input {
   box-sizing: border-box;
 }
 
+.name-container {
+  margin-bottom: 20px;
+}
+
+.flnc {
+  margin-bottom: 20px;
+}
+
 .star1 {
   position: relative;
 }
 
 .star2 {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .both {
@@ -465,11 +506,16 @@ input {
   margin-bottom: 10px; /* Adds space between the labels and input boxes */
 }
 
-
+.flnc,
 .star1, .star2,
 .pass-container,
 .name-container {
   display: flex;
+  justify-content: space-between;
+}
+
+.flnc {
+  flex-direction: column;
 }
 
 .name-input {
@@ -487,9 +533,10 @@ input {
   box-sizing: border-box;
 }
 
+.input-container input,
 .pass-container input,
 .name-container input {
-  width: 48%;  /* Adjust width to fit both inputs within the container */
+  width: 50%;  /* Adjust width to fit both inputs within the container */
   padding: 10px;
   box-sizing: border-box;
 }
@@ -507,7 +554,7 @@ input {
 #last-pass,
 #first-name,
 #last-name {
-  width: 100%; /* Full width for each input */
+  width: 94%; /* Full width for each input */
   margin-bottom: 0;
 }
 
@@ -521,13 +568,10 @@ input {
   flex: 1;
 }
 
-#last-name {
-  margin-left: 15px;
-}
-
 #last-pass {
   margin-left: 0px;
   padding-right: 45px;
+  padding-left: 5.5px;
 }
 
 #first-pass {
@@ -607,4 +651,73 @@ input {
   opacity: 1; /* Fade in the second image */
 }
 
+.placeholder-last {
+  position: absolute;
+  left: 0px;
+  top: 9px; /* Adjust initial position */
+  transition: all 0.4s ease;
+  padding: 0 5px; /* Add padding for better fit */
+  pointer-events: none; /* Prevent interaction */
+  overflow: hidden;
+}
 
+.placeholder {
+  position: absolute;
+  left: 0px;
+  top: 9px; /* Adjust initial position */
+  transition: all 0.4s ease;
+  padding: 0 5px; /* Add padding for better fit */
+  pointer-events: none; /* Prevent interaction */
+  overflow: hidden;
+  
+}
+
+/* Move placeholder when input is focused or filled */
+input:focus + .placeholder,
+input:not(:placeholder-shown) + .placeholder {
+  top: -20px; /* Move up */
+  left: 0px;
+  font-size: 13px; /* Smaller font size when label is above */
+  overflow: hidden;
+
+}
+
+input:focus + .placeholder-last,
+input:not(:placeholder-shown) + .placeholder-last {
+  top: -20px; /* Move up */
+  left: 0px;
+  font-size: 13px; /* Smaller font size when label is above */
+  overflow: hidden;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #4a4a4a;
+  border-radius: 0px;
+  outline: none;
+}
+
+
+.container-2 {
+  margin-bottom: 30px;
+}
+
+#username,
+#email {
+  width: auto;
+}
+
+#first-pass,
+#last-name,
+#last-pass {
+  width: 100%;
+  padding-left: 5.5px;
+
+}
+
+#first-name {
+  width: 100%;
+  padding-left: 5.5px;
+}

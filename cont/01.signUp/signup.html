@@ -79,26 +79,49 @@
           <div class="card">
             <section class="auth-card">
               <div class="input">
-                <div class="heart">
-                  <h3 class="h3" id="h3">First Name</h3>
-                  <h3 class="h3" id="h7">Last Name</h3>
+                <div class="flnc">
+                  <div class="name-container">
+                    <div class="star1">
+                      <div class="input-container">
+                        <input
+                          type="text"
+                          id="first-name"
+                          required
+                          placeholder=" "
+                        />
+                        <label for="first-name" class="placeholder"
+                          >First Name</label
+                        >
+                      </div>
+                    </div>
+                    <div class="star2">
+                      <div class="input-container">
+                        <input
+                          type="text"
+                          id="last-name"
+                          required
+                          placeholder=" "
+                        />
+                        <label for="last-name" class="placeholder-last"
+                          >Last Name</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-m">
+                    <p
+                      id="forbidden-message"
+                      style="
+                        color: red;
+                        text-align: left;
+                        font-size: 12px;
+                        padding-left: 5px;
+                      "
+                    ></p>
+                  </div>
                 </div>
-                <div class="name-container">
-                  <input type="text" id="first-name" required />
-                  <input type="text" id="last-name" required />
-                </div>
-                <p
-                  id="forbidden-message"
-                  style="
-                    color: red;
-                    text-align: left;
-                    font-size: 12px;
-                    margin-bottom: 0;
-                  "
-                ></p>
 
                 <div class="nun">
-                  <h3 class="h3">Username</h3>
                   <section class="container-2">
                     <input
                       class="input1"
@@ -106,7 +129,9 @@
                       id="username"
                       required
                       pattern="[a-zA-Z0-9_]{5,15}"
+                      placeholder=" "
                     />
+                    <label for="username" class="placeholder">Username</label>
                     <p
                       id="forbidden-message1"
                       style="
@@ -114,22 +139,24 @@
                         display: none;
                         text-align: left;
                         font-size: 12px;
-                        margin-bottom: 20px;
+                        margin-bottom: 10px;
                         margin-top: 0;
                         display: block;
+                        padding-left: 5px;
                       "
                     ></p>
                   </section>
 
-                  <h3 class="h3">Email</h3>
-                  <section class="container-2">
+                  <section class="container-3">
                     <input
                       class="input1"
                       type="email"
                       id="email"
                       required
                       pattern=".+@.+\..+"
+                      placeholder=" "
                     />
+                    <label for="email" class="placeholder">Email</label>
                     <p
                       id="email-error-message"
                       style="
@@ -137,42 +164,55 @@
                         display: none;
                         text-align: left;
                         font-size: 12px;
-                        margin-bottom: 20px;
+                        margin-bottom: 5px;
                         margin-top: 0;
+                        padding-left: 5px;
                       "
                     ></p>
                   </section>
 
-                  <div class="heart">
-                    <div class="Heart1-container">
-                      <h3 class="h3" id="h3">Password</h3>
-                    </div>
-
-                    <div class="Heart2-container">
-                      <h3 class="h3" id="h11">Confirm Password</h3>
-                    </div>
-                  </div>
                   <div class="both">
                     <div class="pass-container">
                       <div class="star1">
-                        <input type="password" id="first-pass" required />
-                        <button
-                          type="button"
-                          id="togglePassword"
-                          class="show-password-btn1"
-                        >
-                          Show
-                        </button>
+                        <div class="input-container">
+                          <input
+                            type="password"
+                            id="first-pass"
+                            required
+                            placeholder=" "
+                          />
+                          <label for="first-pass" class="placeholder"
+                            >Password</label
+                          >
+                          <button
+                            type="button"
+                            id="togglePassword"
+                            class="show-password-btn1"
+                          >
+                            Show
+                          </button>
+                        </div>
                       </div>
                       <div class="star2">
-                        <input type="password" id="last-pass" required />
-                        <button
-                          type="button"
-                          id="toggleConfirmPassword"
-                          class="show-password-btn2"
-                        >
-                          Show
-                        </button>
+                        <div class="input-container">
+                          <input
+                            type="password"
+                            id="last-pass"
+                            required
+                            placeholder=" "
+                          />
+
+                          <label for="last-pass" class="placeholder"
+                            >Confirm Password</label
+                          >
+                          <button
+                            type="button"
+                            id="toggleConfirmPassword"
+                            class="show-password-btn2"
+                          >
+                            Show
+                          </button>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -181,6 +221,7 @@
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
+                        padding-left: 5px;
                       "
                     >
                       <div style="display: flex; flex: 1">
@@ -194,25 +235,31 @@
                           text-align: left;
                         "
                       >
-                        <div id="match-message" class="match-message"></div>
+                        <div
+                          id="match-message"
+                          class="match-message"
+                          style="padding-left: 5px"
+                        ></div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div>
+                  <button class="login-in-button" type="submit">Sign Up</button>
+                </div>
+
+                <p>
+                  <span class="alr"
+                    >Already have an account?
+                    <span class="sit">
+                      <a href="../011215071914/login01.html">Login In!</a>
+                    </span></span
+                  >
+                </p>
+                <p class="right00">
+                  © 2024 Coronary Academic MCQs. All rights reserved.
+                </p>
               </div>
-              <button class="login-in-button" type="submit">Sign Up</button>
-              <p>
-                <span
-                  style="font-size: 15px; margin-top: 5px; margin-bottom: 15px"
-                  >Already have an account?
-                  <span class="sit">
-                    <a href="../011215071914/login01.html">Login In!</a>
-                  </span></span
-                >
-              </p>
-              <p class="right00">
-                © 2024 Coronary Academic MCQs. All rights reserved.
-              </p>
             </section>
           </div>
         </div>

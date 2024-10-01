@@ -17,7 +17,7 @@
   --back: white;
   --input: rgba(128, 128, 128, 0.13);
   --selc: rgba(52, 164, 162, 0.533);
-  --input-border: gray;
+  --input-border: rgb(44, 201, 199);
   --show: black;
   --ia: rgba(226, 226, 226, 0.519);
   --bg-gradient:linear-gradient(270deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7), rgba(54, 170, 163, 0.2), rgba(115, 203, 196, 0.3), rgba(115, 203, 196, 0.5), rgba(54, 170, 163, 0.4), rgba(54, 130, 140, 0.4), rgba(54, 130, 140, 0.6), rgba(255, 255, 255, 0.9));
@@ -42,7 +42,7 @@
   --back: black  ;
   --input:  rgba(124, 124, 124, 0.277);
   --selc: rgba(52, 164, 162, 0.533);
-  --input-border: rgba(255, 255, 255, 0.581);
+  --input-border: rgb(44, 201, 199);
   --show: white;
   --ia: gray;
   --bg-gradient: linear-gradient(270deg, 
@@ -100,7 +100,6 @@
 }
 
 input {
-  background-color: var(--input);
   color: var(--text-color);
 }
 
@@ -110,7 +109,6 @@ input {
 #first-pass:hover,
 .input1:hover {
   border-color: var(--input-border);
- cursor: pointer;
 }
 
 #last-name:focus,
@@ -164,3 +162,36 @@ a {
   color: var(--text-color);
 }
 
+
+.placeholder-last {
+  color: var(--text-color);
+}
+
+.placeholder {
+  color: var(--text-color);
+}
+
+input[type="text"]:hover + .placeholder-last {
+  color: var(--link-hover-color); /* Special color when hovering over the input */
+}
+input[type="text"]:hover + .placeholder {
+  color: var(--link-hover-color); /* Special color when hovering over the input */
+}
+
+input[type="email"]:hover + .placeholder {
+  color: var(--link-hover-color); /* Special color when hovering over the input */
+}
+input[type="password"]:hover + .placeholder {
+  color: var(--link-hover-color); /* Special color when hovering over the input */
+}
+
+/* Move placeholder when input is focused or filled */
+input:focus + .placeholder,
+input:not(:placeholder-shown) + .placeholder {
+  color: var(--link-hover-color);
+}
+
+input:focus + .placeholder-last,
+input:not(:placeholder-shown) + .placeholder-last {
+  color: var(--link-hover-color);
+}
