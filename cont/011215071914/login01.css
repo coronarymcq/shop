@@ -302,7 +302,7 @@ input:focus {
   font-size: 13px;
   padding: 10px 30px 10px 30px;
   margin-bottom: 20px;
-  margin-top: 25px;
+  margin-top: 60px;
   border: 1px solid transparent; /* Set initial border to transparent */
   border-radius: 2px;
   border-width: 1px;
@@ -483,18 +483,18 @@ input {
 /* Move placeholder when input is focused or filled */
 input:focus + .placeholder,
 input:not(:placeholder-shown) + .placeholder {
-  top: -20px; /* Move up */
+  top: -23px; /* Move up */
   left: 0px;
-  font-size: 13px; /* Smaller font size when label is above */
+  font-size: 16px; /* Smaller font size when label is above */
   overflow: hidden;
 
 }
 
 input:focus + .placeholder-last,
 input:not(:placeholder-shown) + .placeholder-last {
-  top: -20px; /* Move up */
+  top: -23px; /* Move up */
   left: 0px;
-  font-size: 13px; /* Smaller font size when label is above */
+  font-size: 16px; /* Smaller font size when label is above */
   overflow: hidden;
 }
 
@@ -511,5 +511,5 @@ input {
   font-size: 15px;
   margin-top: 5px;
   margin-bottom: 15px;
-  font-size: 10px;
+  font-size: 12px;
 }

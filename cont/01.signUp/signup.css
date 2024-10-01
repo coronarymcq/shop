@@ -80,7 +80,7 @@ html, body {
   font-size: 15px;
   margin-top: 5px;
   margin-bottom: 15px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 @media (max-width: 853px ) {
@@ -336,10 +336,10 @@ html, body {
   backdrop-filter: blur(100px); /* Adjust blur level */
   font-weight: bold;
   font-family: Nunito, Arial;
-  font-size: 12px;
+  font-size: 13px;
   padding: 10px 30px 10px 30px;
   margin-bottom: 10px;
-  margin-top: 25px;
+  margin-top: 60px;
   border: 1px solid transparent; /* Set initial border to transparent */
   border-radius: 2px;
   border-width: 1px;
@@ -655,22 +655,24 @@ input {
 .placeholder-last {
   position: absolute;
   left: 0px;
-  top: 9px; /* Adjust initial position */
+  top: 0px; /* Adjust initial position */
   transition: all 0.4s ease;
   padding: 0 5px; /* Add padding for better fit */
   pointer-events: none; /* Prevent interaction */
   overflow: hidden;
+  font-size: 14px;
+
 }
 
 .placeholder {
   position: absolute;
   left: 0px;
-  top: 9px; /* Adjust initial position */
+  top: 0px; /* Adjust initial position */
   transition: all 0.4s ease;
   padding: 0 5px; /* Add padding for better fit */
   pointer-events: none; /* Prevent interaction */
   overflow: hidden;
-  
+  font-size: 14px;
 }
 
 /* Move placeholder when input is focused or filled */
@@ -678,7 +680,7 @@ input:focus + .placeholder,
 input:not(:placeholder-shown) + .placeholder {
   top: -20px; /* Move up */
   left: 0px;
-  font-size: 13px; /* Smaller font size when label is above */
+  font-size: 16px; /* Smaller font size when label is above */
   overflow: hidden;
 
 }
@@ -687,7 +689,7 @@ input:focus + .placeholder-last,
 input:not(:placeholder-shown) + .placeholder-last {
   top: -20px; /* Move up */
   left: 0px;
-  font-size: 13px; /* Smaller font size when label is above */
+  font-size: 16px; /* Smaller font size when label is above */
   overflow: hidden;
 }
 
@@ -707,7 +709,18 @@ input {
 
 #username,
 #email {
+  font-size: 15px;
   width: auto;
+}
+
+#last-pass,
+#first-pass {
+  font-size: 15px;
+}
+
+#last-name, 
+#first-name {
+  font-size: 16px;
 }
 
 #first-pass,
