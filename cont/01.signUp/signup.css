@@ -661,7 +661,7 @@ input {
   pointer-events: none; /* Prevent interaction */
   overflow: hidden;
   font-size: 14px;
-
+  white-space: nowrap;
 }
 
 .placeholder {
@@ -673,6 +673,7 @@ input {
   pointer-events: none; /* Prevent interaction */
   overflow: hidden;
   font-size: 14px;
+  white-space: nowrap;
 }
 
 /* Move placeholder when input is focused or filled */
@@ -682,7 +683,7 @@ input:not(:placeholder-shown) + .placeholder {
   left: 0px;
   font-size: 16px; /* Smaller font size when label is above */
   overflow: hidden;
-
+  white-space: nowrap;
 }
 
 input:focus + .placeholder-last,
@@ -691,6 +692,7 @@ input:not(:placeholder-shown) + .placeholder-last {
   left: 0px;
   font-size: 16px; /* Smaller font size when label is above */
   overflow: hidden;
+  white-space: nowrap;
 }
 
 input {
