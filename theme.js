@@ -72,9 +72,9 @@ function updateLogo(theme) {
   const logoImg = document.querySelector('.logo-aboutus'); // Select the logo image
   if (logoImg) { // Check if logoImg exists
     if (theme === 'dark') {
-      logoImg.src = '../../icons/logo-dark.webp'; // Change to dark logo
+      logoImg.src = 'icons/logo-dark.webp'; // Change to dark logo
     } else {
-      logoImg.src = '../../icons/logo.webp'; // Change to light logo
+      logoImg.src = 'icons/logo.webp'; // Change to light logo
     }
   }
 }
@@ -109,8 +109,8 @@ function preloadLogos() {
     'icons/dark-logo-line.webp',
     'icons/header-logo-2.webp',
     'icons/header-logo.webp',
-    '../../icons/logo-dark.webp',
-    '../../icons/logo.webp'
+    'icons/logo-dark.webp',
+    'icons/logo.webp'
   ];
   logosToPreload.forEach(logoSrc => {
     const img = new Image();
