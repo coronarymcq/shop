@@ -218,12 +218,12 @@ html, body {
   
 
   input {
-    background-color: rgba(211, 211, 211, 0.331);
+    background-color: rgba(211, 211, 211, 0);
     border: none;
     margin-bottom: 15px;
     font-size: 15px;
-    border: 1px solid transparent; /* Set initial border to transparent */
-    border-radius: 5px;
+    border-bottom: 1px solid; /* Set initial border to transparent */
+    border-radius: 0px;
     width: calc(100% - 30px); /* Adjust width to account for padding */
     transition: border-color 0.4s ease, border-width 0.4s ease; /* Add transition */
   }
@@ -237,9 +237,6 @@ html, body {
   input:focus {
     outline: none;
     outline-style: none;
-    border: solid;
-    border-color: rgba(0, 0, 0, 0.435);
-    border-width: 1px;
   }
 
   .h3 {
@@ -609,4 +606,5 @@ input {
 .logo-container:hover .hover-logo {
   opacity: 1; /* Fade in the second image */
 }
+
 
