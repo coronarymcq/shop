@@ -267,3 +267,7 @@ body.arabic-font .dropdown-content button {
     outline: none; /* Remove outline on focus */
   }
 }
+
+.ClickHere {
+  color: var(--text-color);
+}

@@ -125,7 +125,9 @@ h2 {
   text-align: center;
   border-bottom: 1px solid gray;
   margin: 0;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
+  padding: 50px;
+  margin-top: 5px;
 }
 
 #li5 {
