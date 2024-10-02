@@ -180,10 +180,10 @@ document.querySelectorAll('.homeLink').forEach(link => {
   /*---------------------------------------*/
   
   (async () => {
-    const pdfjsLib = await import('../../pdfjs/build/pdf.mjs'); // Adjust the path to pdf.mjs
-    pdfjsLib.GlobalWorkerOptions.workerSrc = '../../pdfjs/build/pdf.worker.mjs'; // Adjust the path to pdf.worker.mjs
+    const pdfjsLib = await import('pdfjs/build/pdf.mjs'); // Adjust the path to pdf.mjs
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdfjs/build/pdf.worker.mjs'; // Adjust the path to pdf.worker.mjs
 
-    const url = '../../CORONARY FINAL PUBLIC HEALTH.pdf'; // Path to your PDF file
+    const url = 'CORONARY FINAL PUBLIC HEALTH.pdf'; // Path to your PDF file
     let pdfDoc = null; // Variable to hold the PDF document
     let currentPage = 1; // Track the current page number
     let scale = 1.6; // Initial scale (zoom level)
