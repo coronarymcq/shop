@@ -1,5 +1,3 @@
-
-
 const translations = {
   en: {
     title: "MCQs Coronary Academic",
@@ -12,13 +10,15 @@ const translations = {
     aboutUs: "About Us",
     help: "Help",
     footerText: "© 2024 Coronary Academic MCQs. All rights reserved.",
-    beta: "Beta Version – Work in Progress",
+    beta: "Beta Version – Work in Progress, meaning it's not fully ready and may change later.",
     btnEn: "English",
     btnAr: "Arabic",
     switchTheme: "Themes", // New entry for theme switch
     language: "Language",
     light: "Light Theme",
-    dark: "Dark Theme"
+    dark: "Dark Theme",
+    copyMsg: "Telegram Username '@mumenq' copied to clipboard!",
+    endm3: " This website has been developed by Mo'men Allala."
   },
   ar: {
     title: "MCQs كوروناري أكاديمي",
@@ -30,21 +30,23 @@ const translations = {
     Uni: "جامعة البلقاء التطبيقية",
     aboutUs: "من نحن",
     help: "المساعدة",
-    footerText: "© 2024 أم سي كيو كوروناري أكاديمي. جميع الحقوق محفوظة.",
-    beta: "النسخة التجريبية - قيد التطوير",
+    footerText: ".© 2024 أم سي كيو كوروناري أكاديمي - جميع الحقوق محفوظة",
+    beta: ".إصدار تجريبي – العمل قيد التقدم، مما يعني أنه ليس جاهزًا بالكامل وقد يخضع للتغيير لاحقًا",
     btnEn: "الإنجليزية",
     btnAr: "العربية",
     switchTheme: "المظهر", // New entry for theme switch
     language: "اللغة",
     light: "فاتح",
-    dark: "غامق"
+    dark: "غامق",
+    copyMsg: " .'@mumenq' - تم نسخ اسم المستخدم على تيليجرام إلى الحافظة", // Fixed the translation
+    endm3: " . تم تطوير هذا الموقع بواسطة "
   },
 };
 
 function translatePage(lang) {
   const trans = translations[lang];
 
-  // Update title and buttons
+    // Update title and buttons
   document.title = trans.title;
   document.querySelector('.lang-button').textContent = trans.Settings;
   document.querySelector('.login-button').textContent = trans.login;
@@ -64,9 +66,20 @@ function translatePage(lang) {
   });
   document.querySelector('.nav-bar5').textContent = trans.help;
 
-  // Update main content
+  // Update main content with HTML structure intact
   document.querySelector('.end-margin-text01').textContent = trans.footerText;
   document.querySelector('.end-margin-text02').textContent = trans.beta;
+
+  // For the end margin text, set innerHTML to keep the anchor clickable
+  const developerName = lang === 'ar' ? "مؤمن غالب اللالا" : "Mo'men Allala";
+  document.querySelector('.end-margin-text03').innerHTML = `
+    ${trans.endm3.split("Mo'men Allala")[0]}
+    <a href="javascript:void(0);" onclick="copyToClipboard()">
+      <span style="font-weight: 900">${developerName}</span>
+    </a>.
+  `;
+  
+  document.querySelector('.end-margin-text04').textContent = trans.copyMsg;
 
   // Update dropdown button texts
   document.getElementById('btn-en').textContent = trans.btnEn;
@@ -77,7 +90,6 @@ function translatePage(lang) {
   document.querySelector('.th-toggle').textContent = trans.switchTheme;
   document.querySelector('.light-trans').textContent = trans.light;
   document.querySelector('.dark-trans').textContent = trans.dark;
-
 
   // Manage active state for dropdown buttons
   const langButtons = document.querySelectorAll('#lang-dropdown button');
@@ -96,7 +108,6 @@ function translatePage(lang) {
   // Save the selected language to localStorage
   localStorage.setItem('selectedLanguage', lang);
 }
-
 
 // Load the selected language on page load
 window.onload = function() {
@@ -122,4 +133,3 @@ document.querySelectorAll('#lang-dropdown button').forEach(btn => {
     translatePage(lang);
   });
 });
-

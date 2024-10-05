@@ -157,12 +157,21 @@
     </nav>
 
     <div class="main"></div>
-
+    <p id="copyMessage" class="end-margin-text04">Telegram Username '@mumenq' copied to clipboard!</p>
     <footer class="end-margin" style="font-size: 30px">
       <p class="end-margin-text01">
         &#169; 2024 Coronary Academic MCQs. All rights reserved.
       </p>
-      <p class="end-margin-text02">Beta Version – Work in Progress</p>
+      <p class="end-margin-text02">
+        Beta Version – Work in Progress, meaning it's not fully ready and may
+        change later.
+      </p>
+      <p class="end-margin-text03" style="display: block; line-height: 0px">
+        This website has been developed by
+        <a href="javascript:void(0);" onclick="copyToClipboard()"
+          ><span style="font-weight: 900">Mo'men Allala</span></a
+        >.
+      </p>
     </footer>
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="script.js"></script>
@@ -173,5 +182,36 @@
       src="https://kit.fontawesome.com/607f9f57fe.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function copyToClipboard() {
+        const textToCopy = "@mumenq";
+        const textarea = document.createElement("textarea");
+        textarea.value = textToCopy;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+
+        const message = document.getElementById("copyMessage");
+
+        // Reset classes before showing
+        message.classList.remove("show", "hide");
+        message.style.visibility = "visible"; // Ensure it's visible before showing
+
+        // Show message
+        message.classList.add("show");
+
+        // Remove the message after 2 seconds with smooth transition
+        setTimeout(function () {
+          message.classList.add("hide");
+          message.classList.remove("show");
+        }, 2000);
+
+        // Ensure visibility is hidden after the transition ends
+        setTimeout(function () {
+          message.style.visibility = "hidden";
+        }, 2500); // Wait for the complete transition duration before hiding
+      }
+    </script>
   </body>
 </html>
