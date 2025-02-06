@@ -154,3 +154,10 @@
 ![alt text](images/image-31.png)
 
 ****
+**Version 1.12 | February the 6th**
+
+Due to time constraints, this project will now focus on gathering pre-existing Q banks and sharing them here. Users will not need to make any purchases, create accounts, or provide any information. Therefore, the following has been removed:
+
+1. The login and sign-up pages and system will be removed for now. They may be re-worked in the future, but for now, these pages will be abandoned.
+
+2. The resize issue will no longer be addressed. Phone users will be blocked from accessing the content unless they resize their browser window to a smaller size where the website can be displayed properly.

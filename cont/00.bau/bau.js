@@ -1,72 +1,63 @@
 (function() {
-  // Declare 'started' as block-scoped
+  // Flag to ensure counting only happens once
   let started = false;
-
-  function resetCounters(counters) {
-    counters.forEach((counter) => {
-      counter.innerText = counter.classList.contains("ST") ? "0+" : "0"; // Reset to 0 or '0+' for Students
-    });
-    started = false; // Reset the flag so animation can start again
-  }
 
   function startCounting() {
     const counters = document.querySelectorAll(".info-container div");
-    
     if (started) return; // Prevent multiple triggers
-    
+
     counters.forEach((counter) => {
       const target = +counter.getAttribute("data-target");
       let count = 0;
-
-      // Customize speed and increment for each counter based on its class
       let increment, speed;
 
+      // Customize speed and increment based on the counter's class
       if (counter.classList.contains("FA")) {
-        increment = Math.ceil(target / 9000); // Make faculties count slower
-        speed = 170; // Slower speed for faculties
+        increment = Math.ceil(target / 9000); // Slower increment for "FA"
+        speed = 170;
       } else {
-        increment = Math.ceil(target / 250); // Faster increments for other counters
-        speed = 15; // Faster speed for other counters
+        increment = Math.ceil(target / 250); // Faster for other counters
+        speed = 15;
       }
 
       const updateCount = () => {
         count += increment;
-
         if (count < target) {
           if (counter.classList.contains("QS")) {
-            counter.innerText = "#" + count; // Append # for QS Ranking
+            counter.innerText = "#" + count; // Prefix for QS counters
           } else {
-            counter.innerText =
-              count + (counter.classList.contains("ST") ? "+" : "");
+            counter.innerText = count + (counter.classList.contains("ST") ? "+" : "");
           }
-          setTimeout(updateCount, speed); // Adjust speed here per counter
+          setTimeout(updateCount, speed);
         } else {
+          // Set the final value exactly to the target
           if (counter.classList.contains("QS")) {
-            counter.innerText = "#" + target; // Final target with #
+            counter.innerText = "#" + target;
           } else {
-            counter.innerText =
-              target + (counter.classList.contains("ST") ? "+" : "");
+            counter.innerText = target + (counter.classList.contains("ST") ? "+" : "");
           }
         }
       };
 
       updateCount();
     });
-    started = true; // Mark as started to prevent multiple triggers
+
+    started = true; // Mark as started so counting isn't re-triggered
   }
 
-  // Intersection Observer to trigger animation and reset
+  // Intersection Observer to trigger counting when the container is in view
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting && !started) {
         startCounting();
-      } else if (!entry.isIntersecting) {
-        resetCounters(entry.target.querySelectorAll(".info-container div")); // Pass counters specific to the current view
       }
+      // No reset is performed when the element goes out of view
     });
   });
 
-  // Start observing the .all-container
+  // Observe the container that holds the counters
   const infoContainer = document.querySelector(".all-container");
-  observer.observe(infoContainer);
+  if (infoContainer) {
+    observer.observe(infoContainer);
+  }
 })();

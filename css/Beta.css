@@ -183,7 +183,7 @@ li {
   .TORdiv {
     font-size: 6px;
   }
-
+  
 }
 
 
@@ -404,7 +404,6 @@ li {
   border-color: gray;
   border-width: 0.1px;
   box-shadow: 0px -10px 10px rgba(57, 57, 57, 0.032);
-
 }
 
 .end-margin-text01{
@@ -455,4 +454,40 @@ li {
   transform: translateY(20px);
   visibility: visible;
   /* Keep it visible for the transition */
+}
+
+@media (max-width: 1000px) {
+  .view {
+    display: none;
+  }
+}
+
+.error {
+  text-align: center;
+  /* Always present in the layout */
+  opacity: 0;
+  /* Start invisible */
+  transform: translateY(-10px);
+  /* Slightly shifted up */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+  /* Prevent interactions when hidden */
+}
+
+/* When screen is 1000px or smaller, animate to visible */
+@media (max-width: 1000px) {
+  .error {
+    opacity: 1;
+    /* Fade in */
+    transform: translateY(0);
+    /* Slide into place */
+    pointer-events: auto;
+    /* Allow interactions */
+    text-align: center;
+    padding: 10px;
+  }
+
+  .end-margin {
+    display: none;
+  }
 }

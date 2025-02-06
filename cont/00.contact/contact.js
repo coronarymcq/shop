@@ -99,7 +99,8 @@ var animateNumber = function() {
 };
 
 // Start the animation when the section becomes visible (for demonstration)
-var observer = new IntersectionObserver(function(entries) {
+// Rename "observer" to "subscriberObserver" to avoid redeclaration conflicts
+var subscriberObserver = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting && !hasAnimated) { // Only start counting if not already animated
             animateNumber(); // Start counting when the section becomes visible
@@ -107,8 +108,8 @@ var observer = new IntersectionObserver(function(entries) {
     });
 }, { threshold: 0.1 }); // Trigger when 10% of the section is visible
 
-// Observe the section for visibility
-observer.observe(document.getElementById('section3'));
+// Observe the section for visibility (section3)
+subscriberObserver.observe(document.getElementById('section3'));
 
 /*-------------------------------------------------*/
 
@@ -171,15 +172,14 @@ setLogoBasedOnTheme();
 
 document.querySelectorAll('.homeLink').forEach(link => {
     link.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent default link behavior
-      loadContent('main'); // Fetch content for Home
+        event.preventDefault(); // Prevent default link behavior
+        loadContent('main'); // Fetch content for Home
     });
-  });
+});
 
+/*---------------------------------------*/
 
-  /*---------------------------------------*/
-  
-  (async () => {
+(async () => {
     const pdfjsLib = await import('../../pdfjs/build/pdf.mjs'); // Adjust the path to pdf.mjs
     pdfjsLib.GlobalWorkerOptions.workerSrc = '../../pdfjs/build/pdf.worker.mjs'; // Adjust the path to pdf.worker.mjs
 
