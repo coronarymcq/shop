@@ -19,6 +19,7 @@
   --drop-down: rgba(44, 44, 44, 0.068);
   --selc-la: rgba(82, 82, 82, 0.123);
   --button-pdf: rgba(147, 147, 147, 0.502) ;
+  --titles: rgba(0, 0, 0, 0.582);
 }
 
 /* Dark theme variables */
@@ -40,6 +41,7 @@
   --drop-down: rgba(255, 255, 255, 0.082);
   --selc-la: rgb(58, 58, 58);
   --button-pdf: rgb(219, 219, 219) ;
+  --titles: rgba(206, 206, 206, 0.61); 
 }
 
 
@@ -271,3 +273,141 @@ body.arabic-font .dropdown-content button {
 .ClickHere {
   color: var(--text-color);
 }
+
+/* Convert the overall container into a grid with 3 columns and 2 rows */
+@keyframes move-border {
+  0% {
+    background-position: -100% 0%;
+    /* Start from the left */
+  }
+
+  100% {
+    background-position: 100% 0%;
+    /* End on the right */
+  }
+}
+
+.all-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.all-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 4px dashed transparent;
+  /* Change border to dashed */
+  background: linear-gradient(var(--bg-color), var(--bg-color)) padding-box,
+    linear-gradient(45deg, rgb(52, 164, 162), rgba(52, 164, 162, 0.5)) border-box;
+  background-size: 200% 200%;
+  z-index: -1;
+  animation: move-border 4s linear infinite;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  color: var(--text-color);
+  cursor: crosshair;
+}
+
+.all-container:hover::before {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* (Optional) Reapply styling to the statistic numbers */
+.info-container>.QS,
+.info-container>.FA,
+.info-container>.ST {
+  font-size: 30px;
+  /* Remove any fixed height or line-height if necessary */
+  margin: 0;
+  color: var(--text-color);
+}
+
+/* (Optional) Reapply styling to the statistic labels */
+.label-container>.QS,
+.label-container>.FA,
+.label-container>.ST {
+  font-size: 30px;
+  color: var(--text-color);
+  margin: 0;
+  text-align: center;
+}
+
+ .button-container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+   justify-items: center;
+   margin-top: 100px;
+ }
+
+ .button-wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5px;
+   /* Space between button and text */
+ }
+
+ .buttons {
+   background-color: white;
+   color: var(--text-color);
+   padding: 10px;
+   border: solid;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 5px;
+   border-color: black;
+   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+   width: 90px;
+   /* Adjust size to keep all buttons uniform */
+   height: 90px;
+ }
+
+ .bauweb {
+   width: 10px;
+ }
+
+ .buttons img {
+   width: 60px;
+   transition: transform 0.3s ease-in-out;
+ }
+
+ .buttons:hover {
+   background-color: rgba(52, 164, 162, 0.521);
+   color: white;
+ }
+
+ .buttons:hover img {
+   transform: scale(1.1);
+ }
+
+ .button-text {
+  font-family: Nunito, Arial;
+   font-size: 20px;
+   font-weight: bold;
+   color: black;
+   text-align: center;
+   margin-bottom: 20px;
+   margin-top: 5px;
+ }
+
+ .OurUNI {
+  color: var(--titles);
+ }
